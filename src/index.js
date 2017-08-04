@@ -1,4 +1,4 @@
-// third-party modules
+// external modules
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, browserHistory } from 'react-router';
@@ -6,11 +6,10 @@ import { Provider } from 'react-redux';
 
 // custom modules
 import routes from 'routes';
-import store from 'store';
+import store from 'redux-config';
 
 // styles
-require('style!css!sass!stylesheet');
-
+import 'style!css!sass!styles/stylesheet';
 
 ReactDOM.render(
 	<Provider store={store}>

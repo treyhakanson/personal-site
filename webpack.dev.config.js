@@ -13,15 +13,7 @@ module.exports = {
   },
 
   resolve: {
-    root: __dirname,
-    alias: {
-      App: 'src/components/App.js',
-      store: 'src/redux/store',
-      reducers: 'src/redux/reducers',
-      actions: 'src/redux/actions',
-      routes: 'src/routes.js',
-      stylesheet: 'src/styles/stylesheet.scss'
-    },
+    root: path.join(__dirname, 'src'),
     extensions: ['', '.js', '.jsx']
   },
 
