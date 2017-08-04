@@ -1,0 +1,27 @@
+// font mixins
+@mixin build-font($font-family, $font-weight, $font-style, $font-size) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-size: $font-size;
+}
+
+@mixin header-font($font-size: $header-font-size--default) {
+    @include build-font($header-font-family, $header-font-weight,
+        $header-font-style, $font-size);
+}
+
+@mixin sub-header-font($font-size: $sub-header-font-size--default) {
+    @include build-font($sub-header-font-family, $sub-header-font-weight,
+        $sub-header-font-style, $font-size);
+}
+
+@mixin regular-font($font-size: $regular-font-size--default) {
+    @include build-font($regular-font-family, $regular-font-weight,
+        $regular-font-style, $font-size);
+}
+
+@mixin code-font($font-size: $code-font-size--default) {
+    @include build-font($code-font-family, $code-font-weight,
+        $code-font-style, $font-size);
+}

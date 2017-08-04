@@ -1,1 +1,9 @@
+// base styles
+@import "base/font-faces";
 @import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+@import "base/utils";
+
+// vendor styles
+@import "~highlight.js/styles/atelier-sulphurpool-light.css"; // highlight.js syntax theme

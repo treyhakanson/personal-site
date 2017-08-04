@@ -1,0 +1,44 @@
+// font families
+$header-font-family: 'Lora', serif;
+$sub-header-font-family: 'Playfair Display', cursive;
+$regular-font-family: 'ABeeZee', sans-serif;
+$code-font-family: 'FiraCode-Regular', monospace;
+
+// font sizes
+$header-font-size--default: 42px;
+$header-font-size--jumbo: 50px;
+
+$sub-header-font-size--default: 24px;
+$sub-header-font-size--jumbo: 32px;
+
+$regular-font-size--mini: 14px;
+$regular-font-size--default: 17px;
+$regular-font-size--jumbo: 20px;
+
+$code-font-size--default: 17px;
+
+// font weights
+$header-font-weight: 700;
+$sub-header-font-weight: 400;
+$regular-font-weight: normal;
+$code-font-weight: normal;
+
+// font styles
+$header-font-style: normal;
+$sub-header-font-style: italic;
+$regular-font-style: normal;
+$code-font-style: normal;
+
+// colors
+$code-border-color: #5e6687;
+
+// spacing
+$top-margin--sm: 5px;
+$top-margin--md: 10px;
+$top-margin--lg: 15px;
+$top-margin--xl: 20px;
+
+$bottom-margin--sm: 5px;
+$bottom-margin--md: 10px;
+$bottom-margin--lg: 15px;
+$bottom-margin--xl: 20px;

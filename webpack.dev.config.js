@@ -17,6 +17,7 @@ module.exports = {
             containers: 'containers',
             'redux-config': 'redux-config',
             styles: 'styles',
+            utils: 'utils',
             routes: 'routes'
         },
         extensions: ['.js', '.jsx']

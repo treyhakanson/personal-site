@@ -1,0 +1,32 @@
+// general resets
+* {
+    margin: 0;
+    box-sizing: content-box;
+}
+
+// text element rests
+h1 {
+    @include header-font($header-font-size--jumbo);
+}
+
+h2 {
+    @include header-font;
+}
+
+h3 {
+    @include sub-header-font($sub-header-font-size--jumbo);
+}
+
+h4 {
+    @include sub-header-font;
+}
+
+p {
+    @include regular-font;
+}
+
+pre code {
+    border-left: 5px solid $code-border-color;
+
+    @include code-font;
+}
