@@ -1,11 +1,11 @@
 // external modules
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Route } from 'react-router';
 
 // custom modules
-import App from 'components/App';
+import TestComponent from 'components/TestComponent';
 
 export default (
-	<Route path="/" component={App}>
+	<Route path="/" component={TestComponent}>
 	</Route>
 );
