@@ -3,9 +3,8 @@ import React from 'react';
 import { Route } from 'react-router';
 
 // custom modules
-import TestComponent from 'components/TestComponent';
+import StyleGuide from 'components/StyleGuide';
 
 export default (
-	<Route path="/" component={TestComponent}>
-	</Route>
+	<Route path="/" component={StyleGuide} />
 );

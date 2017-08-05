@@ -11,6 +11,7 @@ import es6Syntax from 'utils/es6-syntax';
 // styles
 import 'styles/stylesheet.scss';
 
+// load highlight js for code
 hljs.registerLanguage('js', es6Syntax);
 
 const render = Component => {
@@ -18,8 +19,7 @@ const render = Component => {
 			<AppContainer>
 				<Component />
 			</AppContainer>,
-			document.getElementById('root'),
-			hljs.initHighlightingOnLoad
+			document.getElementById('root')
 		);
 };
 

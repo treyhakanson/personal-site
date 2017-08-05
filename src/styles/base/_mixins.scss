@@ -4,6 +4,8 @@
     font-weight: $font-weight;
     font-style: $font-style;
     font-size: $font-size;
+    color: $font-color--default;
+    opacity: $font-opactity;
 }
 
 @mixin header-font($font-size: $header-font-size--default) {

@@ -29,16 +29,26 @@ $sub-header-font-style: italic;
 $regular-font-style: normal;
 $code-font-style: normal;
 
-// colors
+// font colors and miscallaneous
+$font-color--default: #232323;
+$font-opactity: 0.88;
+
+
+// application colors
 $code-border-color: #5e6687;
 
 // spacing
-$top-margin--sm: 5px;
-$top-margin--md: 10px;
-$top-margin--lg: 15px;
-$top-margin--xl: 20px;
+$top-margin--sm: 15px;
+$top-margin--md: 20px;
+$top-margin--lg: 25px;
+$top-margin--xl: 30px;
 
-$bottom-margin--sm: 5px;
-$bottom-margin--md: 10px;
-$bottom-margin--lg: 15px;
-$bottom-margin--xl: 20px;
+$bottom-margin--sm: 15px;
+$bottom-margin--md: 20px;
+$bottom-margin--lg: 25px;
+$bottom-margin--xl: 30px;
+
+// borders
+$border-width--thin: 1px;
+$border-width--default: 2px;
+$border-width--thick: 5px;

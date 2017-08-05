@@ -25,8 +25,11 @@ p {
     @include regular-font;
 }
 
-pre code {
-    border-left: 5px solid $code-border-color;
+// code formatting (syntax highlighting handled by highlight.js)
+pre {
+    border-left: $border-width--thick solid $code-border-color;
 
-    @include code-font;
+    code {
+        @include code-font;
+    }
 }
