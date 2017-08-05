@@ -24,6 +24,7 @@ export default class StyleGuide extends Component {
         return (
             <div className="StyleGuide">
                 <div className="horiz-spacing--md">
+                    <hr />
                     <h1 className="bottom-margin--md">Heading 1</h1>
                     <h2 className="bottom-margin--md">Heading 2</h2>
                     <h3 className="bottom-margin--md">Sub Heading 1</h3>

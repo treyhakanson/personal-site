@@ -33,8 +33,12 @@ $regular-font-style: normal;
 $code-font-style: normal;
 
 // font colors and miscallaneous
-$font-color--default: #232323;
-$font-opactity: 0.88;
+$font-color--base: #232323;
+$font-color--default: rgba($font-color--base, 0.88);
+$font-color--light: rgba($font-color--base, 0.65);
+
+$code-padding: 20px !important; // !important to override padding from highlight.js
+$code-line-height: 25px;
 
 // application colors
 $code-border-color: #5e6687;

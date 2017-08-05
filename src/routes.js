@@ -6,5 +6,7 @@ import { Route } from 'react-router';
 import StyleGuide from 'components/StyleGuide';
 
 export default (
-	<Route path="/" component={StyleGuide} />
+	<Route path="/">
+		<Route path="style-guide" component={StyleGuide} />
+	</Route>
 );

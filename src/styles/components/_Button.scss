@@ -61,6 +61,7 @@
     top: $modern-button-offset;
     left: $modern-button-offset;
     transition: $transition-speed--inactive all;
+    border-collapse: separate;
 }
 
 // border button

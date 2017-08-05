@@ -8,6 +8,14 @@ class ButtonBase extends Component {
         onClick: PropTypes.func
     };
 
+    /**
+     * getClassName - generates the classname for the button based on props and
+     * arguments.
+     *
+     * @param  {string} className the classname to be added
+     * @return {string}           the final classname to be applied to the
+     *                            component
+     */
     getClassName(className) {
         const classNames = ['ButtonBase'];
         if (className)

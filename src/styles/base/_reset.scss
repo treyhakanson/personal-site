@@ -27,9 +27,22 @@ p {
 
 // code formatting (syntax highlighting handled by highlight.js)
 pre {
+    padding: $code-padding;
+    line-height: $code-line-height;
     border-left: $border-width--thick solid $code-border-color;
 
     code {
         @include code-font;
     }
+}
+
+// spacers
+hr {
+    width: 100%;
+    max-width: 250px;
+    border: none;
+    height: $border-width--default;
+    background-color: $primary-color--default;
+    margin-top: $top-margin--md;
+    margin-bottom: $bottom-margin--md;
 }

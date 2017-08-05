@@ -4,7 +4,7 @@
   "description": "My personal site, an ongoing projects",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.dev.config.js --hot"
+    "start": "webpack-dev-server --config ./webpack.dev.config.js --define process.env.NODE_ENV=\"'development'\" --hot"
   },
   "author": "Trey Hakanson",
   "license": "MIT",

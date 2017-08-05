@@ -1,14 +1,14 @@
 // external modules
 import React from 'react';
-import { Router, browserHistory } from 'react-router';
+import { Router } from 'react-router';
 import { Provider } from 'react-redux';
 
 // custom modules
 import store from 'redux-config';
 import routes from 'routes';
 
-export default () => (
+export default ({ history }) => (
 	<Provider store={store}>
-		<Router history={browserHistory} routes={routes} />
+		<Router history={history} routes={routes} />
 	</Provider>
 );
