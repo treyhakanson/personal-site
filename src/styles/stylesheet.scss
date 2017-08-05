@@ -5,5 +5,8 @@
 @import "base/reset";
 @import "base/utils";
 
+// component styles
+@import "components/buttons";
+
 // vendor styles
 @import "~highlight.js/styles/atelier-sulphurpool-light.css"; // highlight.js syntax theme

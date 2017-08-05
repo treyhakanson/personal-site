@@ -17,6 +17,9 @@ $regular-font-size--jumbo: 20px;
 
 $code-font-size--default: 17px;
 
+$button-font-size--default: 20px;
+$button-font-size--active: 21px;
+
 // font weights
 $header-font-weight: 700;
 $sub-header-font-weight: 400;
@@ -33,9 +36,12 @@ $code-font-style: normal;
 $font-color--default: #232323;
 $font-opactity: 0.88;
 
-
 // application colors
 $code-border-color: #5e6687;
+$primary-color--default: rgba(#232323, 0.88);
+$primary-color--fade: #e9e9e9;
+
+$light-color: #fff;
 
 // spacing
 $top-margin--sm: 15px;
@@ -48,7 +54,23 @@ $bottom-margin--md: 20px;
 $bottom-margin--lg: 25px;
 $bottom-margin--xl: 30px;
 
+$horiz-spacing--sm: 15px;
+$horiz-spacing--md: 20px;
+$horiz-spacing--lg: 25px;
+$horiz-spacing--xl: 30px;
+
+// transitions
+$transition-speed--active: 200ms;
+$transition-speed--inactive: 150ms;
+
 // borders
 $border-width--thin: 1px;
 $border-width--default: 2px;
 $border-width--thick: 5px;
+
+$border-radius--default: 3px;
+
+// buttons
+$modern-button-offset: 10px;
+$button-height: 50px;
+$button-min-width: 150px;
