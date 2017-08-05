@@ -50,3 +50,11 @@
     margin-left: $horiz-spacing--xl;
     margin-right: $horiz-spacing--xl;
 }
+
+// inline code styling
+.code {
+    background-color: $code-background-color;
+    padding: 5px;
+
+    @include code-font;
+}

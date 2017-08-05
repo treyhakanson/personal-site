@@ -1,0 +1,22 @@
+.SpacerBase {
+    border: none;
+    height: $border-width--default;
+    background-color: $primary-color--default;
+    margin-top: $top-margin--md;
+    margin-bottom: $bottom-margin--md;
+}
+
+.SimpleSpacer--short {
+    width: 50%;
+    max-width: 100px;
+}
+
+.SimpleSpacer--medium {
+    width: 75%;
+    max-width: 175px;
+}
+
+.SimpleSpacer--long {
+    width: 100%;
+    max-width: 250px;
+}
