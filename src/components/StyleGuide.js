@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import Button from 'components/Button';
 import Code from 'components/Code';
 import { SimpleSpacer } from 'components/Spacer';
+import ModernImage from 'svgs/modern-image.svg';
 
 const CODE = `\
 // code
@@ -36,6 +37,9 @@ export default class StyleGuide extends Component {
                     <Button.Fill className="horiz-spacing--md" text="Click Me" />
                     <Button.LightFill className="horiz-spacing--md" text="Click Me" />
                     <Button.Border className="horiz-spacing--md" text="Click Me" />
+                </div>
+                <div className="bottom-margin--md">
+                    <ModernImage height={200} width={200} />
                 </div>
             </div>
         );

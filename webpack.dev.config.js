@@ -8,7 +8,7 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].js'
+        filename: 'bundle.js'
     },
     resolve: {
         modules: [path.resolve(__dirname, './src'), 'node_modules'],
@@ -17,6 +17,7 @@ module.exports = {
             containers: 'containers',
             'redux-config': 'redux-config',
             styles: 'styles',
+            svgs: 'svgs',
             utils: 'utils',
             routes: 'routes'
         },
@@ -24,6 +25,23 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.(svg)$/,
+                loaders: [
+                    {
+                        loader: 'babel-loader',
+                        query: {
+                            presets: ['es2015', 'react', 'stage-1']
+                        }
+                    },
+                    {
+                        loader: 'react-svg-loader',
+                        query: {
+                            jsx: true
+                        }
+                    }
+                ]
+            },
             { test: /\.(json)$/, use: 'json-loader' },
             {
                 test: /\.js$/,
