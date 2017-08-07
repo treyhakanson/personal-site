@@ -106,3 +106,31 @@
         border-color: rgba($primary-color--default, 0.25);
     }
 }
+
+// icon button
+.IconButton {
+    height: $icon-button-size;
+    width: $icon-button-size;
+    min-width: $icon-button-size;
+
+    .ModernButton__Upper,
+    .ModernButton__Shadow {
+        border-radius: 50%;
+    }
+
+    .ModernButton__Upper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.IconButton__Icon path {
+    transform-origin: 50% 50%;
+    transition: $transition-speed--inactive all;
+}
+
+.IconButton:hover .IconButton__Icon path {
+    transform: scale(1.15);
+    transition: $transition-speed--active all;
+}

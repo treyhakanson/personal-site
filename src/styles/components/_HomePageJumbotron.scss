@@ -17,4 +17,7 @@
     height: 100%;
     background-color: $primary-color--default;
     flex: 1 0 0;
+    background-image: url('/public/svgs/homepage-jumbotron-graphic.svg');
+    background-size: cover;
+    background-position: center;
 }

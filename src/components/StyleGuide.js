@@ -2,10 +2,9 @@
 import React, { Component } from 'react';
 
 // custom modules
-import Button from 'components/Button';
+import { Button, IconButton } from 'components/Button';
 import Code from 'components/Code';
 import { SimpleSpacer } from 'components/Spacer';
-import ModernImage from 'svgs/modern-image.svg';
 
 const CODE = `\
 // code
@@ -39,7 +38,7 @@ export default class StyleGuide extends Component {
                     <Button.Border className="horiz-spacing--md" text="Click Me" />
                 </div>
                 <div className="bottom-margin--md">
-                    <ModernImage height={200} width={200} />
+                    <IconButton className="horiz-spacing--md" />
                 </div>
             </div>
         );

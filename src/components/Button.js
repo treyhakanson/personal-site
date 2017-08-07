@@ -1,6 +1,10 @@
 // external modules
 import React, { Component, PropTypes } from 'react';
 
+// custom modules
+import { buildGetClassName } from 'utils/classNames';
+
+// Button
 class ButtonBase extends Component {
     static propTypes = {
         text: PropTypes.string.isRequired,
@@ -8,26 +12,15 @@ class ButtonBase extends Component {
         onClick: PropTypes.func
     };
 
-    /**
-     * getClassName - generates the classname for the button based on props and
-     * arguments.
-     *
-     * @param  {string} className the classname to be added
-     * @return {string}           the final classname to be applied to the
-     *                            component
-     */
-    getClassName(className) {
-        const classNames = ['ButtonBase'];
-        if (className)
-            classNames.push(className);
-        if (this.props.className)
-            classNames.push(this.props.className);
-        return classNames.join(' ');
+    constructor(props) {
+        super(props);
+        this.getClassName = buildGetClassName('ButtonBase');
     }
 }
 
 class ModernButton extends ButtonBase {
     render() {
+        console.log(this.getClassName);
         return (
             <div className={this.getClassName('ModernButton')}
                 onClick={this.props.onClick}>
@@ -65,9 +58,31 @@ class BorderButton extends ButtonBase {
     }
 }
 
-export default {
+export const Button = {
     Modern: ModernButton,
     Border: BorderButton,
     Fill: FillButton,
     LightFill: LightFillButton
 };
+
+// IconButton
+export class IconButton extends ButtonBase {
+    static propTypes = {
+        icon: PropTypes.element.isRequired,
+        className: PropTypes.string,
+        onClick: PropTypes.func
+    }
+
+    render() {
+        return (
+            <div className={this.getClassName(['IconButton', 'ModernButton'])}>
+                <div className="ModernButton__Upper">
+                    {React.cloneElement(this.props.icon, {
+                        className: 'IconButton__Icon'
+                    })}
+                </div>
+                <div className="ModernButton__Shadow"></div>
+            </div>
+        );
+    }
+}

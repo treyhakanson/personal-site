@@ -1,54 +1,54 @@
 // spacing utils
 .top-margin--sm {
-    margin-top: $top-margin--sm;
+    margin-top: $top-margin--sm !important;
 }
 
 .top-margin--md {
-    margin-top: $top-margin--md;
+    margin-top: $top-margin--md !important;
 }
 
 .top-margin--lg {
-    margin-top: $top-margin--lg;
+    margin-top: $top-margin--lg !important;
 }
 
 .top-margin--xl {
-    margin-top: $top-margin--xl;
+    margin-top: $top-margin--xl !important;
 }
 
 .bottom-margin--sm {
-    margin-bottom: $bottom-margin--sm;
+    margin-bottom: $bottom-margin--sm !important;
 }
 
 .bottom-margin--md {
-    margin-bottom: $bottom-margin--md;
+    margin-bottom: $bottom-margin--md !important;
 }
 
 .bottom-margin--lg {
-    margin-bottom: $bottom-margin--lg;
+    margin-bottom: $bottom-margin--lg !important;
 }
 
 .bottom-margin--xl {
-    margin-bottom: $bottom-margin--xl;
+    margin-bottom: $bottom-margin--xl !important;
 }
 
 .horiz-spacing--sm {
-    margin-left: $horiz-spacing--sm;
-    margin-right: $horiz-spacing--sm;
+    margin-left: $horiz-spacing--sm !important;
+    margin-right: $horiz-spacing--sm !important;
 }
 
 .horiz-spacing--md {
-    margin-left: $horiz-spacing--md;
-    margin-right: $horiz-spacing--md;
+    margin-left: $horiz-spacing--md !important;
+    margin-right: $horiz-spacing--md !important;
 }
 
 .horiz-spacing--lg {
-    margin-left: $horiz-spacing--lg;
-    margin-right: $horiz-spacing--lg;
+    margin-left: $horiz-spacing--lg !important;
+    margin-right: $horiz-spacing--lg !important;
 }
 
 .horiz-spacing--xl {
-    margin-left: $horiz-spacing--xl;
-    margin-right: $horiz-spacing--xl;
+    margin-left: $horiz-spacing--xl !important;
+    margin-right: $horiz-spacing--xl !important;
 }
 
 // inline code styling
@@ -62,4 +62,9 @@
 // color utils
 .background-color--primary-color--fade {
     background-color: $primary-color--fade !important;
+}
+
+// font utils
+.text-center {
+    text-align: center;
 }
