@@ -58,3 +58,8 @@
 
     @include code-font;
 }
+
+// color utils
+.background-color--primary-color--fade {
+    background-color: $primary-color--fade !important;
+}

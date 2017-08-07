@@ -1,0 +1,20 @@
+.HomePageJumbotron {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.HomePageJumbotron__Left {
+    height: 100%;
+    flex: 2 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.HomePageJumbotron__Right {
+    height: 100%;
+    background-color: $primary-color--default;
+    flex: 1 0 0;
+}

@@ -14,6 +14,8 @@ class SpacerBase extends Component {
         const classNames = ['SpacerBase'];
         if (this.props.className)
             classNames.push(this.props.className);
+        if (this.props.light)
+            classNames.push('background-color--primary-color--fade');
         if (className)
             classNames.push(className);
         return classNames.join(' ');
@@ -44,9 +46,16 @@ class SimpleSpacerLong extends SpacerBase {
     }
 }
 
+class SimpleSpacerCenter extends SpacerBase {
+    getClassName() {
+        return super.getClassName('SimpleSpacer--center');
+    }
+}
+
 // simple spacer exports
 export const SimpleSpacer = {
     Short: SimpleSpacerShort,
     Medium: SimpleSpacerMedium,
-    Long: SimpleSpacerLong
+    Long: SimpleSpacerLong,
+    Center: SimpleSpacerCenter
 };
