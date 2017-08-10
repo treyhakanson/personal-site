@@ -39,3 +39,34 @@
         box-shadow: $top $left $blur $color;
     }
 }
+
+// media queries
+@mixin build-media-query($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin media-query--xs() {
+    @include build-media-query($screen-size--xs) {
+        @content;
+    }
+}
+
+@mixin media-query--sm() {
+    @include build-media-query($screen-size--sm) {
+        @content;
+    }
+}
+
+@mixin media-query--md() {
+    @include build-media-query($screen-size--md) {
+        @content;
+    }
+}
+
+@mixin media-query--lg() {
+    @include build-media-query($screen-size--lg) {
+        @content;
+    }
+}

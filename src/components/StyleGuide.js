@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import { Button, IconButton } from 'components/Button';
 import Code from 'components/Code';
 import { SimpleSpacer } from 'components/Spacer';
+import DownArrow from 'svgs/down-arrow.svg';
 
 const CODE = `\
 // code
@@ -38,7 +39,7 @@ export default class StyleGuide extends Component {
                     <Button.Border className="horiz-spacing--md" text="Click Me" />
                 </div>
                 <div className="bottom-margin--md">
-                    <IconButton className="horiz-spacing--md" />
+                    <IconButton className="horiz-spacing--md" icon={<DownArrow width={40} height={40} />} />
                 </div>
             </div>
         );

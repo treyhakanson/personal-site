@@ -1,0 +1,16 @@
+.Portfolio {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Portfolio__Content {
+    height: 80%;
+    width: 80%;
+    min-width: 300px;
+    padding: 50px;
+    background-color: white;
+}

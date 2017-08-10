@@ -68,3 +68,28 @@
 .text-center {
     text-align: center;
 }
+
+// screen size utils
+.hide--sm {
+    @include media-query--sm {
+        display: none;
+    }
+}
+
+.hide--md {
+    @include media-query--md {
+        display: none;
+    }
+}
+
+.hide--lg {
+    @include media-query--lg {
+        display: none;
+    }
+}
+
+.hide--lg {
+    @include media-query--lg {
+        display: none;
+    }
+}

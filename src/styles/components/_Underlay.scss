@@ -1,0 +1,7 @@
+.Underlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: $primary-color--default;
+    z-index: -1; // to appear below content at same level
+}

@@ -11,14 +11,11 @@ export default class HomePageJumbotron extends Component {
     render() {
         return (
             <div className="HomePageJumbotron">
-                <div className="HomePageJumbotron__Left">
-                    <MainLogo width={200} height={200} />
-                    <h1 className="text-center">Let&apos;s build something.</h1>
-                    <SimpleSpacer.Center light />
-                    <h3 className="text-center">Trey Hakanson, full-stack developer and designer.</h3>
-                    <IconButton className="top-margin--lg" icon={<DownArrow width={40} height={40} />} />
-                </div>
-                <div className="HomePageJumbotron__Right" />
+                <MainLogo width={200} height={200} />
+                <h1 className="text-center">Let&apos;s build something.</h1>
+                <SimpleSpacer.Center light />
+                <h4 className="text-center">Trey Hakanson, full-stack developer and designer.</h4>
+                <IconButton className="top-margin--lg" icon={<DownArrow width={40} height={40} />} />
             </div>
         );
     }
