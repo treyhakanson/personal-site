@@ -4,8 +4,8 @@ import React, { Component, PropTypes } from 'react';
 // custom modules
 import { IconButton } from 'components/Button';
 import { SimpleSpacer } from 'components/Spacer';
-import MainLogo from 'svgs/main-logo.svg';
-import DownArrow from 'svgs/down-arrow.svg';
+import MainLogo from 'assets/svgs/main-logo.svg';
+import DownArrow from 'assets/svgs/down-arrow.svg';
 
 export default class HomePageJumbotron extends Component {
     render() {

@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Button, IconButton } from 'components/Button';
 import Code from 'components/Code';
 import { SimpleSpacer } from 'components/Spacer';
-import DownArrow from 'svgs/down-arrow.svg';
+import DownArrow from 'assets/svgs/down-arrow.svg';
 
 const CODE = `\
 // code

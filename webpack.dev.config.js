@@ -17,7 +17,7 @@ module.exports = {
             containers: 'containers',
             'redux-config': 'redux-config',
             styles: 'styles',
-            svgs: 'svgs',
+            assets: 'assets',
             utils: 'utils',
             routes: 'routes'
         },
