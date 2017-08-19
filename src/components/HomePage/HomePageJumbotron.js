@@ -8,6 +8,18 @@ import MainLogo from 'assets/svgs/main-logo.svg';
 import DownArrow from 'assets/svgs/down-arrow.svg';
 
 export default class HomePageJumbotron extends Component {
+    scrollDown() {
+        const total = window.innerHeight;
+        const increment = total / 15;
+        const interval = setInterval(() => {
+            if (window.scrollY >= total) {
+                clearInterval(interval);
+            } else {
+                window.scrollTo(0, window.scrollY + increment);
+            }
+        }, 10);
+    }
+
     render() {
         return (
             <div className="HomePageJumbotron">
@@ -15,7 +27,9 @@ export default class HomePageJumbotron extends Component {
                 <h1 className="text-center">Let&apos;s build something.</h1>
                 <SimpleSpacer.Center light />
                 <h4 className="text-center">Trey Hakanson, full-stack developer and designer.</h4>
-                <IconButton className="top-margin--lg" icon={<DownArrow width={40} height={40} />} />
+                <IconButton className="top-margin--lg"
+                    icon={<DownArrow width={40} height={40} />}
+                    onClick={this.scrollDown.bind(this)}/>
             </div>
         );
     }

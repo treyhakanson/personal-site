@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import { Button, IconButton } from 'components/Button';
 import Code from 'components/Code';
 import { SimpleSpacer } from 'components/Spacer';
+import AnimatedBar from 'components/AnimatedBar';
 import DownArrow from 'assets/svgs/down-arrow.svg';
 
 const CODE = `\
@@ -30,16 +31,27 @@ export default class StyleGuide extends Component {
                     <Code className="bottom-margin--md" code={CODE} />
                     <p>Inline <span className="code">code</span></p>
                 </div>
-                <div className="bottom-margin--md">
-                    <Button.Modern className="horiz-spacing--md" text="Click Me" />
+                <div className="bottom-margin--md horiz-spacing--md">
+                    <Button.Modern text="Click Me" />
                 </div>
-                <div className="bottom-margin--md">
-                    <Button.Fill className="horiz-spacing--md" text="Click Me" />
+                <div className="bottom-margin--md horiz-spacing--md">
+                    <Button.Fill text="Click Me" />
                     <Button.LightFill className="horiz-spacing--md" text="Click Me" />
-                    <Button.Border className="horiz-spacing--md" text="Click Me" />
+                    <Button.Border text="Click Me" />
                 </div>
-                <div className="bottom-margin--md">
-                    <IconButton className="horiz-spacing--md" icon={<DownArrow width={40} height={40} />} />
+                <div className="bottom-margin--md horiz-spacing--md">
+                    <IconButton icon={<DownArrow width={40} height={40} />} />
+                </div>
+                <div className="bottom-margin--md horiz-spacing--md" style={{
+                    width: '50%'
+                }}>
+                    <AnimatedBar className="bottom-margin--md"
+                        title="Hello World"
+                        subtitle="Look at this progress bar."
+                        fill={50}
+                        speed={1000} />
+                    <AnimatedBar className="bottom-margin--md" fill={25} speed={500} />
+                    <AnimatedBar className="bottom-margin--md" fill={70} />
                 </div>
             </div>
         );

@@ -75,7 +75,8 @@ export class IconButton extends ButtonBase {
 
     render() {
         return (
-            <div className={this.getClassName(['IconButton', 'ModernButton'])}>
+            <div className={this.getClassName(['IconButton', 'ModernButton'])}
+                onClick={this.props.onClick}>
                 <div className="ModernButton__Upper">
                     {React.cloneElement(this.props.icon, {
                         className: 'IconButton__Icon'

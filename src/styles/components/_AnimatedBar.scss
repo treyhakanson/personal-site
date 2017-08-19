@@ -1,0 +1,28 @@
+.AnimatedBar {
+    position: relative;
+    width: 100%;
+    height: #{$animated-bar-height + $animated-bar-offset + 2 * $border-width--default};
+}
+
+.AnimatedBar__FillWrapper {
+    overflow: hidden;
+    height: $animated-bar-height;
+    border: $border-width--default solid $primary-color--default;
+}
+
+.FillWrapper__Fill {
+    height: inherit;
+    background-color: $primary-color--default;
+    width: 0;
+    transition-timing-function: cubic-bezier(0.00, 0.22, 0.65, 1.40);
+}
+
+.AnimatedBar_Shadow {
+    height: 29px; /* $height + 2 * $border-size */
+    width: inherit;
+    background-color: $primary-color--fade;
+    position: absolute;
+    top: $animated-bar-offset;
+    left: $animated-bar-offset;
+    z-index: -1; /* to appear below fill elements */
+}
