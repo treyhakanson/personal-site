@@ -33,8 +33,8 @@ export default class AnimatedBar extends Component {
             <div className="AnimatedBar__Wrapper">
                 {this.props.title && <h4 className="AnimatedBar__Title">{this.props.title}</h4>}
                 {this.props.title && this.props.subtitle && <SimpleSpacer.Short spacing="sm" />}
-                {this.props.subtitle && <p className="AnimatedBar__Subtitle bottom-margin--md">Look at this bar.</p>}
-                <div className={this.getClassName()}>
+                {this.props.subtitle && <p className="AnimatedBar__Subtitle">{this.props.subtitle}</p>}
+                <div className={this.getClassName('top-margin--xs')}>
                     <div className="AnimatedBar__FillWrapper">
                         <div className="FillWrapper__Fill" ref={el => { this.fillEl = el }}/>
                     </div>

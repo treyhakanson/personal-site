@@ -7,6 +7,8 @@ import Code from 'components/Code';
 import { SimpleSpacer } from 'components/Spacer';
 import AnimatedBar from 'components/AnimatedBar';
 import DownArrow from 'assets/svgs/down-arrow.svg';
+import MailIcon from 'assets/svgs/mail-icon.svg';
+import TextInput from 'components/TextInput';
 
 const CODE = `\
 // code
@@ -50,8 +52,25 @@ export default class StyleGuide extends Component {
                         subtitle="Look at this progress bar."
                         fill={50}
                         speed={1000} />
-                    <AnimatedBar className="bottom-margin--md" fill={25} speed={500} />
-                    <AnimatedBar className="bottom-margin--md" fill={70} />
+                    <AnimatedBar className="bottom-margin--md"
+                        title="Hello World"
+                        fill={25}
+                        speed={500} />
+                    <AnimatedBar className="bottom-margin--md"
+                        subtitle="Look at this progress bar."
+                        fill={70} />
+                </div>
+                <div className="bottom-margin--md horiz-spacing--md" style={{
+                    width: '50%'
+                }}>
+                    <TextInput.Line placeholder="Line of text" />
+                    <TextInput.Area placeholder="Large block of text"
+                        lines={5} />
+                </div>
+                <div className="bottom-margin--md horiz-spacing--md">
+                    <div className="fill--primary padding--md display--inline-block">
+                        <MailIcon width={150} height={150} />
+                    </div>
                 </div>
             </div>
         );

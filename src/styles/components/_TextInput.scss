@@ -1,0 +1,19 @@
+.TextInput--Line {
+    border-left: $border-width--default solid $primary-color--default;
+    border-top: none;
+    border-right: none;
+    border-bottom: $border-width--default solid $primary-color--default;
+    display: block;
+    width: 100%;
+    padding: $input-padding--text;
+    outline: none;
+}
+
+.TextInput--Area {
+    border: $border-width--default solid $primary-color--default;
+    display: block;
+    resize: none;
+    width: 100%;
+    padding: $input-padding--text;
+    outline: none;
+}

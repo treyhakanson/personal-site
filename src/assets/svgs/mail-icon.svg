@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 200 135" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1,0,0,1,-2252.76,-2433.11)">
+        <g id="Artboard5" transform="matrix(0.966845,0,0,0.648753,-1325.98,1402.76)">
+            <rect x="3701.46" y="1588.2" width="206.858" height="206.858" style="fill:none;"/>
+            <g transform="matrix(0.44708,0,0,0.866252,2316.49,1123.96)">
+                <g transform="matrix(2.66491,0,0,1.74546,-5077.79,-2633.38)">
+                    <rect x="3095.03" y="1845.67" width="139.302" height="101.225" style="fill:white;fill-opacity:0.101961;"/>
+                </g>
+                <g transform="matrix(2.66491,0,0,2.11978,-5131.09,-3366.64)">
+                    <path d="M3235.25,1846.85L3164.68,1898.13L3094.12,1846.85L3095.95,1844.49L3164.68,1894.44L3233.42,1844.49L3235.25,1846.85Z" style="fill:white;fill-opacity:0.878431;"/>
+                </g>
+                <g transform="matrix(2.66491,0,0,1.74546,-5131.09,-2675.77)">
+                    <path d="M3237.12,1950.17L3092.24,1950.17L3092.24,1842.4L3237.12,1842.4L3237.12,1950.17ZM3095.03,1845.67L3095.03,1946.9L3234.33,1946.9L3234.33,1845.67L3095.03,1845.67Z" style="fill:white;fill-opacity:0.878431;"/>
+                </g>
+                <g transform="matrix(2.66491,0,0,2.11978,-5104.44,-3387.84)">
+                    <path d="M3126.63,1899.6L3096.13,1930.1L3093.93,1928.04L3124.43,1897.55L3126.63,1899.6Z" style="fill:white;fill-opacity:0.878431;"/>
+                </g>
+                <g transform="matrix(1.63179e-16,2.11978,-2.66491,1.29799e-16,8544.66,-5905.24)">
+                    <path d="M3115.62,1906.36L3117.67,1908.55L3087.17,1939.05L3085.12,1936.86L3115.62,1906.36Z" style="fill:white;fill-opacity:0.878431;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

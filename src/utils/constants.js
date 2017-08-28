@@ -4,3 +4,8 @@ export const SPACER_MARGIN = {
         LARGE: 'lg',
         XLARGE: 'xl'
 };
+
+export const SCROLLER_DIRECTION = {
+    TOP: 'top',
+    BOTTOM: 'bottom'
+};

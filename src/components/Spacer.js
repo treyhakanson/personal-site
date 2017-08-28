@@ -2,6 +2,7 @@
 import React, { Component, PropTypes } from 'react';
 
 // custom modules
+import { validateFromObject } from 'utils/proptype-validations';
 import { SPACER_MARGIN } from 'utils/constants';
 
 // TODO: create more complex and ornate spacer options
@@ -9,15 +10,7 @@ import { SPACER_MARGIN } from 'utils/constants';
 class SpacerBase extends Component {
     static propTypes = {
         light: PropTypes.bool,
-        spacing: (props, propName, componentName) => {
-            if (!SPACER_MARGIN[props.spacing]) {
-                return new Error(
-                    `Invalid prop \`${propName}\` supplied to ` +
-                    `\`${componentName}\`. Must be one of: ` +
-                    Object.values(SPACER_MARGIN).map(v => v).join(', ')
-                );
-            }
-        }
+        spacing: validateFromObject(SPACER_MARGIN)
     };
 
     /**

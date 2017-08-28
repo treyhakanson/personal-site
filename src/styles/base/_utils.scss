@@ -1,4 +1,8 @@
 // spacing utils
+.top-margin--xs {
+    margin-top: $top-margin--xs !important;
+}
+
 .top-margin--sm {
     margin-top: $top-margin--sm !important;
 }
@@ -15,6 +19,10 @@
     margin-top: $top-margin--xl !important;
 }
 
+.bottom-margin--xs {
+    margin-bottom: $bottom-margin--xs !important;
+}
+
 .bottom-margin--sm {
     margin-bottom: $bottom-margin--sm !important;
 }
@@ -29,6 +37,11 @@
 
 .bottom-margin--xl {
     margin-bottom: $bottom-margin--xl !important;
+}
+
+.horiz-spacing--xs {
+    margin-left: $horiz-spacing--xs !important;
+    margin-right: $horiz-spacing--xs !important;
 }
 
 .horiz-spacing--sm {
@@ -92,4 +105,40 @@
     @include media-query--lg {
         display: none;
     }
+}
+
+.fill--primary {
+    background-color: $primary-color--default;
+}
+
+.fill--light {
+    background-color: $light-color;
+}
+
+.padding--xs {
+    padding: $padding--xs;
+}
+
+.padding--sm {
+    padding: $padding--sm;
+}
+
+.padding--md {
+    padding: $padding--md;
+}
+
+.padding--lg {
+    padding: $padding--lg;
+}
+
+.padding--xl {
+    padding: $padding--xl;
+}
+
+.display--block {
+    display: block;
+}
+
+.display--inline-block {
+    display: inline-block;
 }
