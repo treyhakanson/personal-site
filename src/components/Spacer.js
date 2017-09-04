@@ -13,6 +13,10 @@ class SpacerBase extends Component {
         spacing: validateFromObject(SPACER_MARGIN)
     };
 
+    static defaultProps = {
+        spacing: SPACER_MARGIN.SMALL    
+    };
+
     /**
      * getClassName - meant to be override in subclasses; should return the
      * desired className

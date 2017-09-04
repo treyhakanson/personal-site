@@ -9,7 +9,8 @@ import DownArrow from 'assets/svgs/down-arrow.svg';
 
 export default class HomePageJumbotron extends Component {
     scrollDown() {
-        const total = window.innerHeight;
+        const total = Math.min(window.innerHeight,
+            document.body.scrollHeight - window.innerHeight);
         const increment = total / 15;
         const interval = setInterval(() => {
             if (window.scrollY >= total) {
