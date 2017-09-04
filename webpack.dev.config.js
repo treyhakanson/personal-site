@@ -28,12 +28,7 @@ module.exports = {
             {
                 test: /\.(svg)$/,
                 loaders: [
-                    {
-                        loader: 'babel-loader',
-                        query: {
-                            presets: ['es2015', 'react', 'stage-1']
-                        }
-                    },
+                    { loader: 'babel-loader' },
                     {
                         loader: 'react-svg-loader',
                         query: {
