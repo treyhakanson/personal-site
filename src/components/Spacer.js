@@ -2,7 +2,6 @@
 import React, { Component, PropTypes } from 'react';
 
 // custom modules
-import { validateFromObject } from 'utils/proptype-validations';
 import { SPACER_MARGIN } from 'utils/constants';
 
 // TODO: create more complex and ornate spacer options
@@ -10,11 +9,11 @@ import { SPACER_MARGIN } from 'utils/constants';
 class SpacerBase extends Component {
     static propTypes = {
         light: PropTypes.bool,
-        spacing: validateFromObject(SPACER_MARGIN)
+        spacing: PropTypes.oneOf(Object.values(SPACER_MARGIN))
     };
 
     static defaultProps = {
-        spacing: SPACER_MARGIN.SMALL    
+        spacing: SPACER_MARGIN.SMALL
     };
 
     /**

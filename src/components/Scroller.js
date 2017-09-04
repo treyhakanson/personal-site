@@ -3,12 +3,11 @@ import React, { Component, PropTypes } from 'react';
 
 // custom modules
 import DownArrow from 'assets/svgs/down-arrow.svg';
-import { validateFromObject } from 'utils/proptype-validations';
 import { SCROLLER_DIRECTION } from 'utils/constants';
 
 export default class Scroller extends Component {
     static propTypes = {
-        to: validateFromObject(SCROLLER_DIRECTION),
+        to: PropTypes.oneOf(Object.values(SCROLLER_DIRECTION)),
         amount: PropTypes.number
     };
 
@@ -27,7 +26,7 @@ export default class Scroller extends Component {
     }
 
     activateScroller() {
-        
+
     }
 
     render() {

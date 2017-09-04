@@ -20,7 +20,6 @@ class ButtonBase extends Component {
 
 class ModernButton extends ButtonBase {
     render() {
-        console.log(this.getClassName);
         return (
             <div className={this.getClassName('ModernButton')}
                 onClick={this.props.onClick}>

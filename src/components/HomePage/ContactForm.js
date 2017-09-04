@@ -1,5 +1,6 @@
 // external modules
 import React, { Component, PropTypes } from 'react';
+import axios from 'axios';
 
 // custom modules
 import Input from 'components/TextInput';
@@ -7,6 +8,27 @@ import { SimpleSpacer } from 'components/Spacer';
 import { Button } from 'components/Button';
 
 export default class ContactForm extends Component {
+    submitContactForm() {
+        axios.post('http://localhost:8000/api/v1/contact-form', {
+            ...this.state
+        }).then(console.log)
+        .catch(console.error);
+    }
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: '',
+            email: '',
+            message: ''
+        };
+    }
+
+    valueUpdated(key, val) {
+        this.setState({ [key]: val });
+    }
+
     render() {
         return (
             <div className="ContactForm padding--md">
@@ -14,11 +36,21 @@ export default class ContactForm extends Component {
                     <h2>Contact</h2>
                     <SimpleSpacer.Medium />
                     <p className="bottom-margin--md">Drop me a line and I'll get back to you as soon as I can</p>
-                    <Input.Line placeholder="Name" />
-                    <Input.Line placeholder="Email" />
+                    <Input.Line placeholder="Name"
+                        value={this.state.name}
+                        onChange={val => this.valueUpdated('name', val)}
+                        required />
+                    <Input.Line placeholder="Email"
+                        value={this.state.email}
+                        onChange={val => this.valueUpdated('email', val)}
+                        required />
                     <Input.Area placeholder="Message"
-                        lines={5}/>
-                        <Button.Modern text="Send" />
+                        lines={5}
+                        value={this.state.message}
+                        onChange={val => this.valueUpdated('message', val)}
+                        required />
+                        <Button.Modern text="Send"
+                            onClick={this.submitContactForm.bind(this)}/>
                 </div>
             </div>
         );

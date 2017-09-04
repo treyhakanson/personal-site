@@ -4,7 +4,7 @@
   "description": "My personal site, an ongoing projects",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon api/index.js --exec babel-node",
+    "start": "NODE_ENV=development nodemon api/index.js --exec babel-node",
     "dev": "webpack-dev-server --config ./webpack.dev.config.js --define process.env.NODE_ENV=\"'development'\" --hot"
   },
   "author": "Trey Hakanson",
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "highlight.js": "^9.12.0",
     "react": "^15.6.1",
