@@ -32,10 +32,11 @@ export function buildGetClassName(initialClassNames) {
      */
     return function(additionalClassNames) {
         additionalClassNames = cleanClassNames(additionalClassNames);
+        let finalClassNames = [];
         if (additionalClassNames)
-            Array.prototype.push.apply(initialClassNames, additionalClassNames);
+            finalClassNames = initialClassNames.concat(additionalClassNames);
         if (this.props.className)
-            initialClassNames.push(this.props.className);
-        return initialClassNames.join(' ');
+            finalClassNames = [...initialClassNames, this.props.className];
+        return finalClassNames.join(' ');
     };
 }

@@ -48,7 +48,6 @@ class Input extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             error: false
         };
@@ -90,7 +89,6 @@ class Area extends Component {
 
     constructor(props) {
         super(props);
-
         this.state = {
             error: false
         };

@@ -2,7 +2,7 @@
 import React, { Component, PropTypes } from 'react';
 
 // custom modules
-import { buildGetClassName } from 'utils/classNames';
+import { buildGetClassName } from 'utils/class-names';
 
 // Button
 class ButtonBase extends Component {

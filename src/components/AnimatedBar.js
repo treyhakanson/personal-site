@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 
 // custom modules
 import { SimpleSpacer } from 'components/Spacer';
-import { buildGetClassName } from 'utils/classNames';
+import { buildGetClassName } from 'utils/class-names';
 
 export default class AnimatedBar extends Component {
     static propTypes = {
