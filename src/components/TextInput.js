@@ -4,6 +4,66 @@ import React, { Component, PropTypes } from 'react';
 // custom modules
 import { INPUT_TYPES } from 'utils/constants';
 
+/**
+ * TextInputBase - An abstract class upon which the other text inputs are built.
+ * Provides error styling, basic propType validations, and basic defaultProps.
+ * @extends Component
+ */
+class TextInputBase extends Component {
+    static propTypes = {
+        placeholder: PropTypes.string,
+        onChange: PropTypes.func,
+        onBlur: PropTypes.func,
+        required: PropTypes.bool
+    }
+
+    static defaultProps = {
+        type: 'text',
+        value: '',
+        required: false
+    };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            error: false
+        };
+    }
+
+    /**
+     * onChange - fires on change of a text inputs value, applying error styles
+     * if needed and invoking the `onChange` callback on the `props` object, if
+     * needed.
+     *
+     * @param {string} val the new value of the input field
+     */
+    onChange({ target: { value: val } }) {
+        this.setState({ error: !val && this.props.required });
+        this.props.onChange && this.props.onChange(val);
+    }
+
+    /**
+     * onChange - fires on blurring of a text input, applying error styles if
+     * needed and invoking the `onBlur` callback on the `props` object, if
+     * needed.
+     *
+     * @param {string} val the new value of the input field
+     */
+    onBlur({ target: { value: val } }) {
+        this.setState({ error: !val && this.props.required });
+        this.props.onBlur && this.props.onBlur(val);
+    }
+}
+
+/**
+ * verifyValueProp - A proptype validation that ensures that a given
+ * `value` prop's type matches the expected type, as per the
+ * `type` prop.
+ *
+ * @param {type} props         the props
+ * @param {type} propName      the name of the prop in question
+ * @param {type} componentName the name of the component
+ */
 function verifyValueProp(props, propName, componentName) {
     if (props[propName] == undefined) return new Error(
             '`' + propName + '` must be supplied to' +
@@ -31,40 +91,14 @@ function verifyValueProp(props, propName, componentName) {
     }
 }
 
-class InputBase extends Component {
+/**
+ * Input - A single line input field.
+ * @extends TextInputBase
+ */
+class Input extends TextInputBase {
     static propTypes = {
+        ...TextInputBase.propTypes,
         type: PropTypes.oneOf(Object.values(INPUT_TYPES)),
-        placeholder: PropTypes.string,
-        onChange: PropTypes.func,
-        required: PropTypes.bool
-    }
-
-    static defaultProps = {
-        type: 'text',
-        value: '',
-        required: false
-    };
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: false
-        };
-    }
-
-    valueChanged({ target: { value: val } }) {
-        this.setState({ error: !val && this.props.required });
-        this.props.onChange && this.props.onChange(val);
-    }
-
-    onBlur({ target: { value: val } }) {
-        this.setState({ error: !val && this.props.required });
-    }
-}
-
-class Input extends InputBase {
-    static propTypes = {
-        ...InputBase.propTypes,
         value: verifyValueProp
     };
 
@@ -78,15 +112,19 @@ class Input extends InputBase {
                 type={this.props.type}
                 placeholder={this.props.placeholder}
                 value={this.props.value}
-                onChange={this.valueChanged.bind(this)}
+                onChange={this.onChange.bind(this)}
                 onBlur={this.onBlur.bind(this)} />
         );
     }
 }
 
-class Area extends InputBase {
+/**
+ * Area - A text area input.
+ * @extends TextInputBase
+ */
+class Area extends TextInputBase {
     static propTypes = {
-        ...InputBase.propTypes,
+        ...TextInputBase.propTypes,
         value: PropTypes.string
     };
 
@@ -100,11 +138,12 @@ class Area extends InputBase {
                 rows={this.props.lines}
                 placeholder={this.props.placeholder}
                 value={this.props.value}
-                onChange={this.valueChanged.bind(this)}
+                onChange={this.onChange.bind(this)}
                 onBlur={this.onBlur.bind(this)} />
         );
     }
 }
+
 
 export default {
     Line: Input,
