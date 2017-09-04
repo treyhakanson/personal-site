@@ -31,14 +31,13 @@ function verifyValueProp(props, propName, componentName) {
     }
 }
 
-class Input extends Component {
+class InputBase extends Component {
     static propTypes = {
         type: PropTypes.oneOf(Object.values(INPUT_TYPES)),
         placeholder: PropTypes.string,
         onChange: PropTypes.func,
-        required: PropTypes.bool,
-        value: verifyValueProp
-    };
+        required: PropTypes.bool
+    }
 
     static defaultProps = {
         type: 'text',
@@ -58,6 +57,17 @@ class Input extends Component {
         this.props.onChange && this.props.onChange(val);
     }
 
+    onBlur({ target: { value: val } }) {
+        this.setState({ error: !val && this.props.required });
+    }
+}
+
+class Input extends InputBase {
+    static propTypes = {
+        ...InputBase.propTypes,
+        value: verifyValueProp
+    };
+
     render() {
         const classNames = ['TextInput--Line', 'bottom-margin--md'];
         if (this.state.error)
@@ -68,36 +78,17 @@ class Input extends Component {
                 type={this.props.type}
                 placeholder={this.props.placeholder}
                 value={this.props.value}
-                onChange={this.valueChanged.bind(this)} />
+                onChange={this.valueChanged.bind(this)}
+                onBlur={this.onBlur.bind(this)} />
         );
     }
 }
 
-class Area extends Component {
+class Area extends InputBase {
     static propTypes = {
-        placeholder: PropTypes.string,
-        lines: PropTypes.number,
-        onChange: PropTypes.func,
-        value: PropTypes.string,
-        required: PropTypes.bool
+        ...InputBase.propTypes,
+        value: PropTypes.string
     };
-
-    static defaultProps = {
-        value: '',
-        required: false
-    };
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: false
-        };
-    }
-
-    valueChanged({ target: { value: val } }) {
-        this.setState({ error: !val && this.props.required });
-        this.props.onChange && this.props.onChange(val);
-    }
 
     render() {
         const classNames = ['TextInput--Area', 'bottom-margin--md'];
@@ -109,7 +100,8 @@ class Area extends Component {
                 rows={this.props.lines}
                 placeholder={this.props.placeholder}
                 value={this.props.value}
-                onChange={this.valueChanged.bind(this)} />
+                onChange={this.valueChanged.bind(this)}
+                onBlur={this.onBlur.bind(this)} />
         );
     }
 }
