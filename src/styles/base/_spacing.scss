@@ -1,0 +1,76 @@
+// general spacing classes
+@each $type in ("margin", "padding") {
+    .#{$type}--none {
+        @include build-all-dimen($type, 0);
+    }
+
+    .#{$type}-all--xs {
+        @include build-all-dimen($type, $sp--xs);
+    }
+
+    .#{$type}-all--sm {
+        @include build-all-dimen($type, $sp--sm);
+    }
+
+    .#{$type}-all--md {
+        @include build-all-dimen($type, $sp--md);
+    }
+
+    .#{$type}-all--lg {
+        @include build-all-dimen($type, $sp--lg);
+    }
+
+    .#{$type}-all--xl {
+        @include build-all-dimen($type, $sp--xl);
+    }
+    @each $dimen in ("top", "right", "bottom", "left") {
+        .#{$type}-#{$dimen}--none {
+            #{$type}-#{$dimen}: 0 !important;
+        }
+
+        .#{$type}-#{$dimen}--xs {
+            #{$type}-#{$dimen}: $sp--xs !important;
+        }
+
+        .#{$type}-#{$dimen}--sm {
+            #{$type}-#{$dimen}: $sp--sm !important;
+        }
+
+        .#{$type}-#{$dimen}--md {
+            #{$type}-#{$dimen}: $sp--md !important;
+        }
+
+        .#{$type}-#{$dimen}--lg {
+            #{$type}-#{$dimen}: $sp--lg !important;
+        }
+
+        .#{$type}-#{$dimen}--xl {
+            #{$type}-#{$dimen}: $sp--xl !important;
+        }
+    }
+}
+// miscellaneous spacing utils
+.horiz-spacing--xs {
+    margin-left: $horiz-spacing--xs !important;
+    margin-right: $horiz-spacing--xs !important;
+}
+
+.horiz-spacing--sm {
+    margin-left: $horiz-spacing--sm !important;
+    margin-right: $horiz-spacing--sm !important;
+}
+
+.horiz-spacing--md {
+    margin-left: $horiz-spacing--md !important;
+    margin-right: $horiz-spacing--md !important;
+}
+
+.horiz-spacing--lg {
+    margin-left: $horiz-spacing--lg !important;
+    margin-right: $horiz-spacing--lg !important;
+}
+
+.horiz-spacing--xl {
+    margin-left: $horiz-spacing--xl !important;
+    margin-right: $horiz-spacing--xl !important;
+}

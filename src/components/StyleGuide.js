@@ -25,49 +25,49 @@ export default class StyleGuide extends Component {
                     <SimpleSpacer.Short />
                     <SimpleSpacer.Medium />
                     <SimpleSpacer.Long />
-                    <h1 className="bottom-margin--md">Heading 1</h1>
-                    <h2 className="bottom-margin--md">Heading 2</h2>
-                    <h3 className="bottom-margin--md">Sub Heading 1</h3>
-                    <h4 className="bottom-margin--md">Sub Heading 2</h4>
-                    <p className="bottom-margin--md">Regular Text</p>
-                    <Code className="bottom-margin--md" code={CODE} />
+                    <h1 className="margin-bottom--md">Heading 1</h1>
+                    <h2 className="margin-bottom--md">Heading 2</h2>
+                    <h3 className="margin-bottom--md">Sub Heading 1</h3>
+                    <h4 className="margin-bottom--md">Sub Heading 2</h4>
+                    <p className="margin-bottom--md">Regular Text</p>
+                    <Code className="margin-bottom--md" code={CODE} />
                     <p>Inline <span className="code">code</span></p>
                 </div>
-                <div className="bottom-margin--md horiz-spacing--md">
+                <div className="margin-bottom--md horiz-spacing--md">
                     <Button.Modern text="Click Me" />
                 </div>
-                <div className="bottom-margin--md horiz-spacing--md">
+                <div className="margin-bottom--md horiz-spacing--md">
                     <Button.Fill text="Click Me" />
                     <Button.LightFill className="horiz-spacing--md" text="Click Me" />
                     <Button.Border text="Click Me" />
                 </div>
-                <div className="bottom-margin--md horiz-spacing--md">
+                <div className="margin-bottom--md horiz-spacing--md">
                     <IconButton icon={<DownArrow width={40} height={40} />} />
                 </div>
-                <div className="bottom-margin--md horiz-spacing--md" style={{
+                <div className="margin-bottom--md horiz-spacing--md" style={{
                     width: '50%'
                 }}>
-                    <AnimatedBar className="bottom-margin--md"
+                    <AnimatedBar className="margin-bottom--md"
                         title="Hello World"
                         subtitle="Look at this progress bar."
                         fill={50}
                         speed={1000} />
-                    <AnimatedBar className="bottom-margin--md"
+                    <AnimatedBar className="margin-bottom--md"
                         title="Hello World"
                         fill={25}
                         speed={500} />
-                    <AnimatedBar className="bottom-margin--md"
+                    <AnimatedBar className="margin-bottom--md"
                         subtitle="Look at this progress bar."
                         fill={70} />
                 </div>
-                <div className="bottom-margin--md horiz-spacing--md" style={{
+                <div className="margin-bottom--md horiz-spacing--md" style={{
                     width: '50%'
                 }}>
                     <TextInput.Line placeholder="Line of text" />
                     <TextInput.Area placeholder="Large block of text"
                         lines={5} />
                 </div>
-                <div className="bottom-margin--md horiz-spacing--md">
+                <div className="margin-bottom--md horiz-spacing--md">
                     <div className="fill--primary padding--md display--inline-block">
                         <MailIcon width={150} height={150} />
                     </div>

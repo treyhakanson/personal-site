@@ -6,12 +6,10 @@ My personal site built with React, Node.js, PostgreSQL, and Nginx.
 
 ## Setup
 
-1. Run Nginx with the configuration in `nginx.conf`:
+1. Run Nginx via the utility script `init_nginx.sh`:
 
 ```sh
-nginx                           # start nginx
-nginx -c /path/to/nginx.conf    # set configuration
-nginx -s reload                 # reload Nginx
+bash init_nginx.sh
 ```
 
 2. Install Node modules:

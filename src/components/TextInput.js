@@ -103,7 +103,7 @@ class Input extends TextInputBase {
     };
 
     render() {
-        const classNames = ['TextInput--Line', 'bottom-margin--md'];
+        const classNames = ['TextInput--Line', 'margin-bottom--md'];
         if (this.state.error)
             classNames.push('TextInput--error');
 
@@ -129,7 +129,7 @@ class Area extends TextInputBase {
     };
 
     render() {
-        const classNames = ['TextInput--Area', 'bottom-margin--md'];
+        const classNames = ['TextInput--Area', 'margin-bottom--md'];
         if (this.state.error)
             classNames.push('TextInput--error');
 

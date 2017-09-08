@@ -35,11 +35,11 @@ export default class ContactForm extends Component {
 
     render() {
         return (
-            <div className="ContactForm padding--md">
+            <div className="ContactForm padding-all--md">
                 <div className="ContactForm__FormContent">
                     <h2>Contact</h2>
                     <SimpleSpacer.Medium />
-                    <p className="bottom-margin--md">Drop me a line and I'll get back to you as soon as I can</p>
+                    <p className="margin-bottom--md">Drop me a line and I'll get back to you as soon as I can</p>
                     <Input.Line placeholder="Name"
                         value={this.state.name}
                         onChange={val => this.valueUpdated('name', val)}

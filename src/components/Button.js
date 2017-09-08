@@ -4,17 +4,27 @@ import React, { Component, PropTypes } from 'react';
 // custom modules
 import { buildGetClassName } from 'utils/class-names';
 
+// TODO: add "link" prop
+
 // Button
 class ButtonBase extends Component {
     static propTypes = {
         text: PropTypes.string.isRequired,
+        center: PropTypes.bool.isRequired,
         className: PropTypes.string,
         onClick: PropTypes.func
     };
 
+    static defaultProps = {
+        center: false
+    };
+
     constructor(props) {
         super(props);
-        this.getClassName = buildGetClassName('ButtonBase');
+        let className = 'ButtonBase';
+        if (props.center)
+            className += '--center'
+        this.getClassName = buildGetClassName(className);
     }
 }
 

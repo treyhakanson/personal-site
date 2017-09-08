@@ -1,69 +1,3 @@
-// spacing utils
-.top-margin--xs {
-    margin-top: $top-margin--xs !important;
-}
-
-.top-margin--sm {
-    margin-top: $top-margin--sm !important;
-}
-
-.top-margin--md {
-    margin-top: $top-margin--md !important;
-}
-
-.top-margin--lg {
-    margin-top: $top-margin--lg !important;
-}
-
-.top-margin--xl {
-    margin-top: $top-margin--xl !important;
-}
-
-.bottom-margin--xs {
-    margin-bottom: $bottom-margin--xs !important;
-}
-
-.bottom-margin--sm {
-    margin-bottom: $bottom-margin--sm !important;
-}
-
-.bottom-margin--md {
-    margin-bottom: $bottom-margin--md !important;
-}
-
-.bottom-margin--lg {
-    margin-bottom: $bottom-margin--lg !important;
-}
-
-.bottom-margin--xl {
-    margin-bottom: $bottom-margin--xl !important;
-}
-
-.horiz-spacing--xs {
-    margin-left: $horiz-spacing--xs !important;
-    margin-right: $horiz-spacing--xs !important;
-}
-
-.horiz-spacing--sm {
-    margin-left: $horiz-spacing--sm !important;
-    margin-right: $horiz-spacing--sm !important;
-}
-
-.horiz-spacing--md {
-    margin-left: $horiz-spacing--md !important;
-    margin-right: $horiz-spacing--md !important;
-}
-
-.horiz-spacing--lg {
-    margin-left: $horiz-spacing--lg !important;
-    margin-right: $horiz-spacing--lg !important;
-}
-
-.horiz-spacing--xl {
-    margin-left: $horiz-spacing--xl !important;
-    margin-right: $horiz-spacing--xl !important;
-}
-
 // inline code styling
 .code {
     background-color: $code-background-color;
@@ -115,30 +49,24 @@
     background-color: $light-color;
 }
 
-.padding--xs {
-    padding: $padding--xs;
-}
-
-.padding--sm {
-    padding: $padding--sm;
-}
-
-.padding--md {
-    padding: $padding--md;
-}
-
-.padding--lg {
-    padding: $padding--lg;
-}
-
-.padding--xl {
-    padding: $padding--xl;
-}
-
 .display--block {
     display: block;
 }
 
 .display--inline-block {
     display: inline-block;
+}
+
+// content alignment
+[class*="align-content"] {
+    display: flex;
+
+    &[class*="--center"] {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &[class*="--col"] {
+        flex-direction: column;
+    }
 }

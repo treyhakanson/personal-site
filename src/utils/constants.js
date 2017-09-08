@@ -9,6 +9,7 @@ export const SCROLLER_DIRECTION = {
 };
 
 export const SPACER_MARGIN = {
+    XSMALL: 'xs',
     SMALL: 'sm',
     MEDIUM: 'md',
     LARGE: 'lg',

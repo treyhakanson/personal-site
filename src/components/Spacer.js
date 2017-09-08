@@ -29,7 +29,7 @@ class SpacerBase extends Component {
         if (this.props.light)
             classNames.push('background-color--primary-color--fade');
         if (this.props.spacing)
-            classNames.push(`top-margin--${this.props.spacing} bottom-margin--${this.props.spacing}`);
+            classNames.push(`margin-top--${this.props.spacing} margin-bottom--${this.props.spacing}`);
         if (className)
             classNames.push(className);
 

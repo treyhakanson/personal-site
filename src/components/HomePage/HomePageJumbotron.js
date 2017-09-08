@@ -28,7 +28,7 @@ export default class HomePageJumbotron extends Component {
                 <h1 className="text-center">Let&apos;s build something.</h1>
                 <SimpleSpacer.Center light />
                 <h4 className="text-center">Trey Hakanson, full-stack developer and designer.</h4>
-                <IconButton className="top-margin--lg"
+                <IconButton className="margin-top--lg"
                     icon={<DownArrow width={40} height={40} />}
                     onClick={this.scrollDown.bind(this)}/>
             </div>

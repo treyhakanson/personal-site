@@ -27,7 +27,7 @@
         $code-font-style, $font-size);
 }
 
-// browser compatibility mixins
+// shadows
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
     @if $inset {
         -webkit-box-shadow:inset $top $left $blur $color;
@@ -42,7 +42,7 @@
 
 // media queries
 @mixin build-media-query($size) {
-    @media screen and (max-width: $size) {
+    @media screen and (min-width: $size) {
         @content;
     }
 }
@@ -69,4 +69,12 @@
     @include build-media-query($screen-size--lg) {
         @content;
     }
+}
+
+// spacing mixins
+@mixin build-all-dimen($type, $sp) {
+    #{$type}-top: $sp !important;
+    #{$type}-right: $sp !important;
+    #{$type}-bottom: $sp !important;
+    #{$type}-left: $sp !important;
 }

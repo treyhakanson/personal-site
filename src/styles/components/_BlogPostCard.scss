@@ -1,0 +1,16 @@
+.BlogPostCard {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $sp--md;
+
+    @include media-query--md {
+        width: 30%;
+        float: left;
+
+        &:not(:first-of-type) {
+            margin-left: 5%;
+        }
+    }
+
+}
