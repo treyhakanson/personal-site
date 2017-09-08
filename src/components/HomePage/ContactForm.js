@@ -6,10 +6,14 @@ import axios from 'axios';
 import Input from 'components/TextInput';
 import { SimpleSpacer } from 'components/Spacer';
 import { Button } from 'components/Button';
+import { SHARED_CONSTANTS } from 'utils/constants';
+
+// pull off required shared constants
+const { API_INFO } = SHARED_CONSTANTS;
 
 export default class ContactForm extends Component {
     submitContactForm() {
-        axios.post('http://localhost:8000/api/v1/contact-form', {
+        axios.post(`/api/v${API_INFO.VERSION}/contact-form/submit`, {
             ...this.state
         }).then(console.log)
         .catch(console.error);

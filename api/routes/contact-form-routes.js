@@ -1,10 +1,26 @@
 // custom modules
-import { API_INFO } from '../utils/constants';
+import SHARED_CONSTANTS from '../../constants.js';
+import pool from '../db';
+
+// pull off required shared constants
+const { API_INFO } = SHARED_CONSTANTS;
 
 function submitContactForm(req, res) {
     const { name, email, message } = req.body;
-    console.log(name, email, message);
-    res.json({ success: true });
+
+    pool.query(`
+        INSERT INTO contact_form (
+            name, email, message
+        ) VALUEs (
+            $1, $2, $3
+        )
+    `, [name, email, message])
+        .then(() => {
+            res.json({ success: true });
+        }).catch(err => {
+            console.log(err);
+            res.json({ success: false });
+        });
 }
 
 export default function(app) {

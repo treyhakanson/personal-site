@@ -6,7 +6,10 @@ import bodyParser from 'body-parser';
 // custom modules
 import devRoutes from './routes/dev-routes';
 import contactFormRoutes from './routes/contact-form-routes';
-import { API_INFO } from './utils/constants';
+import SHARED_CONSTANTS from '../constants.js';
+
+// pulling off required shared constants
+const { API_INFO } = SHARED_CONSTANTS;
 
 const app = express();
 app.use(bodyParser.json());

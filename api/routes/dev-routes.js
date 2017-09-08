@@ -1,5 +1,8 @@
 // custom modules
-import { API_INFO } from '../utils/constants';
+import SHARED_CONSTANTS from '../../constants.js';
+
+// pull off required shared constants
+const { API_INFO } = SHARED_CONSTANTS;
 
 function helloWorld(req, res) {
     res.send('Hello World!');
