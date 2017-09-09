@@ -85,18 +85,46 @@
 }
 
 // fill button
-.FillButton {
+[class*="FillButton"] {
     border-radius: $border-radius--default;
-    border: $border-width--default solid $primary-color--default;
-    background-color: $primary-color--default;
-    color: $light-color;
+    border-width: $border-width--default;
+    border-style: solid;
+
+
+    &[class*="--light"] {
+        background-color: $light-color;
+        border-color: $primary-color--default;
+        color: $primary-color--default;
+        &:hover {
+            border-color: rgba($primary-color--default, 0.75);
+            background-color: rgba($light-color, 0.75);
+        }
+    }
+
+    &[class*="--medium"] {
+        background-color: $primary-color--fade;
+        border-color: $primary-color--default;
+        color: $primary-color--default;
+        &:hover {
+            border-color: rgba($primary-color--default, 0.75);
+            background-color: rgba($primary-color--fade, 0.75);
+        }
+    }
+
+    &[class*="--dark"] {
+        background-color: $primary-color--default;
+        border-color: $primary-color--default;
+        color: $light-color;
+        &:hover {
+            border-color: rgba($primary-color--default, 0.75);
+            background-color: rgba($primary-color--default, 0.75);
+        }
+    }
 
     &:hover {
         cursor: pointer;
         font-size: $button-font-size--active;
         transition: $transition-speed--active;
-        border-color: rgba($primary-color--default, 0.75);
-        background-color: rgba($primary-color--default, 0.75);
     }
 }
 

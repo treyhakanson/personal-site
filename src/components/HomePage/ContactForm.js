@@ -6,23 +6,34 @@ import axios from 'axios';
 import Input from 'components/TextInput';
 import { SimpleSpacer } from 'components/Spacer';
 import { Button } from 'components/Button';
-import { SHARED_CONSTANTS } from 'utils/constants';
+import Loader from 'components/Loader';
+import { STATUS, SHARED_CONSTANTS } from 'utils/constants';
 
 // pull off required shared constants
 const { API_INFO } = SHARED_CONSTANTS;
 
 export default class ContactForm extends Component {
     submitContactForm() {
-        axios.post(`/api/v${API_INFO.VERSION}/contact-form/submit`, {
-            ...this.state
-        }).then(console.log)
-        .catch(console.error);
+        if (this.state.name && this.state.email && this.state.message) {
+            this.setState({ status: STATUS.LOADING });
+            axios.post(`/api/v${API_INFO.VERSION}/contact-form/submit`, {
+                ...this.state
+            }).then(({ data }) => {
+                this.setState({ status: STATUS.SUCCESS });
+                console.log(data);
+            }).catch(err => {
+                this.setState({ status: STATUS.ERROR });
+                console.error(err);
+            });
+        }
+
     }
 
     constructor(props) {
         super(props);
 
         this.state = {
+            status: STATUS.IDLE,
             name: '',
             email: '',
             message: ''
@@ -34,6 +45,7 @@ export default class ContactForm extends Component {
     }
 
     render() {
+        console.log(this.state.status);
         return (
             <div className="ContactForm padding-all--md">
                 <div className="ContactForm__FormContent">
@@ -53,8 +65,12 @@ export default class ContactForm extends Component {
                         value={this.state.message}
                         onChange={val => this.valueUpdated('message', val)}
                         required />
-                        <Button.Modern text="Send"
-                            onClick={this.submitContactForm.bind(this)}/>
+                    <Button.Modern text="Send"
+                        onClick={this.submitContactForm.bind(this)}
+                        disabled={this.state.status !== STATUS.IDLE} />
+                    {this.state.status === STATUS.LOADING && <Loader />}
+                    {this.state.status === STATUS.SUCCESS && <div className="Block--success">Your data has been received; thanks!</div>}
+                    {this.state.status === STATUS.ERROR && <div className="Block--error">An error occurred, please try again later.</div>}
                 </div>
             </div>
         );

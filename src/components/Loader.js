@@ -6,7 +6,7 @@ export default class Loader extends Component {
 
     render() {
         return (
-            <div className="Loader"></div>
+            <div className="Loader">Loading...</div>
         );
     }
 }

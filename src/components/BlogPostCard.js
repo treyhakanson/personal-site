@@ -21,7 +21,8 @@ export default class BlogPostCard extends Component {
                 <SimpleSpacer.Short spacing="sm" />
                 <p>{this.props.hook}</p>
                 <Button.Border className="margin-top--sm"
-                    text="Read More" />
+                    text="Read More"
+                    link={`/blog/${this.props.title.replace(' ', '-').toLowerCase()}`} />
             </div>
         );
     }

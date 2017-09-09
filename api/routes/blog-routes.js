@@ -16,7 +16,8 @@ function getTopPosts(req, res) {
                author_img AS authorimage,
                blog_body AS blogbody
             FROM blog_posts
-            LIMIT 3;
+            ORDER BY tm DESC
+        LIMIT 3;
     `, [])
         .then(({ rows }) => {
             res.json(rows);
@@ -26,6 +27,34 @@ function getTopPosts(req, res) {
         });
 }
 
+function getBlogPost(req, res) {
+    const { blogTitle } = req.params;
+    pool.query(`
+        SELECT id,
+               tm AS date,
+               title,
+               hook,
+               banner_img AS bannerimage,
+               author_name AS authorname,
+               author_img AS authorimage,
+               blog_body AS blogbody
+            FROM blog_posts
+            WHERE LOWER(title) = LOWER($1)
+        LIMIT 1;
+    `, [blogTitle.replace('-', ' ')])
+        .then(({ rows }) => {
+            if (rows.length) {
+                res.json(rows[0]);
+            } else {
+                res.status(404).json({ error: 'post does not exist' });
+            }
+        }).catch(err => {
+            console.log(err);
+            res.json({ success: false });
+        });
+}
+
 export default function(app) {
     app.get(`/v${API_INFO.VERSION}/blog/get-top-posts`, getTopPosts);
+    app.get(`/v${API_INFO.VERSION}/blog/get-post/:blogTitle`, getBlogPost);
 };

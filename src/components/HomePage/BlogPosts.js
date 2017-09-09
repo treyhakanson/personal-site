@@ -46,7 +46,9 @@ export default class BlogPosts extends Component {
                             date={post.date} />
                     )}
                 </div>}
-                <Button.LightFill text="Go to Blog" center />
+                <Button.Light text="Go to Blog"
+                    link="/blog"
+                    center />
             </div>
         );
     }

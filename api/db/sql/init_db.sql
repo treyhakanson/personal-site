@@ -10,7 +10,7 @@ CREATE TABLE contact_form (
 CREATE TABLE blog_posts (
         id SERIAL PRIMARY KEY,
         tm TIMESTAMP NOT NULL,
-        title VARCHAR(60) NOT NULL,
+        title VARCHAR(60) UNIQUE NOT NULL,
         hook VARCHAR(155) NOT NULL,
         banner_img VARCHAR(60) NOT NULL,
         author_name VARCHAR(60) NOT NULL,

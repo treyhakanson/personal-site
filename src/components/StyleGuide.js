@@ -37,8 +37,9 @@ export default class StyleGuide extends Component {
                     <Button.Modern text="Click Me" />
                 </div>
                 <div className="margin-bottom--md horiz-spacing--md">
-                    <Button.Fill text="Click Me" />
-                    <Button.LightFill className="horiz-spacing--md" text="Click Me" />
+                    <Button.Dark className="margin-right--sm" text="Click Me" />
+                    <Button.Medium className="margin-right--sm" text="Click Me" />
+                    <Button.Light className="margin-right--sm" text="Click Me" />
                     <Button.Border text="Click Me" />
                 </div>
                 <div className="margin-bottom--md horiz-spacing--md">

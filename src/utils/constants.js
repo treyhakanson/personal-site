@@ -16,4 +16,19 @@ export const SPACER_MARGIN = {
     XLARGE: 'xl'
 };
 
+export const STATUS = {
+    IDLE: 'idle',
+    LOADING: 'loading',
+    SUCCESS: 'success',
+    ERROR: 'error'
+};
+
+export const ELEMENT_TYPES = {
+    TEXT: 'text',
+    LINK: 'link',
+    QUOTE: 'quote',
+    IMAGE: 'image',
+    CODE: 'code'
+};
+
 export { default as SHARED_CONSTANTS } from '../../constants.js';

@@ -1,3 +1,11 @@
 .BlogPostsWrapper {
     overflow: auto;
 }
+
+.BlogPost__Content {
+    width: 100%;
+    max-width: 800px;
+    padding: $sp--md;
+    margin: $sp--md auto;
+    line-height: 2rem;
+}
