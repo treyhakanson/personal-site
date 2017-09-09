@@ -1,0 +1,12 @@
+.HomeButton {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 50%;
+    background-color: $primary-color--default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

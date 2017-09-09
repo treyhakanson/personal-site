@@ -1,5 +1,6 @@
 // external modules
 import { Pool } from 'pg';
+import pgp from 'pg-promise';
 
 // custom modules
 import dbConfig from '../../config/db-config.json';
@@ -27,7 +28,22 @@ function connect(callback) {
   return pool.connect(callback);
 };
 
+/**
+ * test - Test a query by prinitng out the query with the interpolated values.
+ *
+ * @param {string} text   The query text
+ * @param {Array} values The values to be inserted
+ *
+ * @return {string} the final query
+ */
+function test(text, values) {
+    const query = pgp.as.format(text, values);
+    console.log(query);
+    return query;
+}
+
 export default {
-	query: query,
-	connect: connect
+	query,
+	connect,
+    test
 };

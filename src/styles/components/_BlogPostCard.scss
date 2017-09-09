@@ -1,15 +1,23 @@
-.BlogPostCard {
+[class^="BlogPostCard"] {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: $sp--md;
 
+    &[class*="--alt"] {
+        border-top: $primary-color--default solid $border-width--default;
+        border-left: $primary-color--default solid $border-width--default;
+
+        @include box-shadow(15px, 15px, 0, $primary-color--fade);
+    }
+
     @include media-query--md {
         width: 30%;
         float: left;
+        margin-left: 5%;
 
-        &:not(:first-of-type) {
-            margin-left: 5%;
+        &:nth-child(3n + 1) {
+            margin-left: 0;
         }
     }
 

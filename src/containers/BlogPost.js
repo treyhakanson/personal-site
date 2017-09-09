@@ -17,7 +17,6 @@ export default class BlogPost extends Component {
         axios.get(`/api/v${API_INFO.VERSION}/blog/get-post/${blogTitle}`)
             .then(({ data: post }) => {
                 this.setState({ post });
-                console.log(post);
             }).catch(err => {
                 console.error(err);
             });

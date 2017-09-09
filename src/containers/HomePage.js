@@ -14,9 +14,9 @@ export default class HomePage extends Component {
             <div className="HomePage">
                 <Underlay imagePath="/public/svgs/main-background-image.svg" />
                 <HomePageJumbotron />
+                <Portfolio />
                 <BlogPosts />
                 <ContactForm />
-                {/* <Portfolio /> */}
                 {/* <Scroller to="top" /> */}
                 <Footer />
             </div>
