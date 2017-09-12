@@ -24,5 +24,5 @@ function submitContactForm(req, res) {
 }
 
 export default function(app) {
-    app.post(`/v${API_INFO.VERSION}/contact-form/submit`, submitContactForm);
+    app.post(`/api/v${API_INFO.VERSION}/contact-form/submit`, submitContactForm);
 };

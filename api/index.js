@@ -4,7 +4,7 @@ import path from 'path';
 import bodyParser from 'body-parser';
 
 // custom modules
-import devRoutes from './routes/dev-routes';
+import dev from './utils/dev';
 import contactFormRoutes from './routes/contact-form-routes';
 import blogRoutes from './routes/blog-routes';
 import SHARED_CONSTANTS from '../constants.js';
@@ -14,11 +14,19 @@ const { API_INFO } = SHARED_CONSTANTS;
 
 const app = express();
 app.use(bodyParser.json());
+app.set('views', path.resolve(__dirname, './views'));
+app.set('view engine', 'ejs');
 app.use('/public', express.static(path.join(__dirname, '../public')));
 
-devRoutes(app);
+dev(app);
 contactFormRoutes(app);
 blogRoutes(app);
+
+if (process.env.NODE_ENV != 'development') {
+	app.get('*', (req, res) => {
+		res.render('index');
+	});
+}
 
 var server = app.listen(API_INFO.PORT, () => {
 	console.log(`Server started on: ${API_INFO.PORT}`);

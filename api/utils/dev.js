@@ -11,5 +11,6 @@ function helloWorld(req, res) {
 export default function(app) {
     // Only add dev routes it in dev environment
     if (process.env.NODE_ENV != 'development') return;
-    app.get(`/v${API_INFO.VERSION}/dev/hello-world`, helloWorld);
+    app.use(require('morgan')('tiny'));
+    app.get(`/api/v${API_INFO.VERSION}/dev/hello-world`, helloWorld);
 }

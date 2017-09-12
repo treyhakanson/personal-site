@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon api/index.js --exec babel-node",
-    "dev": "webpack-dev-server --config ./webpack.dev.config.js --define process.env.NODE_ENV=\"'development'\" --hot"
+    "start-prod": "babel-node api/index.js",
+    "dev": "webpack-dev-server --config ./webpack.dev.config.js --define process.env.NODE_ENV=\"'development'\" --hot",
+    "prod": "webpack --config ./webpack.prod.config.js --progress --colors"
   },
   "author": "Trey Hakanson",
   "license": "MIT",
@@ -20,6 +22,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
     "express": "^4.15.4",
     "highlight.js": "^9.12.0",
     "moment": "^2.18.1",
@@ -40,6 +43,7 @@
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
     "json-loader": "^0.5.4",
+    "morgan": "^1.8.2",
     "node-sass": "^3.4.2",
     "nodemon": "^1.11.0",
     "react-addons-test-utils": "^0.14.7",

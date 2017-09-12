@@ -89,7 +89,7 @@ function getBlogPosts(req, res) {
 }
 
 export default function(app) {
-    app.get(`/v${API_INFO.VERSION}/blog/get-top-posts`, getTopPosts);
-    app.get(`/v${API_INFO.VERSION}/blog/get-post/:blogTitle`, getBlogPost);
-    app.get(`/v${API_INFO.VERSION}/blog/posts`, getBlogPosts);
+    app.get(`/api/v${API_INFO.VERSION}/blog/get-top-posts`, getTopPosts);
+    app.get(`/api/v${API_INFO.VERSION}/blog/get-post/:blogTitle`, getBlogPost);
+    app.get(`/api/v${API_INFO.VERSION}/blog/posts`, getBlogPosts);
 };

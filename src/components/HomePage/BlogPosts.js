@@ -33,7 +33,7 @@ export default class BlogPosts extends Component {
 
     render() {
         return (
-            <div className="BlogPosts padding-all--md margin-top--md margin-bottom--md">
+            <div className="BlogPosts padding-all--sm margin-top--md margin-bottom--md">
                 {this.state.error && <div className="error"></div>}
                 {this.state.loading && <Loader />}
                 {!this.state.loading && <div className="BlogPostsWrapper">
