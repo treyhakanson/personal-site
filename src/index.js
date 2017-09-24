@@ -15,7 +15,7 @@ import 'styles/stylesheet.scss';
 // load highlight js for code
 hljs.registerLanguage('js', es6Syntax);
 
-const render = Component => {
+const render = (Component, history) => {
 		ReactDOM.render(
 			<AppContainer>
 				<Component history={history} />
@@ -25,13 +25,13 @@ const render = Component => {
 };
 
 let history;
-if (process.env.NODE_ENV != 'production') {
-	history = hashHistory;
-	if (module.hot) {
-		module.hot.accept('containers/RootContainer', () => render(RootContainer));
-	}
-} else {
+if (process.env.NODE_ENV != 'development') {
 	history = browserHistory;
+} else {
+	history = hashHistory;
+	if (module.hot)
+		module.hot.accept('containers/RootContainer', () =>
+			render(RootContainer, history));
 }
 
-render(RootContainer);
+render(RootContainer, history);

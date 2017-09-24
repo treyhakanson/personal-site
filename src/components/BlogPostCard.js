@@ -1,9 +1,10 @@
 // external modules
 import React, { Component, PropTypes } from 'react';
+import moment from 'moment';
+import { Link } from 'react-router';
 
 // custom modules
 import { Button } from 'components/Button';
-import { SimpleSpacer } from 'components/Spacer';
 
 export default class BlogPostCard extends Component {
     static propTypes = {
@@ -20,17 +21,19 @@ export default class BlogPostCard extends Component {
     };
 
     render() {
-        const classNames = ['BlogPostCard', 'align-content--center--col', 'fill--light', 'padding-all--sm'];
+        const classNames = ['BlogPostCard', 'align-content--center--col', 'fill--light'];
         if (this.props.alternate)
             classNames[0] = classNames[0] + '--alt';
         return (
             <div className={classNames.join(' ')}>
-                <h3>{this.props.title}</h3>
-                <SimpleSpacer.Short spacing="sm" />
+                <Link className="no-underline margin-bottom--xs"
+                    to={`/blog/${this.props.title.replace(/\ /g, '-').toLowerCase()}`}>
+                    <h3>{this.props.title}</h3>
+                </Link>
+                <p className="margin-bottom--xs font-color--light">
+                    {moment(this.props.date).format('L h:mm a')}
+                </p>
                 <p>{this.props.hook}</p>
-                <Button.Border className="margin-top--sm"
-                    text="Read More"
-                    link={`/blog/${this.props.title.replace(/\ /g, '-').toLowerCase()}`} />
             </div>
         );
     }

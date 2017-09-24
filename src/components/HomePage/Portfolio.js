@@ -7,8 +7,8 @@ import { SimpleSpacer } from 'components/Spacer';
 export default class Portfolio extends Component {
     render() {
         return (
-            <div className="Portfolio margin-top--md padding-all--sm">
-                <div className="Portfolio__Content padding-all--sm fill--light">
+            <div className="Portfolio fill--light padding-all--md">
+                <div className="Portfolio__Content">
                     <h2>About Me</h2>
                     <SimpleSpacer.Medium />
                     <p>

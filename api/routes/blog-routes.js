@@ -17,7 +17,6 @@ function getTopPosts(req, res) {
                blog_body AS blogbody
             FROM blog_posts
             ORDER BY tm DESC
-        LIMIT 3;
     `, [])
         .then(({ rows }) => {
             res.json(rows);

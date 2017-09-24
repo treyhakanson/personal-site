@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon api/index.js --exec babel-node",
-    "start-prod": "babel-node api/index.js",
     "dev": "webpack-dev-server --config ./webpack.dev.config.js --define process.env.NODE_ENV=\"'development'\" --hot",
-    "prod": "webpack --config ./webpack.prod.config.js --progress --colors"
+    "start-prod": "babel-node api/index.js",
+    "build-prod": "webpack --config ./webpack.prod.config.js --progress --colors"
   },
   "author": "Trey Hakanson",
   "license": "MIT",

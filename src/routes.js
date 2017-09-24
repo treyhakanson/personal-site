@@ -13,10 +13,7 @@ export default (
 	<Route path="/">
 		<IndexRoute component={HomePage} />
 		<Route path="style-guide" component={StyleGuide} />
-		<Route path="blog">
-			<IndexRoute component={Blog} />
-			<Route path=":blogTitle" component={BlogPost} />
-		</Route>
+		<Route path="blog/:blogTitle" component={BlogPost} />
 		<Route path="*" component={NotFound} />
 	</Route>
 );

@@ -31859,7 +31859,7 @@ _highlight2.default.registerLanguage('js', _es6Syntax2.default);
 // custom modules
 
 
-var render = function render(Component) {
+var render = function render(Component, history) {
 	_reactDom2.default.render(_react2.default.createElement(
 		_reactHotLoader.AppContainer,
 		null,
@@ -31868,18 +31868,16 @@ var render = function render(Component) {
 };
 
 var history = void 0;
-if (process.env.NODE_ENV != 'production') {
-	history = _reactRouter.hashHistory;
-	if (false) {
-		module.hot.accept('containers/RootContainer', function () {
-			return render(_RootContainer2.default);
-		});
-	}
-} else {
+if (process.env.NODE_ENV != 'development') {
 	history = _reactRouter.browserHistory;
+} else {
+	history = _reactRouter.hashHistory;
+	if (false) module.hot.accept('containers/RootContainer', function () {
+		return render(_RootContainer2.default, history);
+	});
 }
 
-render(_RootContainer2.default);
+render(_RootContainer2.default, history);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
