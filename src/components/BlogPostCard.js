@@ -22,7 +22,7 @@ export default class BlogPostCard extends Component {
     };
 
     render() {
-        const classNames = ['BlogPostCard', 'align-content--center--col', 'fill--light', 'no-underline'];
+        const classNames = ['BlogPostCard', 'align-content--left--col', 'fill--light', 'no-underline'];
         if (this.props.alternate)
             classNames[0] = classNames[0] + '--alt';
         return (

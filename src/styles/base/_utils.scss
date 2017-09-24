@@ -61,6 +61,11 @@
 [class*="align-content"] {
     display: flex;
 
+    &[class*="--left"] {
+        align-items: left;
+        justify-content: center;
+    }
+
     &[class*="--center"] {
         align-items: center;
         justify-content: center;

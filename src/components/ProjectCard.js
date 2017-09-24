@@ -6,6 +6,8 @@ import { Link } from 'react-router';
 // custom modules
 import { cleanTitle } from 'utils/cleaning';
 
+// TODO: need to resize height on window resize
+
 export default class ProjectCard extends Component {
     static propTypes = {
         title: PropTypes.string.isRequired,

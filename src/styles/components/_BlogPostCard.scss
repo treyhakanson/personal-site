@@ -12,13 +12,27 @@
         @include box-shadow(15px, 15px, 0, $primary-color--fade);
     }
 
+    h3 {
+        opacity: 1.0;
+        transition: 150ms all;
+    }
+
+    &:hover h3 {
+        opacity: 0.75;
+        transition: 200ms all;
+    }
+
     @include media-query--md {
-        width: 30%;
+        width: 47.5%;
         float: left;
         margin-left: 5%;
 
-        &:nth-child(3n + 1) {
+        &:nth-child(odd) {
             margin-left: 0;
+        }
+
+        &:nth-last-of-type(2) {
+            margin-bottom: 0;
         }
 
         &:last-of-type {
