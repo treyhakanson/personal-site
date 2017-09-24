@@ -1,0 +1,59 @@
+.ProjectCard {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $sp--md;
+
+    @include media-query--md {
+        width: 30%;
+        float: left;
+        margin-left: 5%;
+
+        &:nth-child(3n + 1) {
+            margin-left: 0;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.ProjectCard__Image {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 200ms all;
+
+    &:hover {
+        background-size: 125%;
+        cursor: pointer;
+        transition: 300ms all;
+
+        .ProjectCard__Title {
+            opacity: 1.0;
+            transition: 200ms all;
+        }
+    }
+}
+
+.ProjectCard__Title {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $primary-color--transluscent;
+    opacity: 0.0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 150ms all;
+
+}

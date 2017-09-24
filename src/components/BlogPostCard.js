@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 
 // custom modules
 import { Button } from 'components/Button';
+import { cleanTitle } from 'utils/cleaning';
 
 export default class BlogPostCard extends Component {
     static propTypes = {
@@ -21,20 +22,18 @@ export default class BlogPostCard extends Component {
     };
 
     render() {
-        const classNames = ['BlogPostCard', 'align-content--center--col', 'fill--light'];
+        const classNames = ['BlogPostCard', 'align-content--center--col', 'fill--light', 'no-underline'];
         if (this.props.alternate)
             classNames[0] = classNames[0] + '--alt';
         return (
-            <div className={classNames.join(' ')}>
-                <Link className="no-underline margin-bottom--xs"
-                    to={`/blog/${this.props.title.replace(/\ /g, '-').toLowerCase()}`}>
-                    <h3>{this.props.title}</h3>
-                </Link>
-                <p className="margin-bottom--xs font-color--light">
+            <Link className={classNames.join(' ')}
+                to={`/blog/${cleanTitle(this.props.title)}`}>
+                <h3 className="margin-bottom--xs">{this.props.title}</h3>
+                <p className="margin-bottom--xs font-color--fade">
                     {moment(this.props.date).format('L h:mm a')}
                 </p>
-                <p>{this.props.hook}</p>
-            </div>
+                <p className="margin-top--xs">{this.props.hook}</p>
+            </Link>
         );
     }
 }

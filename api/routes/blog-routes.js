@@ -16,7 +16,7 @@ function getTopPosts(req, res) {
                author_img AS authorimage,
                blog_body AS blogbody
             FROM blog_posts
-            ORDER BY tm DESC
+            ORDER BY tm DESC;
     `, [])
         .then(({ rows }) => {
             res.json(rows);
@@ -65,7 +65,7 @@ function getBlogPosts(req, res) {
                author_img AS authorimage,
                blog_body AS blogbody
             FROM blog_posts
-        LIMIT $1 OFFSET $2
+        LIMIT $1 OFFSET $2;
     `, [BLOG.POSTS_PER_PAGE, BLOG.POSTS_PER_PAGE * page]);
     pool.query(`
         SELECT id,
@@ -77,7 +77,7 @@ function getBlogPosts(req, res) {
                author_img AS authorimage,
                blog_body AS blogbody
             FROM blog_posts
-        LIMIT $1 OFFSET $2
+        LIMIT $1 OFFSET $2;
     `, [BLOG.POSTS_PER_PAGE, BLOG.POSTS_PER_PAGE * page])
         .then(({ rows = [] }) => {
             res.json(rows);

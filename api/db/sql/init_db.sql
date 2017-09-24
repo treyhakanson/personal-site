@@ -17,3 +17,11 @@ CREATE TABLE blog_posts (
         author_img VARCHAR(1000) NOT NULL,
         blog_body JSON NOT NULL
 );
+
+CREATE TABLE projects (
+        id SERIAL PRIMARY KEY,
+        tm TIMESTAMP NOT NULL,
+        title VARCHAR(60) UNIQUE NOT NULL,
+        banner_img VARCHAR(60) NOT NULL,
+        project_body JSON NOT NULL
+);

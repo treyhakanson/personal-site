@@ -5,8 +5,9 @@ import bodyParser from 'body-parser';
 
 // custom modules
 import dev from './utils/dev';
-import contactFormRoutes from './routes/contact-form-routes';
+import projectRoutes from './routes/project-routes';
 import blogRoutes from './routes/blog-routes';
+import contactFormRoutes from './routes/contact-form-routes';
 import SHARED_CONSTANTS from '../constants.js';
 
 // pulling off required shared constants
@@ -19,8 +20,9 @@ app.set('view engine', 'ejs');
 app.use('/public', express.static(path.join(__dirname, '../public')));
 
 dev(app);
-contactFormRoutes(app);
+projectRoutes(app);
 blogRoutes(app);
+contactFormRoutes(app);
 
 if (process.env.NODE_ENV != 'development') {
 	app.get('*', (req, res) => {

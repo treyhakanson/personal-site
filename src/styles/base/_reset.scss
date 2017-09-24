@@ -36,6 +36,11 @@ textarea {
     @include regular-font;
 }
 
+::selection {
+    color: $light-color;
+    background-color: $primary-color--transluscent;
+}
+
 // code formatting (syntax highlighting handled by highlight.js)
 pre {
     padding: $code-padding;

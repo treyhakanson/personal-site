@@ -45,6 +45,7 @@ $code-border-color: #5e6687;
 $code-background-color: #f5f7ff;
 $primary-color--default: #3E3E3E;
 $primary-color--fade: #e9e9e9;
+$primary-color--transluscent: rgba($primary-color--default, 0.75);
 
 $error-color--default: #b92930;
 $error-color--fade: #b55c60;

@@ -13,7 +13,7 @@ function submitContactForm(req, res) {
             name, email, message
         ) VALUEs (
             $1, $2, $3
-        )
+        );
     `, [name, email, message])
         .then(() => {
             res.json({ success: true });
