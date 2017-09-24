@@ -1,0 +1,20 @@
+.Header__Back {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    border-radius: 50%;
+    background-color: $primary-color--default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        transform: rotateZ(90deg);
+
+        path {
+            fill: $light-color;
+        }
+    }
+}

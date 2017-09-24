@@ -3,7 +3,8 @@ import React, { Component, PropTypes } from 'react';
 import axios from 'axios';
 
 // custom modules
-import { BlogHeader, BlogBody } from 'components/Blog';
+import Header from 'components/Header';
+import Body from 'components/Body'
 import { SHARED_CONSTANTS } from 'utils/constants';
 
 // pulling off required shared constants
@@ -33,8 +34,11 @@ export default class BlogPost extends Component {
         return (
             <div className="BlogPost">
                 {this.state.post && <div className="BlogPost__Content">
-                    <BlogHeader post={this.state.post} />
-                    <BlogBody post={this.state.post} />
+                    <Header title={this.state.post.title}
+                        subtitle={this.state.post.subtitle}
+                        date={this.state.post.date}
+                        authorName={this.state.post.authorname} />
+                    <Body content={this.state.post.blogbody} />
                 </div>}
             </div>
         );

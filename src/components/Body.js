@@ -6,9 +6,9 @@ import { Link } from 'react-router';
 import { ELEMENT_TYPES } from 'utils/constants';
 import Code from 'components/Code';
 
-export default class BlogPost extends Component {
+export default class Body extends Component {
     static propTypes = {
-        post: PropTypes.object.isRequired
+        content: PropTypes.array.isRequired
     };
 
     parseBodyElement(element) {
@@ -30,7 +30,7 @@ export default class BlogPost extends Component {
         return (
             <div className="BlogBody">
                 <div className="BlogBody__Content">
-                    {this.props.post.blogbody.map((el, i) => {
+                    {this.props.content.map((el, i) => {
                         return (
                             <div key={i} className="margin-bottom--md">
                                 {this.parseBodyElement(el)}

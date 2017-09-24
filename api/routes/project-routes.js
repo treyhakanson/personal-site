@@ -34,9 +34,13 @@ function getProject(req, res) {
             FROM projects
             WHERE LOWER(title) = LOWER($1)
         LIMIT 1;
-    `, [projectTitle])
+    `, [projectTitle.replace(/-/g, ' ')])
         .then(({ rows }) => {
-            res.json(rows);
+            if (rows.length) {
+                res.json(rows[0]);
+            } else {
+                res.status(404).json({ error: 'post does not exist' });
+            }
         }).catch(err => {
             console.log(err);
             res.json({ success: false });
