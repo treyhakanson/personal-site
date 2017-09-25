@@ -47,7 +47,26 @@ function getProject(req, res) {
         });
 }
 
+function getProjects(req, res) {
+    pool.query(`
+        SELECT id,
+               tm AS date,
+               title,
+               banner_img AS bannerimage,
+               project_body AS projectbody
+            FROM projects
+            ORDER BY tm DESC;
+    `, [])
+        .then(({ rows }) => {
+            res.json(rows);
+        }).catch(err => {
+            console.log(err);
+            res.json({ success: false });
+        });
+}
+
 export default function(app) {
     app.get(`/api/v${API_INFO.VERSION}/project/get-top-projects`, getTopProjects);
     app.get(`/api/v${API_INFO.VERSION}/project/get-project/:projectTitle`, getProject);
+    app.get(`/api/v${API_INFO.VERSION}/project/get-projects`, getProjects);
 }

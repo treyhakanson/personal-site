@@ -2,6 +2,7 @@
 [class^="ButtonBase"] {
     height: $button-height;
     min-width: $button-min-width;
+    max-width: $button-max-width;
     display: inline-block;
     position: relative;
     transition: $transition-speed--inactive all;

@@ -5,6 +5,7 @@ import axios from 'axios';
 // custom modules
 import Loader from 'components/Loader';
 import ProjectCard from 'components/ProjectCard';
+import { Button } from 'components/Button';
 import { SimpleSpacer } from 'components/Spacer';
 import { SHARED_CONSTANTS } from 'utils/constants';
 
@@ -52,6 +53,9 @@ export default class Portfolio extends Component {
                                 image={project.bannerimage} />
                         )}
                     </div>}
+                    <Button.Light className="margin-top--sm"
+                        text="See More"
+                        link="/projects" />
                 </div>
             </div>
         );

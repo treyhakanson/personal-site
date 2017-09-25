@@ -6,6 +6,7 @@ import axios from 'axios';
 import Loader from 'components/Loader';
 import BlogPostCard from 'components/BlogPostCard';
 import { SimpleSpacer } from 'components/Spacer';
+import { Button } from 'components/Button';
 import { SHARED_CONSTANTS } from 'utils/constants';
 
 // pull required values off shared constants
@@ -48,9 +49,13 @@ export default class BlogPosts extends Component {
                                     author={post.authorname}
                                     image={post.bannerimage}
                                     date={post.date} />
-                                )}
-                            </div>
-                        </div>}
+                            )}
+                        </div>
+                        <Button.Light className="margin-top--sm"
+                            clear
+                            text="See More"
+                            link="/blog" />
+                    </div>}
                 </div>
             </div>
         );

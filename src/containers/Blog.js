@@ -3,8 +3,8 @@ import React, { Component, PropTypes } from 'react';
 import axios from 'axios';
 
 // custom modules
-import HomeButton from 'components/HomeButton';
 import { BlogArchive } from 'components/Blog';
+import Header from 'components/Header';
 import { SHARED_CONSTANTS } from 'utils/constants';
 
 // pull required values off shared constants
@@ -32,8 +32,8 @@ export default class Blog extends Component {
     render() {
         return (
             <div className="Blog padding-all--md">
+                <Header title="Blog Posts" />
                 {!!this.state.posts.length && <BlogArchive posts={this.state.posts} />}
-                <HomeButton />
             </div>
         );
     }

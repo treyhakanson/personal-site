@@ -16,6 +16,8 @@
             margin-left: 0;
         }
 
+        &:nth-last-of-type(3),
+        &:nth-last-of-type(2),
         &:last-of-type {
             margin-bottom: 0;
         }

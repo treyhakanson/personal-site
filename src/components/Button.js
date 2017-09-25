@@ -11,20 +11,25 @@ class ButtonBase extends Component {
         text: PropTypes.string.isRequired,
         center: PropTypes.bool.isRequired,
         disabled: PropTypes.bool.isRequired,
+        clear: PropTypes.bool.isRequired,
         className: PropTypes.string,
         onClick: PropTypes.func,
         link: PropTypes.string
     };
 
     static defaultProps = {
+        clear: false,
         center: false,
         disabled: false
     };
 
     wrapContent(content) {
         if (this.props.link) {
+            let classNames = ['no-underline'];
+            if (this.props.clear)
+                classNames.push('display--block');
             return (
-                <Link className="no-underline"
+                <Link className={classNames.join(' ')}
                     to={this.props.link}>
                     {content}
                 </Link>
@@ -40,9 +45,12 @@ class ButtonBase extends Component {
 
     constructor(props) {
         super(props);
-        let classNames = ['ButtonBase'];
+        let baseClassName = 'ButtonBase';
         if (props.center)
-            classNames.push(classNames.pop() + '--center');
+            baseClassName += '--center';
+        let classNames = [baseClassName];
+        if (props.clear && !props.link)
+            classNames.push('display--block');
         if (props.className)
             classNames.push(props.className);
         this.getClassName = buildGetClassName(classNames.join(' '));

@@ -22,6 +22,11 @@
         transition: 200ms all;
     }
 
+    &:nth-last-of-type(2),
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
     @include media-query--md {
         width: 47.5%;
         float: left;

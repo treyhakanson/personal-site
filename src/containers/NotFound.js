@@ -8,7 +8,7 @@ import { Button } from 'components/Button';
 export default class NotFound extends Component {
     render() {
         return (
-            <div className="NotFound">
+            <div className="NotFound text-center">
                 <h1>Nothing Here.</h1>
                 <SimpleSpacer.Long />
                 <h3>Maybe go back to the homepage?</h3>

@@ -29,7 +29,7 @@ export default class ProjectCard extends Component {
     render() {
         return (
             <Link className="ProjectCard no-underline"
-                to={`/project/${cleanTitle(this.props.title)}`}
+                to={`/projects/${cleanTitle(this.props.title)}`}
                 ref={projectCard => { this.projectCard = projectCard }}
                 style={{ height: this.state.height }}>
                 <div className="ProjectCard__Image" style={{ backgroundImage: `url(${this.props.image})` }}>
