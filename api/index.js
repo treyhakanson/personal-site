@@ -24,12 +24,14 @@ projectRoutes(app);
 blogRoutes(app);
 contactFormRoutes(app);
 
+let port = 8081; // dev port
 if (process.env.NODE_ENV != 'development') {
+	port = 80; // prod port
 	app.get('*', (req, res) => {
 		res.render('index');
 	});
 }
 
-var server = app.listen(API_INFO.PORT, () => {
-	console.log(`Server started on: ${API_INFO.PORT}`);
+const server = app.listen(port, () => {
+	console.log(`Server started on: ${port}`);
 });

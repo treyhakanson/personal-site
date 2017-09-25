@@ -51,7 +51,7 @@ export default class ContactForm extends Component {
                 <div className="ContactForm__FormContent">
                     <h2>Contact</h2>
                     <SimpleSpacer.Medium />
-                    <p className="margin-bottom--md">Drop me a line and I'll get back to you as soon as I can</p>
+                    <p className="margin-bottom--md">Drop me a line and I'll get back to you as soon as I can.</p>
                     <Input.Line placeholder="Name"
                         value={this.state.name}
                         onChange={val => this.valueUpdated('name', val)}

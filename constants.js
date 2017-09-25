@@ -1,6 +1,7 @@
-export default {
+// intentionally left in ES5 so a transform isn't required for the production
+// API
+module.exports = {
     API_INFO: {
-        PORT: 8081,
         VERSION: 1
     },
     BLOG: {
