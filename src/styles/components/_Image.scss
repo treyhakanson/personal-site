@@ -1,0 +1,11 @@
+.Image {
+    background-color: $primary-color--default;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Image__Dummy {
+    visibility: hidden;
+    width: 100%;
+}

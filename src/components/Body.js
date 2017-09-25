@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 // custom modules
 import { ELEMENT_TYPES } from 'utils/constants';
 import Code from 'components/Code';
+import Image from 'components/Image';
 
 export default class Body extends Component {
     static propTypes = {
@@ -18,7 +19,10 @@ export default class Body extends Component {
             case ELEMENT_TYPES.LINK:
                 return <Link to={element.link}>{element.content}</Link>;
             case ELEMENT_TYPES.IMAGE:
-                return <div className="image" />;
+                return <Image url={element.url}
+                    alt={element.alt}
+                    height={element.height}
+                    width={element.width} />;
             case ELEMENT_TYPES.CODE:
                 return <Code code={element.content}/>
             case ELEMENT_TYPES.QUOTE:
