@@ -28,7 +28,9 @@ export const ELEMENT_TYPES = {
     LINK: 'link',
     QUOTE: 'quote',
     IMAGE: 'image',
-    CODE: 'code'
+    CODE: 'code',
+    YOUTUBE: 'youtube',
+    LIST: 'list'
 };
 
 export { default as SHARED_CONSTANTS } from '../../constants.js';

@@ -1,11 +1,11 @@
 // external modules
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
 
 // custom modules
 import { ELEMENT_TYPES } from 'utils/constants';
 import Code from 'components/Code';
 import Image from 'components/Image';
+import Youtube from 'components/Youtube';
 
 export default class Body extends Component {
     static propTypes = {
@@ -17,7 +17,8 @@ export default class Body extends Component {
             case ELEMENT_TYPES.TEXT:
                 return <p>{element.content}</p>;
             case ELEMENT_TYPES.LINK:
-                return <Link to={element.link}>{element.content}</Link>;
+                console.log(element.link);
+                return <a href={element.link}><p>{element.content}</p></a>;
             case ELEMENT_TYPES.IMAGE:
                 return <Image url={element.url}
                     alt={element.alt}
@@ -27,6 +28,14 @@ export default class Body extends Component {
                 return <Code code={element.content}/>
             case ELEMENT_TYPES.QUOTE:
                 return <div className="quote" />
+            case ELEMENT_TYPES.YOUTUBE:
+                return <Youtube videoId={element.id} />;
+            case ELEMENT_TYPES.LIST:
+                return (
+                    <ol>
+                        {element.items.map((item, i) => <li key={i}>{item}</li>)}
+                    </ol>
+                );
         }
     }
 
