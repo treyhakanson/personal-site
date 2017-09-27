@@ -42,7 +42,7 @@ var API_INFO = _constants2.default.API_INFO;
 
 var app = (0, _express2.default)();
 app.use(_bodyParser2.default.json());
-app.set('views', _path2.default.resolve(__dirname, './views'));
+app.set('views', _path2.default.resolve(__dirname, '../views'));
 app.set('view engine', 'ejs');
 app.use('/public', _express2.default.static(_path2.default.join(__dirname, '../public')));
 
