@@ -26,7 +26,7 @@ contactFormRoutes(app);
 
 let port = 8081; // dev port
 if (process.env.NODE_ENV != 'development') {
-	port = 80; // prod port
+	port = 8080; // prod port
 	app.get('*', (req, res) => {
 		res.render('index');
 	});
