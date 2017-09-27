@@ -4730,7 +4730,7 @@ return hooks;
 "use strict";
 
 
-module.exports = __webpack_require__(30);
+module.exports = __webpack_require__(29);
 
 
 /***/ }),
@@ -5368,7 +5368,7 @@ module.exports = invariant;
 
 
 
-var _prodInvariant = __webpack_require__(31);
+var _prodInvariant = __webpack_require__(30);
 
 var ReactCurrentOwner = __webpack_require__(16);
 
@@ -6127,7 +6127,9 @@ var ELEMENT_TYPES = exports.ELEMENT_TYPES = {
     LINK: 'link',
     QUOTE: 'quote',
     IMAGE: 'image',
-    CODE: 'code'
+    CODE: 'code',
+    YOUTUBE: 'youtube',
+    LIST: 'list'
 };
 
 /***/ }),
@@ -6231,7 +6233,7 @@ var _prodInvariant = __webpack_require__(5),
 var CallbackQueue = __webpack_require__(97);
 var PooledClass = __webpack_require__(24);
 var ReactFeatureFlags = __webpack_require__(98);
-var ReactReconciler = __webpack_require__(32);
+var ReactReconciler = __webpack_require__(31);
 var Transaction = __webpack_require__(42);
 
 var invariant = __webpack_require__(3);
@@ -7760,168 +7762,6 @@ module.exports = PooledClass;
 
 
 exports.__esModule = true;
-exports.createMemoryHistory = exports.hashHistory = exports.browserHistory = exports.applyRouterMiddleware = exports.formatPattern = exports.useRouterHistory = exports.match = exports.routerShape = exports.locationShape = exports.PropTypes = exports.RoutingContext = exports.RouterContext = exports.createRoutes = exports.useRoutes = exports.RouteContext = exports.Lifecycle = exports.History = exports.Route = exports.Redirect = exports.IndexRoute = exports.IndexRedirect = exports.withRouter = exports.IndexLink = exports.Link = exports.Router = undefined;
-
-var _RouteUtils = __webpack_require__(22);
-
-Object.defineProperty(exports, 'createRoutes', {
-  enumerable: true,
-  get: function get() {
-    return _RouteUtils.createRoutes;
-  }
-});
-
-var _PropTypes2 = __webpack_require__(74);
-
-Object.defineProperty(exports, 'locationShape', {
-  enumerable: true,
-  get: function get() {
-    return _PropTypes2.locationShape;
-  }
-});
-Object.defineProperty(exports, 'routerShape', {
-  enumerable: true,
-  get: function get() {
-    return _PropTypes2.routerShape;
-  }
-});
-
-var _PatternUtils = __webpack_require__(34);
-
-Object.defineProperty(exports, 'formatPattern', {
-  enumerable: true,
-  get: function get() {
-    return _PatternUtils.formatPattern;
-  }
-});
-
-var _Router2 = __webpack_require__(557);
-
-var _Router3 = _interopRequireDefault(_Router2);
-
-var _Link2 = __webpack_require__(125);
-
-var _Link3 = _interopRequireDefault(_Link2);
-
-var _IndexLink2 = __webpack_require__(571);
-
-var _IndexLink3 = _interopRequireDefault(_IndexLink2);
-
-var _withRouter2 = __webpack_require__(572);
-
-var _withRouter3 = _interopRequireDefault(_withRouter2);
-
-var _IndexRedirect2 = __webpack_require__(573);
-
-var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
-
-var _IndexRoute2 = __webpack_require__(574);
-
-var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
-
-var _Redirect2 = __webpack_require__(127);
-
-var _Redirect3 = _interopRequireDefault(_Redirect2);
-
-var _Route2 = __webpack_require__(575);
-
-var _Route3 = _interopRequireDefault(_Route2);
-
-var _History2 = __webpack_require__(576);
-
-var _History3 = _interopRequireDefault(_History2);
-
-var _Lifecycle2 = __webpack_require__(577);
-
-var _Lifecycle3 = _interopRequireDefault(_Lifecycle2);
-
-var _RouteContext2 = __webpack_require__(578);
-
-var _RouteContext3 = _interopRequireDefault(_RouteContext2);
-
-var _useRoutes2 = __webpack_require__(579);
-
-var _useRoutes3 = _interopRequireDefault(_useRoutes2);
-
-var _RouterContext2 = __webpack_require__(50);
-
-var _RouterContext3 = _interopRequireDefault(_RouterContext2);
-
-var _RoutingContext2 = __webpack_require__(580);
-
-var _RoutingContext3 = _interopRequireDefault(_RoutingContext2);
-
-var _PropTypes3 = _interopRequireDefault(_PropTypes2);
-
-var _match2 = __webpack_require__(581);
-
-var _match3 = _interopRequireDefault(_match2);
-
-var _useRouterHistory2 = __webpack_require__(130);
-
-var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
-
-var _applyRouterMiddleware2 = __webpack_require__(583);
-
-var _applyRouterMiddleware3 = _interopRequireDefault(_applyRouterMiddleware2);
-
-var _browserHistory2 = __webpack_require__(584);
-
-var _browserHistory3 = _interopRequireDefault(_browserHistory2);
-
-var _hashHistory2 = __webpack_require__(586);
-
-var _hashHistory3 = _interopRequireDefault(_hashHistory2);
-
-var _createMemoryHistory2 = __webpack_require__(128);
-
-var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.Router = _Router3.default; /* components */
-
-exports.Link = _Link3.default;
-exports.IndexLink = _IndexLink3.default;
-exports.withRouter = _withRouter3.default;
-
-/* components (configuration) */
-
-exports.IndexRedirect = _IndexRedirect3.default;
-exports.IndexRoute = _IndexRoute3.default;
-exports.Redirect = _Redirect3.default;
-exports.Route = _Route3.default;
-
-/* mixins */
-
-exports.History = _History3.default;
-exports.Lifecycle = _Lifecycle3.default;
-exports.RouteContext = _RouteContext3.default;
-
-/* utils */
-
-exports.useRoutes = _useRoutes3.default;
-exports.RouterContext = _RouterContext3.default;
-exports.RoutingContext = _RoutingContext3.default;
-exports.PropTypes = _PropTypes3.default;
-exports.match = _match3.default;
-exports.useRouterHistory = _useRouterHistory3.default;
-exports.applyRouterMiddleware = _applyRouterMiddleware3.default;
-
-/* histories */
-
-exports.browserHistory = _browserHistory3.default;
-exports.hashHistory = _hashHistory3.default;
-exports.createMemoryHistory = _createMemoryHistory3.default;
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
 exports.routes = exports.route = exports.components = exports.component = exports.history = undefined;
 exports.falsy = falsy;
 
@@ -7953,7 +7793,7 @@ var route = exports.route = oneOfType([object, element]);
 var routes = exports.routes = oneOfType([route, arrayOf(route)]);
 
 /***/ }),
-/* 27 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8007,7 +7847,7 @@ function parsePath(path) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 28 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8024,7 +7864,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(25);
+var _reactRouter = __webpack_require__(33);
 
 var _classNames = __webpack_require__(142);
 
@@ -8272,13 +8112,13 @@ IconButton.propTypes = {
 };
 
 /***/ }),
-/* 29 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(628);
 
 /***/ }),
-/* 30 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8416,7 +8256,7 @@ module.exports = React;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 31 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8460,7 +8300,7 @@ function reactProdInvariant(code) {
 module.exports = reactProdInvariant;
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8632,7 +8472,7 @@ module.exports = ReactReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 33 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8753,6 +8593,168 @@ DOMLazyTree.queueHTML = queueHTML;
 DOMLazyTree.queueText = queueText;
 
 module.exports = DOMLazyTree;
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.createMemoryHistory = exports.hashHistory = exports.browserHistory = exports.applyRouterMiddleware = exports.formatPattern = exports.useRouterHistory = exports.match = exports.routerShape = exports.locationShape = exports.PropTypes = exports.RoutingContext = exports.RouterContext = exports.createRoutes = exports.useRoutes = exports.RouteContext = exports.Lifecycle = exports.History = exports.Route = exports.Redirect = exports.IndexRoute = exports.IndexRedirect = exports.withRouter = exports.IndexLink = exports.Link = exports.Router = undefined;
+
+var _RouteUtils = __webpack_require__(22);
+
+Object.defineProperty(exports, 'createRoutes', {
+  enumerable: true,
+  get: function get() {
+    return _RouteUtils.createRoutes;
+  }
+});
+
+var _PropTypes2 = __webpack_require__(74);
+
+Object.defineProperty(exports, 'locationShape', {
+  enumerable: true,
+  get: function get() {
+    return _PropTypes2.locationShape;
+  }
+});
+Object.defineProperty(exports, 'routerShape', {
+  enumerable: true,
+  get: function get() {
+    return _PropTypes2.routerShape;
+  }
+});
+
+var _PatternUtils = __webpack_require__(34);
+
+Object.defineProperty(exports, 'formatPattern', {
+  enumerable: true,
+  get: function get() {
+    return _PatternUtils.formatPattern;
+  }
+});
+
+var _Router2 = __webpack_require__(557);
+
+var _Router3 = _interopRequireDefault(_Router2);
+
+var _Link2 = __webpack_require__(125);
+
+var _Link3 = _interopRequireDefault(_Link2);
+
+var _IndexLink2 = __webpack_require__(571);
+
+var _IndexLink3 = _interopRequireDefault(_IndexLink2);
+
+var _withRouter2 = __webpack_require__(572);
+
+var _withRouter3 = _interopRequireDefault(_withRouter2);
+
+var _IndexRedirect2 = __webpack_require__(573);
+
+var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
+
+var _IndexRoute2 = __webpack_require__(574);
+
+var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
+
+var _Redirect2 = __webpack_require__(127);
+
+var _Redirect3 = _interopRequireDefault(_Redirect2);
+
+var _Route2 = __webpack_require__(575);
+
+var _Route3 = _interopRequireDefault(_Route2);
+
+var _History2 = __webpack_require__(576);
+
+var _History3 = _interopRequireDefault(_History2);
+
+var _Lifecycle2 = __webpack_require__(577);
+
+var _Lifecycle3 = _interopRequireDefault(_Lifecycle2);
+
+var _RouteContext2 = __webpack_require__(578);
+
+var _RouteContext3 = _interopRequireDefault(_RouteContext2);
+
+var _useRoutes2 = __webpack_require__(579);
+
+var _useRoutes3 = _interopRequireDefault(_useRoutes2);
+
+var _RouterContext2 = __webpack_require__(50);
+
+var _RouterContext3 = _interopRequireDefault(_RouterContext2);
+
+var _RoutingContext2 = __webpack_require__(580);
+
+var _RoutingContext3 = _interopRequireDefault(_RoutingContext2);
+
+var _PropTypes3 = _interopRequireDefault(_PropTypes2);
+
+var _match2 = __webpack_require__(581);
+
+var _match3 = _interopRequireDefault(_match2);
+
+var _useRouterHistory2 = __webpack_require__(130);
+
+var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
+
+var _applyRouterMiddleware2 = __webpack_require__(583);
+
+var _applyRouterMiddleware3 = _interopRequireDefault(_applyRouterMiddleware2);
+
+var _browserHistory2 = __webpack_require__(584);
+
+var _browserHistory3 = _interopRequireDefault(_browserHistory2);
+
+var _hashHistory2 = __webpack_require__(586);
+
+var _hashHistory3 = _interopRequireDefault(_hashHistory2);
+
+var _createMemoryHistory2 = __webpack_require__(128);
+
+var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Router = _Router3.default; /* components */
+
+exports.Link = _Link3.default;
+exports.IndexLink = _IndexLink3.default;
+exports.withRouter = _withRouter3.default;
+
+/* components (configuration) */
+
+exports.IndexRedirect = _IndexRedirect3.default;
+exports.IndexRoute = _IndexRoute3.default;
+exports.Redirect = _Redirect3.default;
+exports.Route = _Route3.default;
+
+/* mixins */
+
+exports.History = _History3.default;
+exports.Lifecycle = _Lifecycle3.default;
+exports.RouteContext = _RouteContext3.default;
+
+/* utils */
+
+exports.useRoutes = _useRoutes3.default;
+exports.RouterContext = _RouterContext3.default;
+exports.RoutingContext = _RoutingContext3.default;
+exports.PropTypes = _PropTypes3.default;
+exports.match = _match3.default;
+exports.useRouterHistory = _useRouterHistory3.default;
+exports.applyRouterMiddleware = _applyRouterMiddleware3.default;
+
+/* histories */
+
+exports.browserHistory = _browserHistory3.default;
+exports.hashHistory = _hashHistory3.default;
+exports.createMemoryHistory = _createMemoryHistory3.default;
 
 /***/ }),
 /* 34 */
@@ -10822,7 +10824,7 @@ var _runTransitionHook = __webpack_require__(76);
 
 var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-var _PathUtils = __webpack_require__(27);
+var _PathUtils = __webpack_require__(26);
 
 var _deprecate = __webpack_require__(77);
 
@@ -12013,7 +12015,7 @@ module.exports = getEventModifierState;
 
 
 
-var DOMLazyTree = __webpack_require__(33);
+var DOMLazyTree = __webpack_require__(32);
 var Danger = __webpack_require__(308);
 var ReactDOMComponentTree = __webpack_require__(7);
 var ReactInstrumentation = __webpack_require__(12);
@@ -12312,7 +12314,7 @@ var _prodInvariant = __webpack_require__(5);
 var ReactPropTypesSecret = __webpack_require__(106);
 var propTypesFactory = __webpack_require__(89);
 
-var React = __webpack_require__(30);
+var React = __webpack_require__(29);
 var PropTypes = propTypesFactory(React.isValidElement);
 
 var invariant = __webpack_require__(3);
@@ -13356,7 +13358,7 @@ var _deprecateObjectProperties = __webpack_require__(47);
 
 var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
 
-var _InternalPropTypes = __webpack_require__(26);
+var _InternalPropTypes = __webpack_require__(25);
 
 var InternalPropTypes = _interopRequireWildcard(_InternalPropTypes);
 
@@ -14222,7 +14224,7 @@ exports.default = Loader;
 
 
 
-var _prodInvariant = __webpack_require__(31),
+var _prodInvariant = __webpack_require__(30),
     _assign = __webpack_require__(6);
 
 var ReactNoopUpdateQueue = __webpack_require__(85);
@@ -16815,7 +16817,7 @@ module.exports = instantiateReactComponent;
 
 var _prodInvariant = __webpack_require__(5);
 
-var React = __webpack_require__(30);
+var React = __webpack_require__(29);
 
 var invariant = __webpack_require__(3);
 
@@ -17406,9 +17408,9 @@ module.exports = getActiveElement;
 
 var _prodInvariant = __webpack_require__(5);
 
-var DOMLazyTree = __webpack_require__(33);
+var DOMLazyTree = __webpack_require__(32);
 var DOMProperty = __webpack_require__(21);
-var React = __webpack_require__(30);
+var React = __webpack_require__(29);
 var ReactBrowserEventEmitter = __webpack_require__(46);
 var ReactCurrentOwner = __webpack_require__(16);
 var ReactDOMComponentTree = __webpack_require__(7);
@@ -17418,7 +17420,7 @@ var ReactFeatureFlags = __webpack_require__(98);
 var ReactInstanceMap = __webpack_require__(39);
 var ReactInstrumentation = __webpack_require__(12);
 var ReactMarkupChecksum = __webpack_require__(366);
-var ReactReconciler = __webpack_require__(32);
+var ReactReconciler = __webpack_require__(31);
 var ReactUpdateQueue = __webpack_require__(71);
 var ReactUpdates = __webpack_require__(17);
 
@@ -18174,7 +18176,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _Actions = __webpack_require__(35);
 
-var _PathUtils = __webpack_require__(27);
+var _PathUtils = __webpack_require__(26);
 
 var _ExecutionEnvironment = __webpack_require__(48);
 
@@ -18552,7 +18554,7 @@ var _deepEqual = __webpack_require__(558);
 
 var _deepEqual2 = _interopRequireDefault(_deepEqual);
 
-var _PathUtils = __webpack_require__(27);
+var _PathUtils = __webpack_require__(26);
 
 var _AsyncUtils = __webpack_require__(561);
 
@@ -19182,7 +19184,7 @@ var _RouteUtils = __webpack_require__(22);
 
 var _PatternUtils = __webpack_require__(34);
 
-var _InternalPropTypes = __webpack_require__(26);
+var _InternalPropTypes = __webpack_require__(25);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19327,7 +19329,7 @@ var _warning2 = _interopRequireDefault(_warning);
 
 var _ExecutionEnvironment = __webpack_require__(48);
 
-var _PathUtils = __webpack_require__(27);
+var _PathUtils = __webpack_require__(26);
 
 var _runTransitionHook = __webpack_require__(76);
 
@@ -20413,9 +20415,9 @@ var _moment = __webpack_require__(1);
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _reactRouter = __webpack_require__(25);
+var _reactRouter = __webpack_require__(33);
 
-var _Button = __webpack_require__(28);
+var _Button = __webpack_require__(27);
 
 var _cleaning = __webpack_require__(264);
 
@@ -31814,7 +31816,7 @@ var _reactDom = __webpack_require__(92);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouter = __webpack_require__(25);
+var _reactRouter = __webpack_require__(33);
 
 var _cleaning = __webpack_require__(264);
 
@@ -31912,8 +31914,6 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(25);
-
 var _constants = __webpack_require__(14);
 
 var _Code = __webpack_require__(268);
@@ -31923,6 +31923,10 @@ var _Code2 = _interopRequireDefault(_Code);
 var _Image = __webpack_require__(657);
 
 var _Image2 = _interopRequireDefault(_Image);
+
+var _Youtube = __webpack_require__(658);
+
+var _Youtube2 = _interopRequireDefault(_Youtube);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31956,10 +31960,15 @@ var Body = function (_Component) {
                         element.content
                     );
                 case _constants.ELEMENT_TYPES.LINK:
+                    console.log(element.link);
                     return _react2.default.createElement(
-                        _reactRouter.Link,
-                        { to: element.link },
-                        element.content
+                        'a',
+                        { href: element.link },
+                        _react2.default.createElement(
+                            'p',
+                            null,
+                            element.content
+                        )
                     );
                 case _constants.ELEMENT_TYPES.IMAGE:
                     return _react2.default.createElement(_Image2.default, { url: element.url,
@@ -31970,6 +31979,20 @@ var Body = function (_Component) {
                     return _react2.default.createElement(_Code2.default, { code: element.content });
                 case _constants.ELEMENT_TYPES.QUOTE:
                     return _react2.default.createElement('div', { className: 'quote' });
+                case _constants.ELEMENT_TYPES.YOUTUBE:
+                    return _react2.default.createElement(_Youtube2.default, { videoId: element.id });
+                case _constants.ELEMENT_TYPES.LIST:
+                    return _react2.default.createElement(
+                        'ol',
+                        null,
+                        element.items.map(function (item, i) {
+                            return _react2.default.createElement(
+                                'li',
+                                { key: i },
+                                item
+                            );
+                        })
+                    );
             }
         }
     }, {
@@ -32159,17 +32182,17 @@ var _highlight = __webpack_require__(118);
 
 var _highlight2 = _interopRequireDefault(_highlight);
 
-var _reactRouter = __webpack_require__(25);
+var _reactRouter = __webpack_require__(33);
 
 var _RootContainer = __webpack_require__(587);
 
 var _RootContainer2 = _interopRequireDefault(_RootContainer);
 
-var _es6Syntax = __webpack_require__(662);
+var _es6Syntax = __webpack_require__(663);
 
 var _es6Syntax2 = _interopRequireDefault(_es6Syntax);
 
-__webpack_require__(663);
+__webpack_require__(664);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32418,7 +32441,7 @@ module.exports = ReactChildren;
 
 
 
-var _prodInvariant = __webpack_require__(31);
+var _prodInvariant = __webpack_require__(30);
 
 var invariant = __webpack_require__(3);
 
@@ -32535,7 +32558,7 @@ module.exports = PooledClass;
 
 
 
-var _prodInvariant = __webpack_require__(31);
+var _prodInvariant = __webpack_require__(30);
 
 var ReactCurrentOwner = __webpack_require__(16);
 var REACT_ELEMENT_TYPE = __webpack_require__(86);
@@ -32956,7 +32979,7 @@ module.exports = ReactDOMFactories;
 
 
 
-var _prodInvariant = __webpack_require__(31);
+var _prodInvariant = __webpack_require__(30);
 
 var ReactPropTypeLocationNames = __webpack_require__(277);
 var ReactPropTypesSecret = __webpack_require__(278);
@@ -34324,7 +34347,7 @@ module.exports = emptyFunction;
  */
 
 
-var _prodInvariant = __webpack_require__(31);
+var _prodInvariant = __webpack_require__(30);
 
 var ReactElement = __webpack_require__(23);
 
@@ -34374,7 +34397,7 @@ module.exports = onlyChild;
 var ReactDOMComponentTree = __webpack_require__(7);
 var ReactDefaultInjection = __webpack_require__(290);
 var ReactMount = __webpack_require__(116);
-var ReactReconciler = __webpack_require__(32);
+var ReactReconciler = __webpack_require__(31);
 var ReactUpdates = __webpack_require__(17);
 var ReactVersion = __webpack_require__(368);
 
@@ -36664,7 +36687,7 @@ module.exports = ReactComponentBrowserEnvironment;
 
 var _prodInvariant = __webpack_require__(5);
 
-var DOMLazyTree = __webpack_require__(33);
+var DOMLazyTree = __webpack_require__(32);
 var ExecutionEnvironment = __webpack_require__(8);
 
 var createNodesFromMarkup = __webpack_require__(309);
@@ -37083,7 +37106,7 @@ var _prodInvariant = __webpack_require__(5),
 
 var AutoFocusUtils = __webpack_require__(314);
 var CSSPropertyOperations = __webpack_require__(315);
-var DOMLazyTree = __webpack_require__(33);
+var DOMLazyTree = __webpack_require__(32);
 var DOMNamespaces = __webpack_require__(64);
 var DOMProperty = __webpack_require__(21);
 var DOMPropertyOperations = __webpack_require__(105);
@@ -39095,7 +39118,7 @@ module.exports = ReactDOMInput;
 
 var _assign = __webpack_require__(6);
 
-var React = __webpack_require__(30);
+var React = __webpack_require__(29);
 var ReactDOMComponentTree = __webpack_require__(7);
 var ReactDOMSelect = __webpack_require__(107);
 
@@ -39394,7 +39417,7 @@ var ReactInstanceMap = __webpack_require__(39);
 var ReactInstrumentation = __webpack_require__(12);
 
 var ReactCurrentOwner = __webpack_require__(16);
-var ReactReconciler = __webpack_require__(32);
+var ReactReconciler = __webpack_require__(31);
 var ReactChildReconciler = __webpack_require__(329);
 
 var emptyFunction = __webpack_require__(15);
@@ -39839,7 +39862,7 @@ module.exports = ReactMultiChild;
 
 
 
-var ReactReconciler = __webpack_require__(32);
+var ReactReconciler = __webpack_require__(31);
 
 var instantiateReactComponent = __webpack_require__(108);
 var KeyEscapeUtils = __webpack_require__(70);
@@ -40001,14 +40024,14 @@ module.exports = ReactChildReconciler;
 var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(6);
 
-var React = __webpack_require__(30);
+var React = __webpack_require__(29);
 var ReactComponentEnvironment = __webpack_require__(67);
 var ReactCurrentOwner = __webpack_require__(16);
 var ReactErrorUtils = __webpack_require__(59);
 var ReactInstanceMap = __webpack_require__(39);
 var ReactInstrumentation = __webpack_require__(12);
 var ReactNodeTypes = __webpack_require__(109);
-var ReactReconciler = __webpack_require__(32);
+var ReactReconciler = __webpack_require__(31);
 
 if (process.env.NODE_ENV !== 'production') {
   var checkReactTypeSpec = __webpack_require__(331);
@@ -41450,7 +41473,7 @@ module.exports = ReactServerUpdateQueue;
 
 var _assign = __webpack_require__(6);
 
-var DOMLazyTree = __webpack_require__(33);
+var DOMLazyTree = __webpack_require__(32);
 var ReactDOMComponentTree = __webpack_require__(7);
 
 var ReactDOMEmptyComponent = function (instantiate) {
@@ -41659,7 +41682,7 @@ var _prodInvariant = __webpack_require__(5),
     _assign = __webpack_require__(6);
 
 var DOMChildrenOperations = __webpack_require__(63);
-var DOMLazyTree = __webpack_require__(33);
+var DOMLazyTree = __webpack_require__(32);
 var ReactDOMComponentTree = __webpack_require__(7);
 
 var escapeTextContentForBrowser = __webpack_require__(45);
@@ -62052,7 +62075,7 @@ var _createTransitionManager = __webpack_require__(78);
 
 var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
-var _InternalPropTypes = __webpack_require__(26);
+var _InternalPropTypes = __webpack_require__(25);
 
 var _RouterContext = __webpack_require__(50);
 
@@ -62476,7 +62499,7 @@ var _warning2 = _interopRequireDefault(_warning);
 
 var _Actions = __webpack_require__(35);
 
-var _PathUtils = __webpack_require__(27);
+var _PathUtils = __webpack_require__(26);
 
 function createLocation() {
   var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
@@ -63443,7 +63466,7 @@ var _Redirect = __webpack_require__(127);
 
 var _Redirect2 = _interopRequireDefault(_Redirect);
 
-var _InternalPropTypes = __webpack_require__(26);
+var _InternalPropTypes = __webpack_require__(25);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63511,7 +63534,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _RouteUtils = __webpack_require__(22);
 
-var _InternalPropTypes = __webpack_require__(26);
+var _InternalPropTypes = __webpack_require__(25);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63574,7 +63597,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _RouteUtils = __webpack_require__(22);
 
-var _InternalPropTypes = __webpack_require__(26);
+var _InternalPropTypes = __webpack_require__(25);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63632,7 +63655,7 @@ var _routerWarning = __webpack_require__(9);
 
 var _routerWarning2 = _interopRequireDefault(_routerWarning);
 
-var _InternalPropTypes = __webpack_require__(26);
+var _InternalPropTypes = __webpack_require__(25);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -63988,7 +64011,7 @@ var _invariant = __webpack_require__(10);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
-var _PathUtils = __webpack_require__(27);
+var _PathUtils = __webpack_require__(26);
 
 var _Actions = __webpack_require__(35);
 
@@ -64233,7 +64256,7 @@ var _invariant2 = _interopRequireDefault(_invariant);
 
 var _Actions = __webpack_require__(35);
 
-var _PathUtils = __webpack_require__(27);
+var _PathUtils = __webpack_require__(26);
 
 var _ExecutionEnvironment = __webpack_require__(48);
 
@@ -64438,7 +64461,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(25);
+var _reactRouter = __webpack_require__(33);
 
 var _reactRedux = __webpack_require__(588);
 
@@ -65979,7 +66002,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(25);
+var _reactRouter = __webpack_require__(33);
 
 var _NotFound = __webpack_require__(620);
 
@@ -66001,11 +66024,11 @@ var _BlogPost = __webpack_require__(655);
 
 var _BlogPost2 = _interopRequireDefault(_BlogPost);
 
-var _Project = __webpack_require__(658);
+var _Project = __webpack_require__(659);
 
 var _Project2 = _interopRequireDefault(_Project);
 
-var _StyleGuide = __webpack_require__(659);
+var _StyleGuide = __webpack_require__(660);
 
 var _StyleGuide2 = _interopRequireDefault(_StyleGuide);
 
@@ -66053,7 +66076,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _Spacer = __webpack_require__(19);
 
-var _Button = __webpack_require__(28);
+var _Button = __webpack_require__(27);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66309,7 +66332,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Button = __webpack_require__(28);
+var _Button = __webpack_require__(27);
 
 var _Spacer = __webpack_require__(19);
 
@@ -66456,7 +66479,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(29);
+var _axios = __webpack_require__(28);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -66470,7 +66493,7 @@ var _BlogPostCard2 = _interopRequireDefault(_BlogPostCard);
 
 var _Spacer = __webpack_require__(19);
 
-var _Button = __webpack_require__(28);
+var _Button = __webpack_require__(27);
 
 var _constants = __webpack_require__(14);
 
@@ -67708,7 +67731,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(29);
+var _axios = __webpack_require__(28);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -67718,7 +67741,7 @@ var _TextInput2 = _interopRequireDefault(_TextInput);
 
 var _Spacer = __webpack_require__(19);
 
-var _Button = __webpack_require__(28);
+var _Button = __webpack_require__(27);
 
 var _Loader = __webpack_require__(83);
 
@@ -67868,7 +67891,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(29);
+var _axios = __webpack_require__(28);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -67880,7 +67903,7 @@ var _ProjectCard = __webpack_require__(266);
 
 var _ProjectCard2 = _interopRequireDefault(_ProjectCard);
 
-var _Button = __webpack_require__(28);
+var _Button = __webpack_require__(27);
 
 var _Spacer = __webpack_require__(19);
 
@@ -68130,7 +68153,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(29);
+var _axios = __webpack_require__(28);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -68236,7 +68259,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(29);
+var _axios = __webpack_require__(28);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -68425,7 +68448,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(29);
+var _axios = __webpack_require__(28);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -68612,7 +68635,64 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(29);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // external modules
+
+
+var Youtube = function (_Component) {
+    _inherits(Youtube, _Component);
+
+    function Youtube() {
+        _classCallCheck(this, Youtube);
+
+        return _possibleConstructorReturn(this, (Youtube.__proto__ || Object.getPrototypeOf(Youtube)).apply(this, arguments));
+    }
+
+    _createClass(Youtube, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "Youtube" },
+                _react2.default.createElement("iframe", { className: "Youtube__Video",
+                    src: "https://www.youtube.com/embed/" + this.props.videoId + "?rel=0&hd=1",
+                    frameBorder: 0,
+                    allowFullScreen: true })
+            );
+        }
+    }]);
+
+    return Youtube;
+}(_react.Component);
+
+Youtube.propTypes = {
+    videoId: _react.PropTypes.string.isRequired
+};
+exports.default = Youtube;
+
+/***/ }),
+/* 659 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _axios = __webpack_require__(28);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -68697,7 +68777,7 @@ Project.propTypes = {};
 exports.default = Project;
 
 /***/ }),
-/* 659 */
+/* 660 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68713,7 +68793,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Button = __webpack_require__(28);
+var _Button = __webpack_require__(27);
 
 var _Code = __webpack_require__(268);
 
@@ -68721,7 +68801,7 @@ var _Code2 = _interopRequireDefault(_Code);
 
 var _Spacer = __webpack_require__(19);
 
-var _AnimatedBar = __webpack_require__(660);
+var _AnimatedBar = __webpack_require__(661);
 
 var _AnimatedBar2 = _interopRequireDefault(_AnimatedBar);
 
@@ -68729,7 +68809,7 @@ var _downArrow = __webpack_require__(51);
 
 var _downArrow2 = _interopRequireDefault(_downArrow);
 
-var _mailIcon = __webpack_require__(661);
+var _mailIcon = __webpack_require__(662);
 
 var _mailIcon2 = _interopRequireDefault(_mailIcon);
 
@@ -68875,7 +68955,7 @@ var StyleGuide = function (_Component) {
 exports.default = StyleGuide;
 
 /***/ }),
-/* 660 */
+/* 661 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68983,7 +69063,7 @@ AnimatedBar.propTypes = {
 exports.default = AnimatedBar;
 
 /***/ }),
-/* 661 */
+/* 662 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69039,7 +69119,7 @@ var SVG = function (_React$Component) {
 exports.default = SVG;
 
 /***/ }),
-/* 662 */
+/* 663 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69130,13 +69210,13 @@ exports.default = function (hljs) {
 };
 
 /***/ }),
-/* 663 */
+/* 664 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
-var dispose = __webpack_require__(664)
+var dispose = __webpack_require__(665)
 	// The css code:
-	(__webpack_require__(665));
+	(__webpack_require__(666));
 // Hot Module Replacement
 if(false) {
 	module.hot.accept();
@@ -69144,7 +69224,7 @@ if(false) {
 }
 
 /***/ }),
-/* 664 */
+/* 665 */
 /***/ (function(module, exports) {
 
 /*
@@ -69171,21 +69251,21 @@ module.exports = function addStyle(cssCode) {
 
 
 /***/ }),
-/* 665 */
+/* 666 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(269)();
 // imports
-exports.i(__webpack_require__(666), "");
+exports.i(__webpack_require__(667), "");
 
 // module
-exports.push([module.i, "@font-face {\n  font-family: 'FiraCode-Regular';\n  src: url(\"/public/fonts/FiraCode-Regular-webfont.woff\") format(\"woff\"); }\n\n* {\n  margin: 0;\n  box-sizing: border-box; }\n\nhtml,\nbody {\n  height: 100%;\n  width: 100%; }\n\nh1 {\n  font-family: \"Lora\", serif;\n  font-weight: 700;\n  font-style: normal;\n  font-size: 50px;\n  color: rgba(35, 35, 35, 0.88); }\n\nh2 {\n  font-family: \"Lora\", serif;\n  font-weight: 700;\n  font-style: normal;\n  font-size: 42px;\n  color: rgba(35, 35, 35, 0.88); }\n\nh3 {\n  font-family: \"Playfair Display\", cursive;\n  font-weight: 400;\n  font-style: italic;\n  font-size: 32px;\n  color: rgba(35, 35, 35, 0.88); }\n\nh4 {\n  font-family: \"Playfair Display\", cursive;\n  font-weight: 400;\n  font-style: italic;\n  font-size: 24px;\n  color: rgba(35, 35, 35, 0.88); }\n\np {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\ninput,\ntextarea {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\n::selection {\n  color: #fff;\n  background-color: rgba(62, 62, 62, 0.75); }\n\npre {\n  padding: 20px !important;\n  line-height: 25px;\n  border-left: 5px solid #5e6687; }\n  pre code {\n    font-family: \"FiraCode-Regular\", monospace;\n    font-weight: normal;\n    font-style: normal;\n    font-size: 17px;\n    color: rgba(35, 35, 35, 0.88); }\n\n.margin--none {\n  margin-top: 0 !important;\n  margin-right: 0 !important;\n  margin-bottom: 0 !important;\n  margin-left: 0 !important; }\n\n.margin-all--xs {\n  margin-top: 5px !important;\n  margin-right: 5px !important;\n  margin-bottom: 5px !important;\n  margin-left: 5px !important; }\n\n.margin-all--sm {\n  margin-top: 25px !important;\n  margin-right: 25px !important;\n  margin-bottom: 25px !important;\n  margin-left: 25px !important; }\n\n.margin-all--md {\n  margin-top: 40px !important;\n  margin-right: 40px !important;\n  margin-bottom: 40px !important;\n  margin-left: 40px !important; }\n\n.margin-all--lg {\n  margin-top: 60px !important;\n  margin-right: 60px !important;\n  margin-bottom: 60px !important;\n  margin-left: 60px !important; }\n\n.margin-all--xl {\n  margin-top: 100px !important;\n  margin-right: 100px !important;\n  margin-bottom: 100px !important;\n  margin-left: 100px !important; }\n\n.margin-top--none {\n  margin-top: 0 !important; }\n\n.margin-top--xs {\n  margin-top: 5px !important; }\n\n.margin-top--sm {\n  margin-top: 25px !important; }\n\n.margin-top--md {\n  margin-top: 40px !important; }\n\n.margin-top--lg {\n  margin-top: 60px !important; }\n\n.margin-top--xl {\n  margin-top: 100px !important; }\n\n.margin-right--none {\n  margin-right: 0 !important; }\n\n.margin-right--xs {\n  margin-right: 5px !important; }\n\n.margin-right--sm {\n  margin-right: 25px !important; }\n\n.margin-right--md {\n  margin-right: 40px !important; }\n\n.margin-right--lg {\n  margin-right: 60px !important; }\n\n.margin-right--xl {\n  margin-right: 100px !important; }\n\n.margin-bottom--none {\n  margin-bottom: 0 !important; }\n\n.margin-bottom--xs {\n  margin-bottom: 5px !important; }\n\n.margin-bottom--sm {\n  margin-bottom: 25px !important; }\n\n.margin-bottom--md {\n  margin-bottom: 40px !important; }\n\n.margin-bottom--lg {\n  margin-bottom: 60px !important; }\n\n.margin-bottom--xl {\n  margin-bottom: 100px !important; }\n\n.margin-left--none {\n  margin-left: 0 !important; }\n\n.margin-left--xs {\n  margin-left: 5px !important; }\n\n.margin-left--sm {\n  margin-left: 25px !important; }\n\n.margin-left--md {\n  margin-left: 40px !important; }\n\n.margin-left--lg {\n  margin-left: 60px !important; }\n\n.margin-left--xl {\n  margin-left: 100px !important; }\n\n.padding--none {\n  padding-top: 0 !important;\n  padding-right: 0 !important;\n  padding-bottom: 0 !important;\n  padding-left: 0 !important; }\n\n.padding-all--xs {\n  padding-top: 5px !important;\n  padding-right: 5px !important;\n  padding-bottom: 5px !important;\n  padding-left: 5px !important; }\n\n.padding-all--sm {\n  padding-top: 25px !important;\n  padding-right: 25px !important;\n  padding-bottom: 25px !important;\n  padding-left: 25px !important; }\n\n.padding-all--md {\n  padding-top: 40px !important;\n  padding-right: 40px !important;\n  padding-bottom: 40px !important;\n  padding-left: 40px !important; }\n\n.padding-all--lg {\n  padding-top: 60px !important;\n  padding-right: 60px !important;\n  padding-bottom: 60px !important;\n  padding-left: 60px !important; }\n\n.padding-all--xl {\n  padding-top: 100px !important;\n  padding-right: 100px !important;\n  padding-bottom: 100px !important;\n  padding-left: 100px !important; }\n\n.padding-top--none {\n  padding-top: 0 !important; }\n\n.padding-top--xs {\n  padding-top: 5px !important; }\n\n.padding-top--sm {\n  padding-top: 25px !important; }\n\n.padding-top--md {\n  padding-top: 40px !important; }\n\n.padding-top--lg {\n  padding-top: 60px !important; }\n\n.padding-top--xl {\n  padding-top: 100px !important; }\n\n.padding-right--none {\n  padding-right: 0 !important; }\n\n.padding-right--xs {\n  padding-right: 5px !important; }\n\n.padding-right--sm {\n  padding-right: 25px !important; }\n\n.padding-right--md {\n  padding-right: 40px !important; }\n\n.padding-right--lg {\n  padding-right: 60px !important; }\n\n.padding-right--xl {\n  padding-right: 100px !important; }\n\n.padding-bottom--none {\n  padding-bottom: 0 !important; }\n\n.padding-bottom--xs {\n  padding-bottom: 5px !important; }\n\n.padding-bottom--sm {\n  padding-bottom: 25px !important; }\n\n.padding-bottom--md {\n  padding-bottom: 40px !important; }\n\n.padding-bottom--lg {\n  padding-bottom: 60px !important; }\n\n.padding-bottom--xl {\n  padding-bottom: 100px !important; }\n\n.padding-left--none {\n  padding-left: 0 !important; }\n\n.padding-left--xs {\n  padding-left: 5px !important; }\n\n.padding-left--sm {\n  padding-left: 25px !important; }\n\n.padding-left--md {\n  padding-left: 40px !important; }\n\n.padding-left--lg {\n  padding-left: 60px !important; }\n\n.padding-left--xl {\n  padding-left: 100px !important; }\n\n.horiz-spacing--xs {\n  margin-left: 5px !important;\n  margin-right: 5px !important; }\n\n.horiz-spacing--sm {\n  margin-left: 25px !important;\n  margin-right: 25px !important; }\n\n.horiz-spacing--md {\n  margin-left: 40px !important;\n  margin-right: 40px !important; }\n\n.horiz-spacing--lg {\n  margin-left: 60px !important;\n  margin-right: 60px !important; }\n\n.horiz-spacing--xl {\n  margin-left: 100px !important;\n  margin-right: 100px !important; }\n\n.code {\n  background-color: #f5f7ff;\n  padding: 5px;\n  font-family: \"FiraCode-Regular\", monospace;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\n.background-color--primary-color--fade {\n  background-color: #e9e9e9 !important; }\n\n.text-center {\n  text-align: center; }\n\n@media screen and (min-width: 768px) {\n  .hide--sm {\n    display: none; } }\n\n@media screen and (min-width: 992px) {\n  .hide--md {\n    display: none; } }\n\n@media screen and (min-width: 1200px) {\n  .hide--lg {\n    display: none; } }\n\n@media screen and (min-width: 1200px) {\n  .hide--lg {\n    display: none; } }\n\n.fill--primary {\n  background-color: #3E3E3E; }\n\n.fill--light {\n  background-color: #fff; }\n\n.display--block {\n  display: block; }\n\n.display--inline-block {\n  display: inline-block; }\n\n[class*=\"align-content\"] {\n  display: flex; }\n  [class*=\"align-content\"][class*=\"--left\"] {\n    align-items: left;\n    justify-content: center; }\n  [class*=\"align-content\"][class*=\"--center\"] {\n    align-items: center;\n    justify-content: center; }\n  [class*=\"align-content\"][class*=\"--col\"] {\n    flex-direction: column; }\n\n.no-underline {\n  text-decoration: none !important; }\n\n.handle-float {\n  overflow: auto; }\n\n.hover--basic {\n  cursor: pointer; }\n\n.font-color--fade {\n  color: rgba(35, 35, 35, 0.65); }\n\n.font-color--light {\n  color: #fff; }\n\n[class^=\"ButtonBase\"] {\n  height: 50px;\n  min-width: 150px;\n  max-width: 200px;\n  display: inline-block;\n  position: relative;\n  transition: 150ms all;\n  line-height: 50px;\n  text-align: center;\n  font-family: \"Lora\", serif;\n  font-weight: 700;\n  font-style: normal;\n  font-size: 20px;\n  color: rgba(35, 35, 35, 0.88); }\n  [class^=\"ButtonBase\"][class*=\"--center\"] {\n    display: block;\n    max-width: 200px;\n    margin-left: auto;\n    margin-right: auto; }\n\n.ModernButton {\n  margin-top: 14px;\n  margin-bottom: 14px; }\n  .ModernButton:hover {\n    cursor: pointer;\n    transition: 200ms all; }\n    .ModernButton:hover .ModernButton__Upper {\n      top: 5px;\n      left: 5px;\n      border-color: rgba(62, 62, 62, 0.25);\n      font-size: 21px;\n      transition: 200ms all; }\n    .ModernButton:hover .ModernButton__Shadow {\n      top: 5px;\n      left: 5px;\n      opacity: 0.5;\n      transition: 200ms all; }\n\n.ModernButton__Upper {\n  border: 2px solid #3E3E3E;\n  border-radius: 3px;\n  background-color: transparent;\n  width: 100%;\n  height: inherit;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  transition: 150ms all; }\n\n.ModernButton__Shadow {\n  opacity: 1.0;\n  background-color: #e9e9e9;\n  border: 2px solid #e9e9e9;\n  border-radius: 3px;\n  width: 100%;\n  height: inherit;\n  position: absolute;\n  z-index: 0;\n  top: 10px;\n  left: 10px;\n  transition: 150ms all;\n  border-collapse: separate; }\n\n.BorderButton {\n  border-radius: 3px;\n  border: 2px solid #3E3E3E; }\n  .BorderButton:hover {\n    cursor: pointer;\n    font-size: 21px;\n    transition: 200ms;\n    border-color: rgba(62, 62, 62, 0.25); }\n\n[class*=\"FillButton\"] {\n  border-radius: 3px;\n  border-width: 2px;\n  border-style: solid; }\n  [class*=\"FillButton\"][class*=\"--light\"] {\n    background-color: #fff;\n    border-color: #3E3E3E;\n    color: #3E3E3E; }\n    [class*=\"FillButton\"][class*=\"--light\"]:hover {\n      border-color: rgba(62, 62, 62, 0.75);\n      background-color: rgba(255, 255, 255, 0.75); }\n  [class*=\"FillButton\"][class*=\"--medium\"] {\n    background-color: #e9e9e9;\n    border-color: #3E3E3E;\n    color: #3E3E3E; }\n    [class*=\"FillButton\"][class*=\"--medium\"]:hover {\n      border-color: rgba(62, 62, 62, 0.75);\n      background-color: rgba(233, 233, 233, 0.75); }\n  [class*=\"FillButton\"][class*=\"--dark\"] {\n    background-color: #3E3E3E;\n    border-color: #3E3E3E;\n    color: #fff; }\n    [class*=\"FillButton\"][class*=\"--dark\"]:hover {\n      border-color: rgba(62, 62, 62, 0.75);\n      background-color: rgba(62, 62, 62, 0.75); }\n  [class*=\"FillButton\"]:hover {\n    cursor: pointer;\n    font-size: 21px;\n    transition: 200ms; }\n\n.LightFillButton {\n  border-radius: 3px;\n  border: 2px solid #3E3E3E;\n  background-color: #e9e9e9; }\n  .LightFillButton:hover {\n    cursor: pointer;\n    font-size: 21px;\n    transition: 200ms;\n    border-color: rgba(62, 62, 62, 0.25); }\n\n.IconButton {\n  height: 50px;\n  width: 50px;\n  min-width: 50px; }\n  .IconButton .ModernButton__Upper,\n  .IconButton .ModernButton__Shadow {\n    border-radius: 50%; }\n  .IconButton .ModernButton__Upper {\n    display: flex;\n    align-items: center;\n    justify-content: center; }\n\n.IconButton__Icon path {\n  transform-origin: 50% 50%;\n  transition: 150ms all; }\n\n.IconButton:hover .IconButton__Icon path {\n  transform: scale(1.15);\n  transition: 200ms all; }\n\n.SpacerBase {\n  border: none;\n  height: 2px;\n  background-color: #3E3E3E;\n  margin-top: 40px;\n  margin-bottom: 40px; }\n\n.SimpleSpacer--short {\n  width: 50%;\n  max-width: 100px; }\n\n.SimpleSpacer--medium {\n  width: 75%;\n  max-width: 175px; }\n\n.SimpleSpacer--long {\n  width: 100%;\n  max-width: 250px; }\n\n.SimpleSpacer--center {\n  width: 100%;\n  max-width: 150px;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto; }\n\n.Underlay {\n  position: fixed;\n  height: 100%;\n  width: 100%;\n  background-color: #3E3E3E;\n  z-index: -1; }\n\n.HomePageJumbotron {\n  background-color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  padding: 40px;\n  height: 100%;\n  width: 100%;\n  max-width: 850px; }\n\n.ContactForm {\n  background-color: #fff; }\n  .ContactForm .ContactForm__FormContent {\n    max-width: 700px;\n    margin-left: auto;\n    margin-right: auto; }\n\n.Portfolio {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.Portfolio__Content {\n  max-width: 700px; }\n\n.Portfolio__Projects {\n  overflow: auto; }\n\n.AnimatedBar {\n  position: relative;\n  width: 100%;\n  height: 44px; }\n\n.AnimatedBar__FillWrapper {\n  overflow: hidden;\n  height: 25px;\n  border: 2px solid #3E3E3E; }\n\n.FillWrapper__Fill {\n  height: inherit;\n  background-color: #3E3E3E;\n  width: 0;\n  transition-timing-function: cubic-bezier(0, 0.22, 0.65, 1.4); }\n\n.AnimatedBar_Shadow {\n  height: 29px;\n  /* $height + 2 * $border-size */\n  width: inherit;\n  background-color: #e9e9e9;\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  z-index: -1;\n  /* to appear below fill elements */ }\n\n.TextInput--Line {\n  border-left: 2px solid #3E3E3E;\n  border-top: none;\n  border-right: none;\n  border-bottom: 2px solid #3E3E3E;\n  display: block;\n  width: 100%;\n  padding: 5px;\n  outline: none;\n  transition: 100ms all; }\n\n.TextInput--Area {\n  border: 2px solid #3E3E3E;\n  display: block;\n  resize: none;\n  width: 100%;\n  padding: 5px;\n  outline: none;\n  transition: 100ms all; }\n\n.TextInput--error {\n  border-color: #b92930;\n  color: #b92930;\n  transition: 200ms all; }\n  .TextInput--error::placeholder {\n    color: #b55c60;\n    transition: 200ms all; }\n\n.Scroller {\n  width: 65px;\n  height: 65px;\n  background-color: #fff;\n  position: absolute;\n  bottom: 40px;\n  right: 40px;\n  border-radius: 50%;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .Scroller:hover {\n    cursor: pointer; }\n\n.BlogPostsWrapper {\n  overflow: auto; }\n\n.BlogPost__Content {\n  width: 100%;\n  max-width: 800px;\n  padding: 40px;\n  margin: 40px auto; }\n  .BlogPost__Content p {\n    line-height: 2rem; }\n\n[class^=\"BlogPostCard\"] {\n  width: 100%;\n  max-width: 500px;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 40px; }\n  [class^=\"BlogPostCard\"][class*=\"--alt\"] {\n    border-top: #3E3E3E solid 2px;\n    border-left: #3E3E3E solid 2px;\n    -webkit-box-shadow: 15px 15px 0 #e9e9e9;\n    -moz-box-shadow: 15px 15px 0 #e9e9e9;\n    box-shadow: 15px 15px 0 #e9e9e9; }\n  [class^=\"BlogPostCard\"] h3 {\n    opacity: 1.0;\n    transition: 150ms all; }\n  [class^=\"BlogPostCard\"]:hover h3 {\n    opacity: 0.75;\n    transition: 200ms all; }\n  [class^=\"BlogPostCard\"]:nth-last-of-type(2), [class^=\"BlogPostCard\"]:last-of-type {\n    margin-bottom: 0; }\n  @media screen and (min-width: 992px) {\n    [class^=\"BlogPostCard\"] {\n      width: 47.5%;\n      float: left;\n      margin-left: 5%; }\n      [class^=\"BlogPostCard\"]:nth-child(odd) {\n        margin-left: 0; }\n      [class^=\"BlogPostCard\"]:nth-last-of-type(2) {\n        margin-bottom: 0; }\n      [class^=\"BlogPostCard\"]:last-of-type {\n        margin-bottom: 0; } }\n\n.NotFound {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column; }\n\n.HomeButton {\n  height: 60px;\n  width: 60px;\n  position: fixed;\n  bottom: 25px;\n  right: 25px;\n  border-radius: 50%;\n  background-color: #3E3E3E;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.ProjectCard {\n  position: relative;\n  display: block;\n  width: 100%;\n  max-width: 500px;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 40px; }\n  @media screen and (min-width: 992px) {\n    .ProjectCard {\n      width: 30%;\n      float: left;\n      margin-left: 5%; }\n      .ProjectCard:nth-child(3n + 1) {\n        margin-left: 0; }\n      .ProjectCard:nth-last-of-type(3), .ProjectCard:nth-last-of-type(2), .ProjectCard:last-of-type {\n        margin-bottom: 0; } }\n\n.ProjectCard__Image {\n  width: 100%;\n  height: 100%;\n  background-size: 100%;\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: 200ms all; }\n  .ProjectCard__Image:hover {\n    background-size: 125%;\n    cursor: pointer;\n    transition: 300ms all; }\n    .ProjectCard__Image:hover .ProjectCard__Title {\n      opacity: 1.0;\n      transition: 200ms all; }\n\n.ProjectCard__Title {\n  position: absolute;\n  display: flex;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(62, 62, 62, 0.75);\n  opacity: 0.0;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  transition: 150ms all; }\n\n.BlogPosts__Content {\n  max-width: 700px;\n  margin-left: auto;\n  margin-right: auto; }\n\n.BlogPosts__BlogPostCards {\n  overflow: auto; }\n\n.Project__Content {\n  width: 100%;\n  max-width: 800px;\n  padding: 40px;\n  margin: 40px auto; }\n  .Project__Content p {\n    line-height: 2rem; }\n\n.Header__Back {\n  height: 50px;\n  width: 50px;\n  position: fixed;\n  top: 25px;\n  right: 25px;\n  border-radius: 50%;\n  background-color: #3E3E3E;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 1; }\n  .Header__Back svg {\n    transform: rotateZ(90deg); }\n    .Header__Back svg path {\n      fill: #fff; }\n\n.Image {\n  background-color: #3E3E3E;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.Image__Dummy {\n  visibility: hidden;\n  width: 100%; }\n\n.HomePage {\n  height: 100%;\n  width: 100%; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: 'FiraCode-Regular';\n  src: url(\"/public/fonts/FiraCode-Regular-webfont.woff\") format(\"woff\"); }\n\n* {\n  margin: 0;\n  box-sizing: border-box; }\n\nhtml,\nbody {\n  height: 100%;\n  width: 100%; }\n\nh1 {\n  font-family: \"Lora\", serif;\n  font-weight: 700;\n  font-style: normal;\n  font-size: 50px;\n  color: rgba(35, 35, 35, 0.88); }\n\nh2 {\n  font-family: \"Lora\", serif;\n  font-weight: 700;\n  font-style: normal;\n  font-size: 42px;\n  color: rgba(35, 35, 35, 0.88); }\n\nh3 {\n  font-family: \"Playfair Display\", cursive;\n  font-weight: 400;\n  font-style: italic;\n  font-size: 32px;\n  color: rgba(35, 35, 35, 0.88); }\n\nh4 {\n  font-family: \"Playfair Display\", cursive;\n  font-weight: 400;\n  font-style: italic;\n  font-size: 24px;\n  color: rgba(35, 35, 35, 0.88); }\n\np {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\nol {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\nli {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n  li:not(:last-of-type) {\n    margin-bottom: 25px; }\n\ninput,\ntextarea {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\n::selection {\n  color: #fff;\n  background-color: rgba(62, 62, 62, 0.75); }\n\npre {\n  padding: 20px !important;\n  line-height: 25px;\n  border-left: 5px solid #5e6687; }\n  pre code {\n    font-family: \"FiraCode-Regular\", monospace;\n    font-weight: normal;\n    font-style: normal;\n    font-size: 17px;\n    color: rgba(35, 35, 35, 0.88); }\n\n.margin--none {\n  margin-top: 0 !important;\n  margin-right: 0 !important;\n  margin-bottom: 0 !important;\n  margin-left: 0 !important; }\n\n.margin-all--xs {\n  margin-top: 5px !important;\n  margin-right: 5px !important;\n  margin-bottom: 5px !important;\n  margin-left: 5px !important; }\n\n.margin-all--sm {\n  margin-top: 25px !important;\n  margin-right: 25px !important;\n  margin-bottom: 25px !important;\n  margin-left: 25px !important; }\n\n.margin-all--md {\n  margin-top: 40px !important;\n  margin-right: 40px !important;\n  margin-bottom: 40px !important;\n  margin-left: 40px !important; }\n\n.margin-all--lg {\n  margin-top: 60px !important;\n  margin-right: 60px !important;\n  margin-bottom: 60px !important;\n  margin-left: 60px !important; }\n\n.margin-all--xl {\n  margin-top: 100px !important;\n  margin-right: 100px !important;\n  margin-bottom: 100px !important;\n  margin-left: 100px !important; }\n\n.margin-top--none {\n  margin-top: 0 !important; }\n\n.margin-top--xs {\n  margin-top: 5px !important; }\n\n.margin-top--sm {\n  margin-top: 25px !important; }\n\n.margin-top--md {\n  margin-top: 40px !important; }\n\n.margin-top--lg {\n  margin-top: 60px !important; }\n\n.margin-top--xl {\n  margin-top: 100px !important; }\n\n.margin-right--none {\n  margin-right: 0 !important; }\n\n.margin-right--xs {\n  margin-right: 5px !important; }\n\n.margin-right--sm {\n  margin-right: 25px !important; }\n\n.margin-right--md {\n  margin-right: 40px !important; }\n\n.margin-right--lg {\n  margin-right: 60px !important; }\n\n.margin-right--xl {\n  margin-right: 100px !important; }\n\n.margin-bottom--none {\n  margin-bottom: 0 !important; }\n\n.margin-bottom--xs {\n  margin-bottom: 5px !important; }\n\n.margin-bottom--sm {\n  margin-bottom: 25px !important; }\n\n.margin-bottom--md {\n  margin-bottom: 40px !important; }\n\n.margin-bottom--lg {\n  margin-bottom: 60px !important; }\n\n.margin-bottom--xl {\n  margin-bottom: 100px !important; }\n\n.margin-left--none {\n  margin-left: 0 !important; }\n\n.margin-left--xs {\n  margin-left: 5px !important; }\n\n.margin-left--sm {\n  margin-left: 25px !important; }\n\n.margin-left--md {\n  margin-left: 40px !important; }\n\n.margin-left--lg {\n  margin-left: 60px !important; }\n\n.margin-left--xl {\n  margin-left: 100px !important; }\n\n.padding--none {\n  padding-top: 0 !important;\n  padding-right: 0 !important;\n  padding-bottom: 0 !important;\n  padding-left: 0 !important; }\n\n.padding-all--xs {\n  padding-top: 5px !important;\n  padding-right: 5px !important;\n  padding-bottom: 5px !important;\n  padding-left: 5px !important; }\n\n.padding-all--sm {\n  padding-top: 25px !important;\n  padding-right: 25px !important;\n  padding-bottom: 25px !important;\n  padding-left: 25px !important; }\n\n.padding-all--md {\n  padding-top: 40px !important;\n  padding-right: 40px !important;\n  padding-bottom: 40px !important;\n  padding-left: 40px !important; }\n\n.padding-all--lg {\n  padding-top: 60px !important;\n  padding-right: 60px !important;\n  padding-bottom: 60px !important;\n  padding-left: 60px !important; }\n\n.padding-all--xl {\n  padding-top: 100px !important;\n  padding-right: 100px !important;\n  padding-bottom: 100px !important;\n  padding-left: 100px !important; }\n\n.padding-top--none {\n  padding-top: 0 !important; }\n\n.padding-top--xs {\n  padding-top: 5px !important; }\n\n.padding-top--sm {\n  padding-top: 25px !important; }\n\n.padding-top--md {\n  padding-top: 40px !important; }\n\n.padding-top--lg {\n  padding-top: 60px !important; }\n\n.padding-top--xl {\n  padding-top: 100px !important; }\n\n.padding-right--none {\n  padding-right: 0 !important; }\n\n.padding-right--xs {\n  padding-right: 5px !important; }\n\n.padding-right--sm {\n  padding-right: 25px !important; }\n\n.padding-right--md {\n  padding-right: 40px !important; }\n\n.padding-right--lg {\n  padding-right: 60px !important; }\n\n.padding-right--xl {\n  padding-right: 100px !important; }\n\n.padding-bottom--none {\n  padding-bottom: 0 !important; }\n\n.padding-bottom--xs {\n  padding-bottom: 5px !important; }\n\n.padding-bottom--sm {\n  padding-bottom: 25px !important; }\n\n.padding-bottom--md {\n  padding-bottom: 40px !important; }\n\n.padding-bottom--lg {\n  padding-bottom: 60px !important; }\n\n.padding-bottom--xl {\n  padding-bottom: 100px !important; }\n\n.padding-left--none {\n  padding-left: 0 !important; }\n\n.padding-left--xs {\n  padding-left: 5px !important; }\n\n.padding-left--sm {\n  padding-left: 25px !important; }\n\n.padding-left--md {\n  padding-left: 40px !important; }\n\n.padding-left--lg {\n  padding-left: 60px !important; }\n\n.padding-left--xl {\n  padding-left: 100px !important; }\n\n.horiz-spacing--xs {\n  margin-left: 5px !important;\n  margin-right: 5px !important; }\n\n.horiz-spacing--sm {\n  margin-left: 25px !important;\n  margin-right: 25px !important; }\n\n.horiz-spacing--md {\n  margin-left: 40px !important;\n  margin-right: 40px !important; }\n\n.horiz-spacing--lg {\n  margin-left: 60px !important;\n  margin-right: 60px !important; }\n\n.horiz-spacing--xl {\n  margin-left: 100px !important;\n  margin-right: 100px !important; }\n\n.code {\n  background-color: #f5f7ff;\n  padding: 5px;\n  font-family: \"FiraCode-Regular\", monospace;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\n.background-color--primary-color--fade {\n  background-color: #e9e9e9 !important; }\n\n.text-center {\n  text-align: center; }\n\n@media screen and (min-width: 768px) {\n  .hide--sm {\n    display: none; } }\n\n@media screen and (min-width: 992px) {\n  .hide--md {\n    display: none; } }\n\n@media screen and (min-width: 1200px) {\n  .hide--lg {\n    display: none; } }\n\n@media screen and (min-width: 1200px) {\n  .hide--lg {\n    display: none; } }\n\n.fill--primary {\n  background-color: #3E3E3E; }\n\n.fill--light {\n  background-color: #fff; }\n\n.display--block {\n  display: block; }\n\n.display--inline-block {\n  display: inline-block; }\n\n[class*=\"align-content\"] {\n  display: flex; }\n  [class*=\"align-content\"][class*=\"--left\"] {\n    align-items: left;\n    justify-content: center; }\n  [class*=\"align-content\"][class*=\"--center\"] {\n    align-items: center;\n    justify-content: center; }\n  [class*=\"align-content\"][class*=\"--col\"] {\n    flex-direction: column; }\n\n.no-underline {\n  text-decoration: none !important; }\n\n.handle-float {\n  overflow: auto; }\n\n.hover--basic {\n  cursor: pointer; }\n\n.font-color--fade {\n  color: rgba(35, 35, 35, 0.65); }\n\n.font-color--light {\n  color: #fff; }\n\n[class^=\"ButtonBase\"] {\n  height: 50px;\n  min-width: 150px;\n  max-width: 200px;\n  display: inline-block;\n  position: relative;\n  transition: 150ms all;\n  line-height: 50px;\n  text-align: center;\n  font-family: \"Lora\", serif;\n  font-weight: 700;\n  font-style: normal;\n  font-size: 20px;\n  color: rgba(35, 35, 35, 0.88); }\n  [class^=\"ButtonBase\"][class*=\"--center\"] {\n    display: block;\n    max-width: 200px;\n    margin-left: auto;\n    margin-right: auto; }\n\n.ModernButton {\n  margin-top: 14px;\n  margin-bottom: 14px; }\n  .ModernButton:hover {\n    cursor: pointer;\n    transition: 200ms all; }\n    .ModernButton:hover .ModernButton__Upper {\n      top: 5px;\n      left: 5px;\n      border-color: rgba(62, 62, 62, 0.25);\n      font-size: 21px;\n      transition: 200ms all; }\n    .ModernButton:hover .ModernButton__Shadow {\n      top: 5px;\n      left: 5px;\n      opacity: 0.5;\n      transition: 200ms all; }\n\n.ModernButton__Upper {\n  border: 2px solid #3E3E3E;\n  border-radius: 3px;\n  background-color: transparent;\n  width: 100%;\n  height: inherit;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  transition: 150ms all; }\n\n.ModernButton__Shadow {\n  opacity: 1.0;\n  background-color: #e9e9e9;\n  border: 2px solid #e9e9e9;\n  border-radius: 3px;\n  width: 100%;\n  height: inherit;\n  position: absolute;\n  z-index: 0;\n  top: 10px;\n  left: 10px;\n  transition: 150ms all;\n  border-collapse: separate; }\n\n.BorderButton {\n  border-radius: 3px;\n  border: 2px solid #3E3E3E; }\n  .BorderButton:hover {\n    cursor: pointer;\n    font-size: 21px;\n    transition: 200ms;\n    border-color: rgba(62, 62, 62, 0.25); }\n\n[class*=\"FillButton\"] {\n  border-radius: 3px;\n  border-width: 2px;\n  border-style: solid; }\n  [class*=\"FillButton\"][class*=\"--light\"] {\n    background-color: #fff;\n    border-color: #3E3E3E;\n    color: #3E3E3E; }\n    [class*=\"FillButton\"][class*=\"--light\"]:hover {\n      border-color: rgba(62, 62, 62, 0.75);\n      background-color: rgba(255, 255, 255, 0.75); }\n  [class*=\"FillButton\"][class*=\"--medium\"] {\n    background-color: #e9e9e9;\n    border-color: #3E3E3E;\n    color: #3E3E3E; }\n    [class*=\"FillButton\"][class*=\"--medium\"]:hover {\n      border-color: rgba(62, 62, 62, 0.75);\n      background-color: rgba(233, 233, 233, 0.75); }\n  [class*=\"FillButton\"][class*=\"--dark\"] {\n    background-color: #3E3E3E;\n    border-color: #3E3E3E;\n    color: #fff; }\n    [class*=\"FillButton\"][class*=\"--dark\"]:hover {\n      border-color: rgba(62, 62, 62, 0.75);\n      background-color: rgba(62, 62, 62, 0.75); }\n  [class*=\"FillButton\"]:hover {\n    cursor: pointer;\n    font-size: 21px;\n    transition: 200ms; }\n\n.LightFillButton {\n  border-radius: 3px;\n  border: 2px solid #3E3E3E;\n  background-color: #e9e9e9; }\n  .LightFillButton:hover {\n    cursor: pointer;\n    font-size: 21px;\n    transition: 200ms;\n    border-color: rgba(62, 62, 62, 0.25); }\n\n.IconButton {\n  height: 50px;\n  width: 50px;\n  min-width: 50px; }\n  .IconButton .ModernButton__Upper,\n  .IconButton .ModernButton__Shadow {\n    border-radius: 50%; }\n  .IconButton .ModernButton__Upper {\n    display: flex;\n    align-items: center;\n    justify-content: center; }\n\n.IconButton__Icon path {\n  transform-origin: 50% 50%;\n  transition: 150ms all; }\n\n.IconButton:hover .IconButton__Icon path {\n  transform: scale(1.15);\n  transition: 200ms all; }\n\n.SpacerBase {\n  border: none;\n  height: 2px;\n  background-color: #3E3E3E;\n  margin-top: 40px;\n  margin-bottom: 40px; }\n\n.SimpleSpacer--short {\n  width: 50%;\n  max-width: 100px; }\n\n.SimpleSpacer--medium {\n  width: 75%;\n  max-width: 175px; }\n\n.SimpleSpacer--long {\n  width: 100%;\n  max-width: 250px; }\n\n.SimpleSpacer--center {\n  width: 100%;\n  max-width: 150px;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto; }\n\n.Underlay {\n  position: fixed;\n  height: 100%;\n  width: 100%;\n  background-color: #3E3E3E;\n  z-index: -1; }\n\n.HomePageJumbotron {\n  background-color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  padding: 40px;\n  height: 100%;\n  width: 100%;\n  max-width: 850px; }\n\n.ContactForm {\n  background-color: #fff; }\n  .ContactForm .ContactForm__FormContent {\n    max-width: 700px;\n    margin-left: auto;\n    margin-right: auto; }\n\n.Portfolio {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.Portfolio__Content {\n  max-width: 700px; }\n\n.Portfolio__Projects {\n  overflow: auto; }\n\n.AnimatedBar {\n  position: relative;\n  width: 100%;\n  height: 44px; }\n\n.AnimatedBar__FillWrapper {\n  overflow: hidden;\n  height: 25px;\n  border: 2px solid #3E3E3E; }\n\n.FillWrapper__Fill {\n  height: inherit;\n  background-color: #3E3E3E;\n  width: 0;\n  transition-timing-function: cubic-bezier(0, 0.22, 0.65, 1.4); }\n\n.AnimatedBar_Shadow {\n  height: 29px;\n  /* $height + 2 * $border-size */\n  width: inherit;\n  background-color: #e9e9e9;\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  z-index: -1;\n  /* to appear below fill elements */ }\n\n.TextInput--Line {\n  border-left: 2px solid #3E3E3E;\n  border-top: none;\n  border-right: none;\n  border-bottom: 2px solid #3E3E3E;\n  display: block;\n  width: 100%;\n  padding: 5px;\n  outline: none;\n  transition: 100ms all; }\n\n.TextInput--Area {\n  border: 2px solid #3E3E3E;\n  display: block;\n  resize: none;\n  width: 100%;\n  padding: 5px;\n  outline: none;\n  transition: 100ms all; }\n\n.TextInput--error {\n  border-color: #b92930;\n  color: #b92930;\n  transition: 200ms all; }\n  .TextInput--error::placeholder {\n    color: #b55c60;\n    transition: 200ms all; }\n\n.Scroller {\n  width: 65px;\n  height: 65px;\n  background-color: #fff;\n  position: absolute;\n  bottom: 40px;\n  right: 40px;\n  border-radius: 50%;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .Scroller:hover {\n    cursor: pointer; }\n\n.BlogPostsWrapper {\n  overflow: auto; }\n\n.BlogPost__Content {\n  width: 100%;\n  max-width: 800px;\n  padding: 40px;\n  margin: 40px auto; }\n  .BlogPost__Content p {\n    line-height: 2rem; }\n\n[class^=\"BlogPostCard\"] {\n  width: 100%;\n  max-width: 500px;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 40px; }\n  [class^=\"BlogPostCard\"][class*=\"--alt\"] {\n    border-top: #3E3E3E solid 2px;\n    border-left: #3E3E3E solid 2px;\n    -webkit-box-shadow: 15px 15px 0 #e9e9e9;\n    -moz-box-shadow: 15px 15px 0 #e9e9e9;\n    box-shadow: 15px 15px 0 #e9e9e9; }\n  [class^=\"BlogPostCard\"] h3 {\n    opacity: 1.0;\n    transition: 150ms all; }\n  [class^=\"BlogPostCard\"]:hover h3 {\n    opacity: 0.75;\n    transition: 200ms all; }\n  [class^=\"BlogPostCard\"]:nth-last-of-type(2), [class^=\"BlogPostCard\"]:last-of-type {\n    margin-bottom: 0; }\n  @media screen and (min-width: 992px) {\n    [class^=\"BlogPostCard\"] {\n      width: 47.5%;\n      float: left;\n      margin-left: 5%; }\n      [class^=\"BlogPostCard\"]:nth-child(odd) {\n        margin-left: 0; }\n      [class^=\"BlogPostCard\"]:nth-last-of-type(2) {\n        margin-bottom: 0; }\n      [class^=\"BlogPostCard\"]:last-of-type {\n        margin-bottom: 0; } }\n\n.NotFound {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column; }\n\n.HomeButton {\n  height: 60px;\n  width: 60px;\n  position: fixed;\n  bottom: 25px;\n  right: 25px;\n  border-radius: 50%;\n  background-color: #3E3E3E;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.ProjectCard {\n  position: relative;\n  display: block;\n  width: 100%;\n  max-width: 500px;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 40px; }\n  @media screen and (min-width: 992px) {\n    .ProjectCard {\n      width: 30%;\n      float: left;\n      margin-left: 5%; }\n      .ProjectCard:nth-child(3n + 1) {\n        margin-left: 0; }\n      .ProjectCard:nth-last-of-type(3), .ProjectCard:nth-last-of-type(2), .ProjectCard:last-of-type {\n        margin-bottom: 0; } }\n\n.ProjectCard__Image {\n  width: 100%;\n  height: 100%;\n  background-size: 100%;\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: 200ms all; }\n  .ProjectCard__Image:hover {\n    background-size: 125%;\n    cursor: pointer;\n    transition: 300ms all; }\n    .ProjectCard__Image:hover .ProjectCard__Title {\n      opacity: 1.0;\n      transition: 200ms all; }\n\n.ProjectCard__Title {\n  position: absolute;\n  display: flex;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(62, 62, 62, 0.75);\n  opacity: 0.0;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  transition: 150ms all; }\n\n.BlogPosts__Content {\n  max-width: 700px;\n  margin-left: auto;\n  margin-right: auto; }\n\n.BlogPosts__BlogPostCards {\n  overflow: auto; }\n\n.Project__Content {\n  width: 100%;\n  max-width: 800px;\n  padding: 40px;\n  margin: 40px auto; }\n  .Project__Content p {\n    line-height: 2rem; }\n\n.Header__Back {\n  height: 50px;\n  width: 50px;\n  position: fixed;\n  top: 25px;\n  right: 25px;\n  border-radius: 50%;\n  background-color: #3E3E3E;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 1; }\n  .Header__Back svg {\n    transform: rotateZ(90deg); }\n    .Header__Back svg path {\n      fill: #fff; }\n\n.Image {\n  background-color: #3E3E3E;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.Image__Dummy {\n  visibility: hidden;\n  width: 100%; }\n\n.Youtube {\n  position: relative;\n  padding-bottom: 56.25%;\n  padding-top: 25px;\n  height: 0;\n  background-color: #e9e9e9; }\n\n.Youtube__Video {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%; }\n\n.HomePage {\n  height: 100%;\n  width: 100%; }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 666 */
+/* 667 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(269)();
