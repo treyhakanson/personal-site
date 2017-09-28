@@ -20,13 +20,13 @@
     transition: 100ms all;
 }
 
-.TextInput--error {
-    border-color: $error-color--default;
-    color: $error-color--default;
-    transition: 200ms all;
-
-    &::placeholder {
-        color: $error-color--fade;
-        transition: 200ms all;
-    }
-}
+// .TextInput--error {
+//     border-color: $error-color--default;
+//     color: $error-color--default;
+//     transition: 200ms all;
+//
+//     &::placeholder {
+//         color: $error-color--fade;
+//         transition: 200ms all;
+//     }
+// }

@@ -6,7 +6,9 @@ export default class Loader extends Component {
 
     render() {
         return (
-            <div className="Loader">Loading...</div>
+            <div className="Loader margin-bottom--sm margin-top--sm">
+                <p>Loading...</p>
+            </div>
         );
     }
 }

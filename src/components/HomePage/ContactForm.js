@@ -4,9 +4,11 @@ import axios from 'axios';
 
 // custom modules
 import Input from 'components/TextInput';
+import Loader from 'components/Loader';
+import { ErrorBlock, SuccessBlock } from 'components/Block';
+import { validateEmail } from 'utils/cleaning';
 import { SimpleSpacer } from 'components/Spacer';
 import { Button } from 'components/Button';
-import Loader from 'components/Loader';
 import { STATUS, SHARED_CONSTANTS } from 'utils/constants';
 
 // pull off required shared constants
@@ -14,7 +16,7 @@ const { API_INFO } = SHARED_CONSTANTS;
 
 export default class ContactForm extends Component {
     submitContactForm() {
-        if (this.state.name && this.state.email && this.state.message) {
+        if (this.state.name && validateEmail(this.state.email) && this.state.message) {
             this.setState({ status: STATUS.LOADING });
             axios.post(`/api/v${API_INFO.VERSION}/contact-form/submit`, {
                 ...this.state
@@ -25,6 +27,18 @@ export default class ContactForm extends Component {
                 this.setState({ status: STATUS.ERROR });
                 console.error(err);
             });
+        } else {
+            const err = ['Please address the following errors:'];
+            if (!this.state.name) {
+                err.push('A name is required.');
+            }
+            if (!validateEmail(this.state.email)) {
+                err.push('A valid email value is required.');
+            }
+            if (!this.state.message) {
+                err.push('A message is required.');
+            }
+            this.setState({ inputError: err.join(' ') });
         }
 
     }
@@ -36,7 +50,8 @@ export default class ContactForm extends Component {
             status: STATUS.IDLE,
             name: '',
             email: '',
-            message: ''
+            message: '',
+            inputError: ''
         };
     }
 
@@ -45,7 +60,6 @@ export default class ContactForm extends Component {
     }
 
     render() {
-        console.log(this.state.status);
         return (
             <div className="ContactForm padding-all--md">
                 <div className="ContactForm__FormContent">
@@ -65,12 +79,13 @@ export default class ContactForm extends Component {
                         value={this.state.message}
                         onChange={val => this.valueUpdated('message', val)}
                         required />
+                    {this.state.status === STATUS.LOADING && <Loader />}
+                    {this.state.status === STATUS.SUCCESS && <SuccessBlock text="Your form has been received; thanks!" />}
+                    {this.state.status === STATUS.ERROR && <ErrorBlock text="An error occurred, please try again later." />}
+                    {!!this.state.inputError && <ErrorBlock text={this.state.inputError} />}
                     <Button.Modern text="Send"
                         onClick={this.submitContactForm.bind(this)}
                         disabled={this.state.status !== STATUS.IDLE} />
-                    {this.state.status === STATUS.LOADING && <Loader />}
-                    {this.state.status === STATUS.SUCCESS && <div className="Block--success">Your data has been received; thanks!</div>}
-                    {this.state.status === STATUS.ERROR && <div className="Block--error">An error occurred, please try again later.</div>}
                 </div>
             </div>
         );
