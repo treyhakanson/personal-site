@@ -78,3 +78,11 @@
     #{$type}-bottom: $sp !important;
     #{$type}-left: $sp !important;
 }
+
+@mixin delay-animation($animation-name, $animation-delay, $animation-duration) {
+  animation-name: #{$animation-name};
+  animation-duration: $animation-duration;
+  animation-delay: $animation-delay;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

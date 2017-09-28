@@ -16,7 +16,8 @@ function getTopPosts(req, res) {
                author_img AS authorimage,
                blog_body AS blogbody
             FROM blog_posts
-            ORDER BY tm DESC;
+            ORDER BY tm DESC
+        LIMIT 4;
     `, [])
         .then(({ rows }) => {
             res.json(rows);
@@ -55,18 +56,6 @@ function getBlogPost(req, res) {
 
 function getBlogPosts(req, res) {
     const { page = 0 } = req.query;
-    pool.test(`
-        SELECT id,
-               tm AS date,
-               title,
-               hook,
-               banner_img AS bannerimage,
-               author_name AS authorname,
-               author_img AS authorimage,
-               blog_body AS blogbody
-            FROM blog_posts
-        LIMIT $1 OFFSET $2;
-    `, [BLOG.POSTS_PER_PAGE, BLOG.POSTS_PER_PAGE * page]);
     pool.query(`
         SELECT id,
                tm AS date,

@@ -45,7 +45,7 @@ $code-border-color: #5e6687;
 $code-background-color: #f5f7ff;
 $primary-color--default: #3E3E3E;
 $primary-color--fade: #e9e9e9;
-$primary-color--transluscent: rgba($primary-color--default, 0.75);
+$primary-color--transluscent: rgba($primary-color--default, 0.5);
 
 $success-color--default: #53BA68;
 $error-color--default: #b92930;
@@ -76,6 +76,10 @@ $border-width--default: 2px;
 $border-width--thick: 5px;
 
 $border-radius--default: 3px;
+
+// Loader
+$dot-sz: 25px;
+$dot-spacing: 15px;
 
 // buttons
 $modern-button-offset: 10px;

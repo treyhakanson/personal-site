@@ -15,7 +15,7 @@ function submitContactForm(req, res) {
         pool.query(`
             INSERT INTO contact_form (
                 name, email, message
-            ) VALUEs (
+            ) VALUES (
                 $1, $2, $3
             );
         `, [name, email, message])

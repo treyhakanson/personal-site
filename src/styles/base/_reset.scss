@@ -43,6 +43,12 @@ li {
     }
 }
 
+a,
+a:link,
+a:visited {
+    color: $font-color--default;
+}
+
 input,
 textarea {
     @include regular-font;

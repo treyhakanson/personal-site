@@ -13,7 +13,8 @@ function getTopProjects(req, res) {
                banner_img AS bannerimage,
                project_body AS projectbody
             FROM projects
-            ORDER BY tm DESC;
+            ORDER BY tm DESC
+        LIMIT 3;
     `, [])
         .then(({ rows }) => {
             res.json(rows);
@@ -55,7 +56,8 @@ function getProjects(req, res) {
                banner_img AS bannerimage,
                project_body AS projectbody
             FROM projects
-            ORDER BY tm DESC;
+            ORDER BY tm DESC
+        LIMIT 10; --NOTE: temporary
     `, [])
         .then(({ rows }) => {
             res.json(rows);
