@@ -27,7 +27,7 @@ var API_INFO = _constants2.default.API_INFO,
 
 
 function getTopPosts(req, res) {
-    _db2.default.query('\n        SELECT id,\n               tm AS date,\n               title,\n               hook,\n               banner_img AS bannerimage,\n               author_name AS authorname,\n               author_img AS authorimage,\n               blog_body AS blogbody\n            FROM blog_posts\n            ORDER BY tm DESC;\n    ', []).then(function (_ref) {
+    _db2.default.query('\n        SELECT id,\n               tm AS date,\n               title,\n               hook,\n               banner_img AS bannerimage,\n               author_name AS authorname,\n               author_img AS authorimage,\n               blog_body AS blogbody\n            FROM blog_posts\n            ORDER BY tm DESC\n        LIMIT 4;\n    ', []).then(function (_ref) {
         var rows = _ref.rows;
 
         res.json(rows);
@@ -58,7 +58,6 @@ function getBlogPosts(req, res) {
     var _req$query$page = req.query.page,
         page = _req$query$page === undefined ? 0 : _req$query$page;
 
-    _db2.default.test('\n        SELECT id,\n               tm AS date,\n               title,\n               hook,\n               banner_img AS bannerimage,\n               author_name AS authorname,\n               author_img AS authorimage,\n               blog_body AS blogbody\n            FROM blog_posts\n        LIMIT $1 OFFSET $2;\n    ', [BLOG.POSTS_PER_PAGE, BLOG.POSTS_PER_PAGE * page]);
     _db2.default.query('\n        SELECT id,\n               tm AS date,\n               title,\n               hook,\n               banner_img AS bannerimage,\n               author_name AS authorname,\n               author_img AS authorimage,\n               blog_body AS blogbody\n            FROM blog_posts\n        LIMIT $1 OFFSET $2;\n    ', [BLOG.POSTS_PER_PAGE, BLOG.POSTS_PER_PAGE * page]).then(function (_ref3) {
         var _ref3$rows = _ref3.rows,
             rows = _ref3$rows === undefined ? [] : _ref3$rows;

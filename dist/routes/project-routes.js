@@ -26,7 +26,7 @@ var API_INFO = _constants2.default.API_INFO;
 
 
 function getTopProjects(req, res) {
-    _db2.default.query('\n        SELECT id,\n               tm AS date,\n               title,\n               banner_img AS bannerimage,\n               project_body AS projectbody\n            FROM projects\n            ORDER BY tm DESC;\n    ', []).then(function (_ref) {
+    _db2.default.query('\n        SELECT id,\n               tm AS date,\n               title,\n               banner_img AS bannerimage,\n               project_body AS projectbody\n            FROM projects\n            ORDER BY tm DESC\n        LIMIT 3;\n    ', []).then(function (_ref) {
         var rows = _ref.rows;
 
         res.json(rows);
@@ -54,7 +54,7 @@ function getProject(req, res) {
 }
 
 function getProjects(req, res) {
-    _db2.default.query('\n        SELECT id,\n               tm AS date,\n               title,\n               banner_img AS bannerimage,\n               project_body AS projectbody\n            FROM projects\n            ORDER BY tm DESC;\n    ', []).then(function (_ref3) {
+    _db2.default.query('\n        SELECT id,\n               tm AS date,\n               title,\n               banner_img AS bannerimage,\n               project_body AS projectbody\n            FROM projects\n            ORDER BY tm DESC\n        LIMIT 10; --NOTE: temporary\n    ', []).then(function (_ref3) {
         var rows = _ref3.rows;
 
         res.json(rows);
