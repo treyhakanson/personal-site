@@ -12,7 +12,7 @@ var _constants = require('../../constants');
 
 var _constants2 = _interopRequireDefault(_constants);
 
-var _cleaning = require('../../src/utils/cleaning');
+var _cleaning = require('../utils/cleaning');
 
 var _db = require('../db');
 

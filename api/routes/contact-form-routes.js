@@ -1,6 +1,6 @@
 // custom modules
 import SHARED_CONSTANTS from '../../constants';
-import { validateEmail } from '../../src/utils/cleaning';
+import { validateEmail } from '../utils/cleaning';
 import pool from '../db';
 
 // pull off required shared constants
