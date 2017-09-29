@@ -23,7 +23,7 @@ function getTopPosts(req, res) {
             res.json(rows);
         }).catch(err => {
             console.log(err);
-            res.json({ success: false });
+            res.status(500).json({ error: 'an unexpected error occurred' });
         });
 }
 
@@ -50,7 +50,7 @@ function getBlogPost(req, res) {
             }
         }).catch(err => {
             console.log(err);
-            res.json({ success: false });
+            res.status(500).json({ error: 'an unexpected error occurred' });
         });
 }
 

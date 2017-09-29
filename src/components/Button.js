@@ -48,6 +48,8 @@ class ButtonBase extends Component {
         let baseClassName = 'ButtonBase';
         if (props.center)
             baseClassName += '--center';
+        if (props.disabled)
+            baseClassName += '--disabled';
         let classNames = [baseClassName];
         if (props.clear && !props.link)
             classNames.push('display--block');
