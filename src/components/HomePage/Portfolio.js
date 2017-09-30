@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // custom modules
 import Loader from 'components/Loader';
-import ProjectCard from 'components/ProjectCard';
+import { ProjectCard } from 'components/Project';
 import { Button } from 'components/Button';
 import { SimpleSpacer } from 'components/Spacer';
 import { SHARED_CONSTANTS } from 'utils/constants';

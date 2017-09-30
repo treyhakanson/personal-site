@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react';
 
 // custom modules
 import { SimpleSpacer } from 'components/Spacer';
-import BlogPostCard from 'components/BlogPostCard';
+import { BlogPostCard } from 'components/Blog';
 
 export default class BlogArchive extends Component {
     static propTypes = {

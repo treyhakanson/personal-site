@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // custom modules
 import Loader from 'components/Loader';
-import BlogPostCard from 'components/BlogPostCard';
+import { BlogPostCard } from 'components/Blog';
 import { SimpleSpacer } from 'components/Spacer';
 import { Button } from 'components/Button';
 import { SHARED_CONSTANTS } from 'utils/constants';

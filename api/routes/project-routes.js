@@ -3,7 +3,7 @@ import SHARED_CONSTANTS from '../../constants.js';
 import pool from '../db';
 
 // pull off required shared constants
-const { API_INFO } = SHARED_CONSTANTS;
+const { API_INFO, PROJECT } = SHARED_CONSTANTS;
 
 function getTopProjects(req, res) {
     pool.query(`
@@ -20,7 +20,7 @@ function getTopProjects(req, res) {
             res.json(rows);
         }).catch(err => {
             console.log(err);
-            res.json({ success: false });
+            res.status(500).json({ error: 'an unexpected error occurred' });
         });
 }
 
@@ -44,11 +44,12 @@ function getProject(req, res) {
             }
         }).catch(err => {
             console.log(err);
-            res.json({ success: false });
+            res.status(500).json({ error: 'an unexpected error occurred' });
         });
 }
 
 function getProjects(req, res) {
+    const { page = 0 } = req.query;
     pool.query(`
         SELECT id,
                tm AS date,
@@ -57,18 +58,18 @@ function getProjects(req, res) {
                project_body AS projectbody
             FROM projects
             ORDER BY tm DESC
-        LIMIT 10; --NOTE: temporary
-    `, [])
+        LIMIT $1 OFFSET $2;
+    `, [PROJECT.PROJECTS_PER_PAGE, PROJECT.PROJECTS_PER_PAGE * page])
         .then(({ rows }) => {
             res.json(rows);
         }).catch(err => {
             console.log(err);
-            res.json({ success: false });
+            res.status(500).json({ error: 'an unexpected error occurred' });
         });
 }
 
 export default function(app) {
     app.get(`/api/v${API_INFO.VERSION}/project/get-top-projects`, getTopProjects);
     app.get(`/api/v${API_INFO.VERSION}/project/get-project/:projectTitle`, getProject);
-    app.get(`/api/v${API_INFO.VERSION}/project/get-projects`, getProjects);
+    app.get(`/api/v${API_INFO.VERSION}/project/posts`, getProjects);
 }

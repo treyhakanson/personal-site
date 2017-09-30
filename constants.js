@@ -6,5 +6,8 @@ module.exports = {
     },
     BLOG: {
         POSTS_PER_PAGE: 9
+    },
+    PROJECT: {
+        PROJECTS_PER_PAGE: 6
     }
 };

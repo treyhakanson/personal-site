@@ -14,7 +14,7 @@ const { API_INFO, BLOG } = SHARED_CONSTANTS;
 export default class Blog extends Component {
     componentDidMount() {
         axios.get(`/api/v${API_INFO.VERSION}/blog/posts/`, {
-            page: this.state.page
+            params: { page: this.state.page }
         }).then(({ data: posts }) => {
             this.setState({
                 posts,

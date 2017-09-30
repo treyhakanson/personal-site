@@ -43,26 +43,36 @@ class ButtonBase extends Component {
         !this.props.disabled && this.props.onClick && this.props.onClick();
     }
 
+    getModifiers() {
+        let modifiers = [];
+        if (this.props.disabled) modifiers.push('disabled');
+        if (this.props.center) modifiers.push('center');
+        return modifiers;
+    }
+
+    getAdditionalClassNames() {
+        let classNames = [];
+        if (this.props.clear && !this.props.link)
+            classNames.push('display--block');
+        if (this.props.className)
+            classNames.push(this.props.className);
+        return classNames;
+    }
+
     constructor(props) {
         super(props);
         let baseClassName = 'ButtonBase';
-        if (props.center)
-            baseClassName += '--center';
-        if (props.disabled)
-            baseClassName += '--disabled';
         let classNames = [baseClassName];
-        if (props.clear && !props.link)
-            classNames.push('display--block');
-        if (props.className)
-            classNames.push(props.className);
         this.getClassName = buildGetClassName(classNames.join(' '));
     }
 }
 
 class ModernButton extends ButtonBase {
     render() {
+        const m = this.getModifiers();
+        const ac = this.getAdditionalClassNames();
         return this.wrapContent(
-            <div className={this.getClassName('ModernButton')}
+            <div className={this.getClassName(['ModernButton', ...ac], m)}
                 onClick={this.onClick.bind(this)}>
                 <div className="ModernButton__Upper">{this.props.text}</div>
                 <div className="ModernButton__Shadow"></div>
@@ -73,8 +83,10 @@ class ModernButton extends ButtonBase {
 
 class DarkFillButton extends ButtonBase {
     render() {
+        const m = this.getModifiers();
+        const ac = this.getAdditionalClassNames();
         return this.wrapContent(
-            <div className={this.getClassName('FillButton--dark')}
+            <div className={this.getClassName(['FillButton--dark', ...ac], m)}
                 onClick={this.onClick.bind(this)}>{this.props.text}</div>
         );
     }
@@ -82,8 +94,10 @@ class DarkFillButton extends ButtonBase {
 
 class MediumFillButton extends ButtonBase {
     render() {
+        const m = this.getModifiers();
+        const ac = this.getAdditionalClassNames();
         return this.wrapContent(
-            <div className={this.getClassName('FillButton--medium')}
+            <div className={this.getClassName(['FillButton--medium', ...ac], m)}
                 onClick={this.onClick.bind(this)}>{this.props.text}</div>
         );
     }
@@ -91,8 +105,11 @@ class MediumFillButton extends ButtonBase {
 
 class LightFillButton extends ButtonBase {
     render() {
+        debugger;
+        const m = this.getModifiers();
+        const ac = this.getAdditionalClassNames();
         return this.wrapContent(
-            <div className={this.getClassName('FillButton--light')}
+            <div className={this.getClassName(['FillButton--light', ...ac], m)}
                 onClick={this.onClick.bind(this)}>{this.props.text}</div>
         );
     }
@@ -100,8 +117,10 @@ class LightFillButton extends ButtonBase {
 
 class BorderButton extends ButtonBase {
     render() {
+        const m = this.getModifiers();
+        const ac = this.getAdditionalClassNames();
         return this.wrapContent(
-            <div className={this.getClassName('BorderButton')}
+            <div className={this.getClassName(['BorderButton', ...ac], m)}
                 onClick={this.onClick.bind(this)}>{this.props.text}</div>
         );
     }
@@ -124,8 +143,10 @@ export class IconButton extends ButtonBase {
     }
 
     render() {
+        const m = this.getModifiers();
+        const ac = this.getAdditionalClassNames();
         return this.wrapContent(
-            <div className={this.getClassName(['IconButton', 'ModernButton'])}
+            <div className={this.getClassName(['IconButton', 'ModernButton', ...ac], m)}
                 onClick={this.onClick.bind(this)}>
                 <div className="ModernButton__Upper">
                     {React.cloneElement(this.props.icon, {
