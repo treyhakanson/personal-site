@@ -105,7 +105,6 @@ class MediumFillButton extends ButtonBase {
 
 class LightFillButton extends ButtonBase {
     render() {
-        debugger;
         const m = this.getModifiers();
         const ac = this.getAdditionalClassNames();
         return this.wrapContent(

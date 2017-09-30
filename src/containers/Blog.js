@@ -52,7 +52,7 @@ export default class Blog extends Component {
     render() {
         return (
             <div className="Blog padding-all--md">
-                <Header title="Blog Posts" />
+                <Header title="Blog Posts" link="/" />
                 {!!this.state.posts.length && <BlogArchive posts={this.state.posts} />}
                 {!!this.state.posts.length &&
                     <Button.Light className="margin-top--md"

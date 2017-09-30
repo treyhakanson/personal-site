@@ -3,10 +3,23 @@
  *
  * @param {string} title - the title to be cleaned
  *
- * @return {string} the cleaned title
+ * @return {string} the cleaned simple url
  */
 export function cleanTitle(title) {
     return title.replace(/\ /g, '-').toLowerCase();
+}
+
+/**
+ * cleanTitleRev - cleans a given url string to a title format
+ *
+ * @param {string} url - the url string to be cleaned
+ *
+ * @return {string} the cleaned title
+ */
+export function cleanTitleRev(url) {
+    return url.split('-').reduce((x, y) => {
+        return `${x} ${y[0].toUpperCase()}${y.slice(1, y.length)}`;
+    }, '').trim();
 }
 
 /**

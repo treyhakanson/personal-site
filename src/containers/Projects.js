@@ -54,7 +54,7 @@ export default class Projects extends Component {
         console.log(this.state.more);
         return (
             <div className="Projects padding-all--md">
-                <Header title="Projects" />
+                <Header title="Projects" link="/" />
                 {!!this.state.projects.length && <ProjectArchive projects={this.state.projects} />}
                 {!!this.state.projects.length &&
                     <Button.Light className="margin-top--md"

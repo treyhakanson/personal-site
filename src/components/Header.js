@@ -18,11 +18,18 @@ export default class Header extends Component {
         authorName: PropTypes.string
     };
 
+    navigate() {
+        if (this.props.link)
+            this.context.router.push(this.props.link);
+        else
+            this.context.router.goBack();
+    }
+
     render() {
         return (
             <div className="Header margin-bottom--md">
                 <div className="Header__Back margin-bottom--sm hover--basic"
-                    onClick={this.context.router.goBack}>
+                    onClick={this.navigate.bind(this)}>
                     <BackArrow width={35} height={35} />
                 </div>
                 <h1>{this.props.title}</h1>
