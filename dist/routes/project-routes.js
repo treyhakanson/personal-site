@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (app) {
     app.get('/api/v' + API_INFO.VERSION + '/project/get-top-projects', getTopProjects);
     app.get('/api/v' + API_INFO.VERSION + '/project/get-project/:projectTitle', getProject);
-    app.get('/api/v' + API_INFO.VERSION + '/project/get-projects', getProjects);
+    app.get('/api/v' + API_INFO.VERSION + '/project/posts', getProjects);
 };
 
 var _constants = require('../../constants.js');
@@ -22,7 +22,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // pull off required shared constants
 // custom modules
-var API_INFO = _constants2.default.API_INFO;
+var API_INFO = _constants2.default.API_INFO,
+    PROJECT = _constants2.default.PROJECT;
 
 
 function getTopProjects(req, res) {
@@ -32,7 +33,7 @@ function getTopProjects(req, res) {
         res.json(rows);
     }).catch(function (err) {
         console.log(err);
-        res.json({ success: false });
+        res.status(500).json({ error: 'an unexpected error occurred' });
     });
 }
 
@@ -49,17 +50,20 @@ function getProject(req, res) {
         }
     }).catch(function (err) {
         console.log(err);
-        res.json({ success: false });
+        res.status(500).json({ error: 'an unexpected error occurred' });
     });
 }
 
 function getProjects(req, res) {
-    _db2.default.query('\n        SELECT id,\n               tm AS date,\n               title,\n               banner_img AS bannerimage,\n               project_body AS projectbody\n            FROM projects\n            ORDER BY tm DESC\n        LIMIT 10; --NOTE: temporary\n    ', []).then(function (_ref3) {
+    var _req$query$page = req.query.page,
+        page = _req$query$page === undefined ? 0 : _req$query$page;
+
+    _db2.default.query('\n        SELECT id,\n               tm AS date,\n               title,\n               banner_img AS bannerimage,\n               project_body AS projectbody\n            FROM projects\n            ORDER BY tm DESC\n        LIMIT $1 OFFSET $2;\n    ', [PROJECT.PROJECTS_PER_PAGE, PROJECT.PROJECTS_PER_PAGE * page]).then(function (_ref3) {
         var rows = _ref3.rows;
 
         res.json(rows);
     }).catch(function (err) {
         console.log(err);
-        res.json({ success: false });
+        res.status(500).json({ error: 'an unexpected error occurred' });
     });
 }
