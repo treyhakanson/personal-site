@@ -51,11 +51,11 @@ export default class BlogPosts extends Component {
                                     date={post.date} />
                             )}
                         </div>
-                        <Button.Light className="margin-top--sm"
-                            clear
-                            text="See More"
-                            link="/blog" />
                     </div>}
+                    <Button.Light className="margin-top--sm"
+                        clear
+                        text="See More"
+                        link="/blog" />
                 </div>
             </div>
         );
