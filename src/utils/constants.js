@@ -33,4 +33,9 @@ export const ELEMENT_TYPES = {
     LIST: 'list'
 };
 
+export const SOCIAL = {
+   GITHUB: 'https://github.com/treyhakanson',
+   STACKOVERFLOW: 'https://stackoverflow.com/users/5495358/treyhakanson'
+};
+
 export { default as SHARED_CONSTANTS } from '../../constants.js';

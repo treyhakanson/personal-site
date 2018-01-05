@@ -2086,7 +2086,7 @@ function loadLocale(name) {
             module && module.exports) {
         try {
             oldLocale = globalLocale._abbr;
-            __webpack_require__(648)("./" + name);
+            __webpack_require__(650)("./" + name);
             // because defineLocale currently also sets the global locale, we
             // want to undo that for lazy loaded locales
             getSetGlobalLocale(oldLocale);
@@ -5772,8 +5772,70 @@ module.exports = { debugTool: debugTool };
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _constants = __webpack_require__(621);
+
+Object.defineProperty(exports, 'SHARED_CONSTANTS', {
+    enumerable: true,
+    get: function get() {
+        return _interopRequireDefault(_constants).default;
+    }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var INPUT_TYPES = exports.INPUT_TYPES = {
+    TEXT: 'text',
+    NUMBER: 'number'
+};
+
+var SCROLLER_DIRECTION = exports.SCROLLER_DIRECTION = {
+    TOP: 'top',
+    BOTTOM: 'bottom'
+};
+
+var SPACER_MARGIN = exports.SPACER_MARGIN = {
+    XSMALL: 'xs',
+    SMALL: 'sm',
+    MEDIUM: 'md',
+    LARGE: 'lg',
+    XLARGE: 'xl'
+};
+
+var STATUS = exports.STATUS = {
+    IDLE: 'idle',
+    LOADING: 'loading',
+    SUCCESS: 'success',
+    ERROR: 'error'
+};
+
+var ELEMENT_TYPES = exports.ELEMENT_TYPES = {
+    TEXT: 'text',
+    LINK: 'link',
+    QUOTE: 'quote',
+    IMAGE: 'image',
+    CODE: 'code',
+    YOUTUBE: 'youtube',
+    LIST: 'list'
+};
+
+var SOCIAL = exports.SOCIAL = {
+    GITHUB: 'https://github.com/treyhakanson',
+    STACKOVERFLOW: 'https://stackoverflow.com/users/5495358/treyhakanson'
+};
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 var bind = __webpack_require__(147);
-var isBuffer = __webpack_require__(629);
+var isBuffer = __webpack_require__(631);
 
 /*global toString:true*/
 
@@ -6074,63 +6136,6 @@ module.exports = {
   trim: trim
 };
 
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _constants = __webpack_require__(621);
-
-Object.defineProperty(exports, 'SHARED_CONSTANTS', {
-    enumerable: true,
-    get: function get() {
-        return _interopRequireDefault(_constants).default;
-    }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var INPUT_TYPES = exports.INPUT_TYPES = {
-    TEXT: 'text',
-    NUMBER: 'number'
-};
-
-var SCROLLER_DIRECTION = exports.SCROLLER_DIRECTION = {
-    TOP: 'top',
-    BOTTOM: 'bottom'
-};
-
-var SPACER_MARGIN = exports.SPACER_MARGIN = {
-    XSMALL: 'xs',
-    SMALL: 'sm',
-    MEDIUM: 'md',
-    LARGE: 'lg',
-    XLARGE: 'xl'
-};
-
-var STATUS = exports.STATUS = {
-    IDLE: 'idle',
-    LOADING: 'loading',
-    SUCCESS: 'success',
-    ERROR: 'error'
-};
-
-var ELEMENT_TYPES = exports.ELEMENT_TYPES = {
-    TEXT: 'text',
-    LINK: 'link',
-    QUOTE: 'quote',
-    IMAGE: 'image',
-    CODE: 'code',
-    YOUTUBE: 'youtube',
-    LIST: 'list'
-};
 
 /***/ }),
 /* 15 */
@@ -6555,7 +6560,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8142,7 +8147,7 @@ function parsePath(path) {
 /* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(628);
+module.exports = __webpack_require__(630);
 
 /***/ }),
 /* 29 */
@@ -14284,8 +14289,8 @@ exports.default = NotFound;
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
-var utils = __webpack_require__(13);
-var normalizeHeaderName = __webpack_require__(631);
+var utils = __webpack_require__(14);
+var normalizeHeaderName = __webpack_require__(633);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -14388,7 +14393,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _BlogArchive = __webpack_require__(646);
+var _BlogArchive = __webpack_require__(648);
 
 Object.defineProperty(exports, 'BlogArchive', {
   enumerable: true,
@@ -14397,7 +14402,7 @@ Object.defineProperty(exports, 'BlogArchive', {
   }
 });
 
-var _BlogPostCard = __webpack_require__(647);
+var _BlogPostCard = __webpack_require__(649);
 
 Object.defineProperty(exports, 'BlogPostCard', {
   enumerable: true,
@@ -14419,7 +14424,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ProjectArchive = __webpack_require__(654);
+var _ProjectArchive = __webpack_require__(656);
 
 Object.defineProperty(exports, 'ProjectArchive', {
   enumerable: true,
@@ -14428,7 +14433,7 @@ Object.defineProperty(exports, 'ProjectArchive', {
   }
 });
 
-var _ProjectCard = __webpack_require__(655);
+var _ProjectCard = __webpack_require__(657);
 
 Object.defineProperty(exports, 'ProjectCard', {
   enumerable: true,
@@ -20386,13 +20391,13 @@ module.exports = function bind(fn, thisArg) {
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
-var utils = __webpack_require__(13);
-var settle = __webpack_require__(632);
-var buildURL = __webpack_require__(634);
-var parseHeaders = __webpack_require__(635);
-var isURLSameOrigin = __webpack_require__(636);
+var utils = __webpack_require__(14);
+var settle = __webpack_require__(634);
+var buildURL = __webpack_require__(636);
+var parseHeaders = __webpack_require__(637);
+var isURLSameOrigin = __webpack_require__(638);
 var createError = __webpack_require__(149);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(637);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(639);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -20489,7 +20494,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(638);
+      var cookies = __webpack_require__(640);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -20574,7 +20579,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(633);
+var enhanceError = __webpack_require__(635);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -31731,7 +31736,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31934,17 +31939,17 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 var _Code = __webpack_require__(269);
 
 var _Code2 = _interopRequireDefault(_Code);
 
-var _Image = __webpack_require__(662);
+var _Image = __webpack_require__(664);
 
 var _Image2 = _interopRequireDefault(_Image);
 
-var _Youtube = __webpack_require__(663);
+var _Youtube = __webpack_require__(665);
 
 var _Youtube2 = _interopRequireDefault(_Youtube);
 
@@ -32063,7 +32068,7 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _syntaxHighlighting = __webpack_require__(661);
+var _syntaxHighlighting = __webpack_require__(663);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32208,11 +32213,11 @@ var _RootContainer = __webpack_require__(588);
 
 var _RootContainer2 = _interopRequireDefault(_RootContainer);
 
-var _es6Syntax = __webpack_require__(668);
+var _es6Syntax = __webpack_require__(670);
 
 var _es6Syntax2 = _interopRequireDefault(_es6Syntax);
 
-__webpack_require__(669);
+__webpack_require__(671);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66032,23 +66037,23 @@ var _HomePage = __webpack_require__(622);
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
 
-var _Projects = __webpack_require__(658);
+var _Projects = __webpack_require__(660);
 
 var _Projects2 = _interopRequireDefault(_Projects);
 
-var _Blog = __webpack_require__(659);
+var _Blog = __webpack_require__(661);
 
 var _Blog2 = _interopRequireDefault(_Blog);
 
-var _BlogPost = __webpack_require__(660);
+var _BlogPost = __webpack_require__(662);
 
 var _BlogPost2 = _interopRequireDefault(_BlogPost);
 
-var _Project = __webpack_require__(664);
+var _Project = __webpack_require__(666);
 
 var _Project2 = _interopRequireDefault(_Project);
 
-var _StyleGuide = __webpack_require__(665);
+var _StyleGuide = __webpack_require__(667);
 
 var _StyleGuide2 = _interopRequireDefault(_StyleGuide);
 
@@ -66121,11 +66126,11 @@ var _Footer2 = _interopRequireDefault(_Footer);
 
 var _HomePage = __webpack_require__(624);
 
-var _Scroller = __webpack_require__(656);
+var _Scroller = __webpack_require__(658);
 
 var _Scroller2 = _interopRequireDefault(_Scroller);
 
-var _Underlay = __webpack_require__(657);
+var _Underlay = __webpack_require__(659);
 
 var _Underlay2 = _interopRequireDefault(_Underlay);
 
@@ -66238,7 +66243,7 @@ Object.defineProperty(exports, 'HomePageJumbotron', {
   }
 });
 
-var _BlogPosts = __webpack_require__(627);
+var _BlogPosts = __webpack_require__(629);
 
 Object.defineProperty(exports, 'BlogPosts', {
   enumerable: true,
@@ -66247,7 +66252,7 @@ Object.defineProperty(exports, 'BlogPosts', {
   }
 });
 
-var _ContactForm = __webpack_require__(649);
+var _ContactForm = __webpack_require__(651);
 
 Object.defineProperty(exports, 'ContactForm', {
   enumerable: true,
@@ -66256,7 +66261,7 @@ Object.defineProperty(exports, 'ContactForm', {
   }
 });
 
-var _Portfolio = __webpack_require__(653);
+var _Portfolio = __webpack_require__(655);
 
 Object.defineProperty(exports, 'Portfolio', {
   enumerable: true,
@@ -66284,6 +66289,8 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _constants = __webpack_require__(13);
+
 var _Button = __webpack_require__(21);
 
 var _Spacer = __webpack_require__(19);
@@ -66295,6 +66302,14 @@ var _mainLogo2 = _interopRequireDefault(_mainLogo);
 var _downArrow = __webpack_require__(53);
 
 var _downArrow2 = _interopRequireDefault(_downArrow);
+
+var _soIcon = __webpack_require__(627);
+
+var _soIcon2 = _interopRequireDefault(_soIcon);
+
+var _ghIcon = __webpack_require__(628);
+
+var _ghIcon2 = _interopRequireDefault(_ghIcon);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66347,6 +66362,20 @@ var HomePageJumbotron = function (_Component) {
                     'h4',
                     { className: 'text-center' },
                     'Trey Hakanson, full-stack developer and designer.'
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'margin-top--sm' },
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'margin-right--sm', href: _constants.SOCIAL.STACKOVERFLOW, target: '_blank', rel: 'nofollow' },
+                        _react2.default.createElement(_soIcon2.default, { width: 32, height: 32 })
+                    ),
+                    _react2.default.createElement(
+                        'a',
+                        { href: _constants.SOCIAL.GITHUB, target: '_blank', rel: 'nofollow' },
+                        _react2.default.createElement(_ghIcon2.default, { width: 32, height: 32 })
+                    )
                 ),
                 _react2.default.createElement(_Button.IconButton, { className: 'margin-top--lg',
                     icon: _react2.default.createElement(_downArrow2.default, { width: 40, height: 40 }),
@@ -66422,6 +66451,116 @@ exports.default = SVG;
 
 
 Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SVG = function (_React$Component) {
+  _inherits(SVG, _React$Component);
+
+  function SVG() {
+    _classCallCheck(this, SVG);
+
+    return _possibleConstructorReturn(this, (SVG.__proto__ || Object.getPrototypeOf(SVG)).apply(this, arguments));
+  }
+
+  _createClass(SVG, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "svg",
+        _extends({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 120 120" }, this.props),
+        _react2.default.createElement("path", { fill: "#232323", d: "M84.4 93.8V70.6h7.7v30.9H22.6V70.6h7.7v23.2z" }),
+        _react2.default.createElement("path", { fill: "#232323", d: "M38.8 68.4l37.8 7.9 1.6-7.6-37.8-7.9-1.6 7.6zm5-18l35 16.3 3.2-7-35-16.4-3.2 7.1zm9.7-17.2l29.7 24.7 4.9-5.9-29.7-24.7-4.9 5.9zm19.2-18.3l-6.2 4.6 23 31 6.2-4.6-23-31zM38 86h38.6v-7.7H38V86z" })
+      );
+    }
+  }]);
+
+  return SVG;
+}(_react2.default.Component);
+
+exports.default = SVG;
+
+/***/ }),
+/* 628 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SVG = function (_React$Component) {
+  _inherits(SVG, _React$Component);
+
+  function SVG() {
+    _classCallCheck(this, SVG);
+
+    return _possibleConstructorReturn(this, (SVG.__proto__ || Object.getPrototypeOf(SVG)).apply(this, arguments));
+  }
+
+  _createClass(SVG, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "svg",
+        _extends({ viewBox: "0 0 2213 2300", xmlns: "http://www.w3.org/2000/svg", xmlnsSerif: "http://www.serif.com/", fillRule: "evenodd", clipRule: "evenodd", strokeLinejoin: "round", strokeMiterlimit: "1.414" }, this.props),
+        _react2.default.createElement(
+          "g",
+          { serifId: "Layer 1" },
+          _react2.default.createElement("path", { d: "M1106.182 104.855c-591.733 0-1071.567 479.728-1071.567 1071.567 0 473.428 307.036 875.097 732.802 1016.789 53.554 9.919 73.215-23.246 73.215-51.549 0-25.534-.994-109.964-1.455-199.503-298.11 64.82-361.016-126.431-361.016-126.431-48.745-123.84-118.978-156.793-118.978-156.793-97.223-66.507 7.328-65.14 7.328-65.14 107.604 7.559 164.263 110.443 164.263 110.443 95.573 163.8 250.68 116.44 311.828 89.06 9.635-69.24 37.388-116.53 68.033-143.288-238.01-27.079-488.21-118.978-488.21-529.573 0-116.973 41.86-212.582 110.408-287.624-11.126-26.99-47.805-135.977 10.398-283.578 0 0 89.983-28.782 294.74 109.858 85.476-23.743 177.145-35.65 268.21-36.075 91.066.425 182.806 12.332 268.442 36.075 204.526-138.64 294.385-109.858 294.385-109.858 58.327 147.6 21.648 256.588 10.523 283.578 68.707 75.042 110.265 170.65 110.265 287.624 0 411.588-250.68 502.193-489.292 528.721 38.435 33.254 72.682 98.465 72.682 198.439 0 143.377-1.224 258.771-1.224 294.065 0 28.534 19.27 61.93 73.587 51.424 425.553-141.85 732.2-543.378 732.2-1016.664 0-591.84-479.764-1071.567-1071.567-1071.567", fill: "#181717" }),
+          _react2.default.createElement("path", { d: "M440.471 1643.373c-2.36 5.341-10.735 6.938-18.365 3.283-7.79-3.513-12.138-10.771-9.618-16.112 2.307-5.465 10.682-6.992 18.454-3.336 7.773 3.496 12.209 10.824 9.53 16.165M483.875 1691.799c-5.11 4.737-15.119 2.537-21.88-4.951-7.026-7.47-8.322-17.479-3.14-22.27 5.27-4.738 14.959-2.52 21.968 4.951 7.027 7.56 8.393 17.46 3.052 22.27M526.125 1753.497c-6.566 4.578-17.319.302-23.955-9.227-6.566-9.547-6.566-20.975.16-25.553 6.636-4.578 17.23-.443 23.955 8.997 6.548 9.688 6.548 21.116-.16 25.783M584.008 1813.137c-5.873 6.477-18.383 4.738-27.54-4.117-9.369-8.624-11.977-20.885-6.104-27.362 5.963-6.495 18.543-4.667 27.77 4.099 9.299 8.624 12.12 20.974 5.874 27.38M663.86 1847.757c-2.61 8.393-14.64 12.19-26.777 8.624-12.12-3.673-20.052-13.486-17.603-21.968 2.52-8.447 14.622-12.422 26.848-8.606 12.102 3.655 20.051 13.415 17.531 21.95M751.554 1854.163c.301 8.836-9.99 16.165-22.731 16.325-12.812.284-23.193-6.867-23.335-15.562 0-8.926 10.08-16.166 22.873-16.396 12.741-.249 23.193 6.867 23.193 15.633M833.162 1840.286c1.526 8.606-7.329 17.461-19.981 19.821-12.439 2.29-23.955-3.052-25.535-11.587-1.543-8.837 7.453-17.692 19.892-19.98 12.67-2.201 24.009 2.98 25.624 11.746", fill: "#181717", fillRule: "nonzero" })
+        )
+      );
+    }
+  }]);
+
+  return SVG;
+}(_react2.default.Component);
+
+exports.default = SVG;
+
+/***/ }),
+/* 629 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
@@ -66445,7 +66584,7 @@ var _Spacer = __webpack_require__(19);
 
 var _Button = __webpack_require__(21);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -66543,15 +66682,15 @@ var BlogPosts = function (_Component) {
 exports.default = BlogPosts;
 
 /***/ }),
-/* 628 */
+/* 630 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(13);
+var utils = __webpack_require__(14);
 var bind = __webpack_require__(147);
-var Axios = __webpack_require__(630);
+var Axios = __webpack_require__(632);
 var defaults = __webpack_require__(85);
 
 /**
@@ -66586,14 +66725,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(151);
-axios.CancelToken = __webpack_require__(644);
+axios.CancelToken = __webpack_require__(646);
 axios.isCancel = __webpack_require__(150);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(645);
+axios.spread = __webpack_require__(647);
 
 module.exports = axios;
 
@@ -66602,7 +66741,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 629 */
+/* 631 */
 /***/ (function(module, exports) {
 
 /*!
@@ -66629,18 +66768,18 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 630 */
+/* 632 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var defaults = __webpack_require__(85);
-var utils = __webpack_require__(13);
-var InterceptorManager = __webpack_require__(639);
-var dispatchRequest = __webpack_require__(640);
-var isAbsoluteURL = __webpack_require__(642);
-var combineURLs = __webpack_require__(643);
+var utils = __webpack_require__(14);
+var InterceptorManager = __webpack_require__(641);
+var dispatchRequest = __webpack_require__(642);
+var isAbsoluteURL = __webpack_require__(644);
+var combineURLs = __webpack_require__(645);
 
 /**
  * Create a new instance of Axios
@@ -66722,13 +66861,13 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 631 */
+/* 633 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(13);
+var utils = __webpack_require__(14);
 
 module.exports = function normalizeHeaderName(headers, normalizedName) {
   utils.forEach(headers, function processHeader(value, name) {
@@ -66741,7 +66880,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 632 */
+/* 634 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66774,7 +66913,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 633 */
+/* 635 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -66802,13 +66941,13 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 634 */
+/* 636 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(13);
+var utils = __webpack_require__(14);
 
 function encode(val) {
   return encodeURIComponent(val).
@@ -66877,13 +67016,13 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 635 */
+/* 637 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(13);
+var utils = __webpack_require__(14);
 
 /**
  * Parse headers into an object
@@ -66921,13 +67060,13 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 636 */
+/* 638 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(13);
+var utils = __webpack_require__(14);
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -66996,7 +67135,7 @@ module.exports = (
 
 
 /***/ }),
-/* 637 */
+/* 639 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67039,13 +67178,13 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 638 */
+/* 640 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(13);
+var utils = __webpack_require__(14);
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -67099,13 +67238,13 @@ module.exports = (
 
 
 /***/ }),
-/* 639 */
+/* 641 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(13);
+var utils = __webpack_require__(14);
 
 function InterceptorManager() {
   this.handlers = [];
@@ -67158,14 +67297,14 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 640 */
+/* 642 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(13);
-var transformData = __webpack_require__(641);
+var utils = __webpack_require__(14);
+var transformData = __webpack_require__(643);
 var isCancel = __webpack_require__(150);
 var defaults = __webpack_require__(85);
 
@@ -67244,13 +67383,13 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 641 */
+/* 643 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(13);
+var utils = __webpack_require__(14);
 
 /**
  * Transform the data for a request or a response
@@ -67271,7 +67410,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 642 */
+/* 644 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67292,7 +67431,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 643 */
+/* 645 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67313,7 +67452,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 644 */
+/* 646 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67377,7 +67516,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 645 */
+/* 647 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67411,7 +67550,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 646 */
+/* 648 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67483,7 +67622,7 @@ BlogArchive.propTypes = {
 exports.default = BlogArchive;
 
 /***/ }),
-/* 647 */
+/* 649 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67575,7 +67714,7 @@ BlogPostCard.defaultProps = {
 exports.default = BlogPostCard;
 
 /***/ }),
-/* 648 */
+/* 650 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -67824,10 +67963,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 648;
+webpackContext.id = 650;
 
 /***/ }),
-/* 649 */
+/* 651 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -67857,7 +67996,7 @@ var _Loader = __webpack_require__(40);
 
 var _Loader2 = _interopRequireDefault(_Loader);
 
-var _Block = __webpack_require__(650);
+var _Block = __webpack_require__(652);
 
 var _cleaning = __webpack_require__(41);
 
@@ -67865,7 +68004,7 @@ var _Spacer = __webpack_require__(19);
 
 var _Button = __webpack_require__(21);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -67998,7 +68137,7 @@ var ContactForm = function (_Component) {
 exports.default = ContactForm;
 
 /***/ }),
-/* 650 */
+/* 652 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68015,11 +68154,11 @@ var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _errorIcon = __webpack_require__(651);
+var _errorIcon = __webpack_require__(653);
 
 var _errorIcon2 = _interopRequireDefault(_errorIcon);
 
-var _successIcon = __webpack_require__(652);
+var _successIcon = __webpack_require__(654);
 
 var _successIcon2 = _interopRequireDefault(_successIcon);
 
@@ -68155,7 +68294,7 @@ var SuccessBlock = exports.SuccessBlock = function (_Block2) {
 }(Block);
 
 /***/ }),
-/* 651 */
+/* 653 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68208,7 +68347,7 @@ var SVG = function (_React$Component) {
 exports.default = SVG;
 
 /***/ }),
-/* 652 */
+/* 654 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68261,7 +68400,7 @@ var SVG = function (_React$Component) {
 exports.default = SVG;
 
 /***/ }),
-/* 653 */
+/* 655 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68291,7 +68430,7 @@ var _Button = __webpack_require__(21);
 
 var _Spacer = __webpack_require__(19);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68386,7 +68525,7 @@ var Portfolio = function (_Component) {
 exports.default = Portfolio;
 
 /***/ }),
-/* 654 */
+/* 656 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68449,7 +68588,7 @@ ProjectArchive.propTypes = {
 exports.default = ProjectArchive;
 
 /***/ }),
-/* 655 */
+/* 657 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68551,7 +68690,7 @@ ProjectCard.propTypes = {
 exports.default = ProjectCard;
 
 /***/ }),
-/* 656 */
+/* 658 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68571,7 +68710,7 @@ var _downArrow = __webpack_require__(53);
 
 var _downArrow2 = _interopRequireDefault(_downArrow);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68634,7 +68773,7 @@ Scroller.propTypes = {
 exports.default = Scroller;
 
 /***/ }),
-/* 657 */
+/* 659 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68686,7 +68825,7 @@ Underlay.propTypes = {
 exports.default = Underlay;
 
 /***/ }),
-/* 658 */
+/* 660 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68716,7 +68855,7 @@ var _Project = __webpack_require__(87);
 
 var _Spacer = __webpack_require__(19);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68816,7 +68955,7 @@ var Projects = function (_Component) {
 exports.default = Projects;
 
 /***/ }),
-/* 659 */
+/* 661 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68844,7 +68983,7 @@ var _Button = __webpack_require__(21);
 
 var _Blog = __webpack_require__(86);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68942,7 +69081,7 @@ var Blog = function (_Component) {
 exports.default = Blog;
 
 /***/ }),
-/* 660 */
+/* 662 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -68980,7 +69119,7 @@ var _NotFound2 = _interopRequireDefault(_NotFound);
 
 var _cleaning = __webpack_require__(41);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -69072,7 +69211,7 @@ var BlogPost = function (_Component) {
 exports.default = BlogPost;
 
 /***/ }),
-/* 661 */
+/* 663 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69099,7 +69238,7 @@ function highlight(node) {
 } // external modules
 
 /***/ }),
-/* 662 */
+/* 664 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69156,7 +69295,7 @@ Image.propTypes = {
 exports.default = Image;
 
 /***/ }),
-/* 663 */
+/* 665 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69213,7 +69352,7 @@ Youtube.propTypes = {
 exports.default = Youtube;
 
 /***/ }),
-/* 664 */
+/* 666 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69251,7 +69390,7 @@ var _NotFound2 = _interopRequireDefault(_NotFound);
 
 var _cleaning = __webpack_require__(41);
 
-var _constants = __webpack_require__(14);
+var _constants = __webpack_require__(13);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -69343,7 +69482,7 @@ Project.propTypes = {};
 exports.default = Project;
 
 /***/ }),
-/* 665 */
+/* 667 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69367,7 +69506,7 @@ var _Code2 = _interopRequireDefault(_Code);
 
 var _Spacer = __webpack_require__(19);
 
-var _AnimatedBar = __webpack_require__(666);
+var _AnimatedBar = __webpack_require__(668);
 
 var _AnimatedBar2 = _interopRequireDefault(_AnimatedBar);
 
@@ -69375,7 +69514,7 @@ var _downArrow = __webpack_require__(53);
 
 var _downArrow2 = _interopRequireDefault(_downArrow);
 
-var _mailIcon = __webpack_require__(667);
+var _mailIcon = __webpack_require__(669);
 
 var _mailIcon2 = _interopRequireDefault(_mailIcon);
 
@@ -69521,7 +69660,7 @@ var StyleGuide = function (_Component) {
 exports.default = StyleGuide;
 
 /***/ }),
-/* 666 */
+/* 668 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69629,7 +69768,7 @@ AnimatedBar.propTypes = {
 exports.default = AnimatedBar;
 
 /***/ }),
-/* 667 */
+/* 669 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69685,7 +69824,7 @@ var SVG = function (_React$Component) {
 exports.default = SVG;
 
 /***/ }),
-/* 668 */
+/* 670 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -69776,13 +69915,13 @@ exports.default = function (hljs) {
 };
 
 /***/ }),
-/* 669 */
+/* 671 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
-var dispose = __webpack_require__(670)
+var dispose = __webpack_require__(672)
 	// The css code:
-	(__webpack_require__(671));
+	(__webpack_require__(673));
 // Hot Module Replacement
 if(false) {
 	module.hot.accept();
@@ -69790,7 +69929,7 @@ if(false) {
 }
 
 /***/ }),
-/* 670 */
+/* 672 */
 /***/ (function(module, exports) {
 
 /*
@@ -69817,12 +69956,12 @@ module.exports = function addStyle(cssCode) {
 
 
 /***/ }),
-/* 671 */
+/* 673 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(270)();
 // imports
-exports.i(__webpack_require__(672), "");
+exports.i(__webpack_require__(674), "");
 
 // module
 exports.push([module.i, "@font-face {\n  font-family: 'FiraCode-Regular';\n  src: url(\"/public/fonts/FiraCode-Regular-webfont.woff\") format(\"woff\"); }\n\n* {\n  margin: 0;\n  box-sizing: border-box; }\n\nhtml,\nbody {\n  height: 100%;\n  width: 100%; }\n\nh1 {\n  font-family: \"Lora\", serif;\n  font-weight: 700;\n  font-style: normal;\n  font-size: 50px;\n  color: rgba(35, 35, 35, 0.88); }\n\nh2 {\n  font-family: \"Lora\", serif;\n  font-weight: 700;\n  font-style: normal;\n  font-size: 42px;\n  color: rgba(35, 35, 35, 0.88); }\n\nh3 {\n  font-family: \"Playfair Display\", cursive;\n  font-weight: 400;\n  font-style: italic;\n  font-size: 32px;\n  color: rgba(35, 35, 35, 0.88); }\n\nh4 {\n  font-family: \"Playfair Display\", cursive;\n  font-weight: 400;\n  font-style: italic;\n  font-size: 24px;\n  color: rgba(35, 35, 35, 0.88); }\n\np {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\nol {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\nli {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n  li:not(:last-of-type) {\n    margin-bottom: 25px; }\n\na,\na:link,\na:visited {\n  color: rgba(35, 35, 35, 0.88); }\n\ninput,\ntextarea {\n  font-family: \"ABeeZee\", sans-serif;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\n::selection {\n  color: #fff;\n  background-color: rgba(62, 62, 62, 0.5); }\n\npre {\n  padding: 20px !important;\n  line-height: 25px;\n  border-left: 5px solid #5e6687; }\n  pre code {\n    font-family: \"FiraCode-Regular\", monospace;\n    font-weight: normal;\n    font-style: normal;\n    font-size: 17px;\n    color: rgba(35, 35, 35, 0.88); }\n\n.margin--none {\n  margin-top: 0 !important;\n  margin-right: 0 !important;\n  margin-bottom: 0 !important;\n  margin-left: 0 !important; }\n\n.margin-all--xs {\n  margin-top: 5px !important;\n  margin-right: 5px !important;\n  margin-bottom: 5px !important;\n  margin-left: 5px !important; }\n\n.margin-all--sm {\n  margin-top: 25px !important;\n  margin-right: 25px !important;\n  margin-bottom: 25px !important;\n  margin-left: 25px !important; }\n\n.margin-all--md {\n  margin-top: 40px !important;\n  margin-right: 40px !important;\n  margin-bottom: 40px !important;\n  margin-left: 40px !important; }\n\n.margin-all--lg {\n  margin-top: 60px !important;\n  margin-right: 60px !important;\n  margin-bottom: 60px !important;\n  margin-left: 60px !important; }\n\n.margin-all--xl {\n  margin-top: 100px !important;\n  margin-right: 100px !important;\n  margin-bottom: 100px !important;\n  margin-left: 100px !important; }\n\n.margin-top--none {\n  margin-top: 0 !important; }\n\n.margin-top--xs {\n  margin-top: 5px !important; }\n\n.margin-top--sm {\n  margin-top: 25px !important; }\n\n.margin-top--md {\n  margin-top: 40px !important; }\n\n.margin-top--lg {\n  margin-top: 60px !important; }\n\n.margin-top--xl {\n  margin-top: 100px !important; }\n\n.margin-right--none {\n  margin-right: 0 !important; }\n\n.margin-right--xs {\n  margin-right: 5px !important; }\n\n.margin-right--sm {\n  margin-right: 25px !important; }\n\n.margin-right--md {\n  margin-right: 40px !important; }\n\n.margin-right--lg {\n  margin-right: 60px !important; }\n\n.margin-right--xl {\n  margin-right: 100px !important; }\n\n.margin-bottom--none {\n  margin-bottom: 0 !important; }\n\n.margin-bottom--xs {\n  margin-bottom: 5px !important; }\n\n.margin-bottom--sm {\n  margin-bottom: 25px !important; }\n\n.margin-bottom--md {\n  margin-bottom: 40px !important; }\n\n.margin-bottom--lg {\n  margin-bottom: 60px !important; }\n\n.margin-bottom--xl {\n  margin-bottom: 100px !important; }\n\n.margin-left--none {\n  margin-left: 0 !important; }\n\n.margin-left--xs {\n  margin-left: 5px !important; }\n\n.margin-left--sm {\n  margin-left: 25px !important; }\n\n.margin-left--md {\n  margin-left: 40px !important; }\n\n.margin-left--lg {\n  margin-left: 60px !important; }\n\n.margin-left--xl {\n  margin-left: 100px !important; }\n\n.padding--none {\n  padding-top: 0 !important;\n  padding-right: 0 !important;\n  padding-bottom: 0 !important;\n  padding-left: 0 !important; }\n\n.padding-all--xs {\n  padding-top: 5px !important;\n  padding-right: 5px !important;\n  padding-bottom: 5px !important;\n  padding-left: 5px !important; }\n\n.padding-all--sm {\n  padding-top: 25px !important;\n  padding-right: 25px !important;\n  padding-bottom: 25px !important;\n  padding-left: 25px !important; }\n\n.padding-all--md {\n  padding-top: 40px !important;\n  padding-right: 40px !important;\n  padding-bottom: 40px !important;\n  padding-left: 40px !important; }\n\n.padding-all--lg {\n  padding-top: 60px !important;\n  padding-right: 60px !important;\n  padding-bottom: 60px !important;\n  padding-left: 60px !important; }\n\n.padding-all--xl {\n  padding-top: 100px !important;\n  padding-right: 100px !important;\n  padding-bottom: 100px !important;\n  padding-left: 100px !important; }\n\n.padding-top--none {\n  padding-top: 0 !important; }\n\n.padding-top--xs {\n  padding-top: 5px !important; }\n\n.padding-top--sm {\n  padding-top: 25px !important; }\n\n.padding-top--md {\n  padding-top: 40px !important; }\n\n.padding-top--lg {\n  padding-top: 60px !important; }\n\n.padding-top--xl {\n  padding-top: 100px !important; }\n\n.padding-right--none {\n  padding-right: 0 !important; }\n\n.padding-right--xs {\n  padding-right: 5px !important; }\n\n.padding-right--sm {\n  padding-right: 25px !important; }\n\n.padding-right--md {\n  padding-right: 40px !important; }\n\n.padding-right--lg {\n  padding-right: 60px !important; }\n\n.padding-right--xl {\n  padding-right: 100px !important; }\n\n.padding-bottom--none {\n  padding-bottom: 0 !important; }\n\n.padding-bottom--xs {\n  padding-bottom: 5px !important; }\n\n.padding-bottom--sm {\n  padding-bottom: 25px !important; }\n\n.padding-bottom--md {\n  padding-bottom: 40px !important; }\n\n.padding-bottom--lg {\n  padding-bottom: 60px !important; }\n\n.padding-bottom--xl {\n  padding-bottom: 100px !important; }\n\n.padding-left--none {\n  padding-left: 0 !important; }\n\n.padding-left--xs {\n  padding-left: 5px !important; }\n\n.padding-left--sm {\n  padding-left: 25px !important; }\n\n.padding-left--md {\n  padding-left: 40px !important; }\n\n.padding-left--lg {\n  padding-left: 60px !important; }\n\n.padding-left--xl {\n  padding-left: 100px !important; }\n\n.horiz-spacing--xs {\n  margin-left: 5px !important;\n  margin-right: 5px !important; }\n\n.horiz-spacing--sm {\n  margin-left: 25px !important;\n  margin-right: 25px !important; }\n\n.horiz-spacing--md {\n  margin-left: 40px !important;\n  margin-right: 40px !important; }\n\n.horiz-spacing--lg {\n  margin-left: 60px !important;\n  margin-right: 60px !important; }\n\n.horiz-spacing--xl {\n  margin-left: 100px !important;\n  margin-right: 100px !important; }\n\n.code {\n  background-color: #f5f7ff;\n  padding: 5px;\n  font-family: \"FiraCode-Regular\", monospace;\n  font-weight: normal;\n  font-style: normal;\n  font-size: 17px;\n  color: rgba(35, 35, 35, 0.88); }\n\n.background-color--primary-color--fade {\n  background-color: #e9e9e9 !important; }\n\n.text-center {\n  text-align: center; }\n\n@media screen and (min-width: 768px) {\n  .hide--sm {\n    display: none; } }\n\n@media screen and (min-width: 992px) {\n  .hide--md {\n    display: none; } }\n\n@media screen and (min-width: 1200px) {\n  .hide--lg {\n    display: none; } }\n\n@media screen and (min-width: 1200px) {\n  .hide--lg {\n    display: none; } }\n\n.fill--primary {\n  background-color: #3E3E3E; }\n\n.fill--light {\n  background-color: #fff; }\n\n.display--block {\n  display: block; }\n\n.display--inline-block {\n  display: inline-block; }\n\n[class*=\"align-content\"] {\n  display: flex; }\n  [class*=\"align-content\"][class*=\"--left\"] {\n    align-items: left;\n    justify-content: center; }\n  [class*=\"align-content\"][class*=\"--center\"] {\n    align-items: center;\n    justify-content: center; }\n  [class*=\"align-content\"][class*=\"--col\"] {\n    flex-direction: column; }\n\n.no-underline {\n  text-decoration: none !important; }\n\n.handle-float {\n  overflow: auto; }\n\n.hover--basic {\n  cursor: pointer; }\n\n.font-color--fade {\n  color: rgba(35, 35, 35, 0.65); }\n\n.font-color--light {\n  color: #fff; }\n\n.font-color--error {\n  color: #b92930; }\n\n.font-color--success {\n  color: #53BA68; }\n\n[class^=\"ButtonBase\"] {\n  height: 50px;\n  min-width: 150px;\n  max-width: 200px;\n  display: inline-block;\n  position: relative;\n  transition: 150ms all;\n  line-height: 50px;\n  text-align: center;\n  font-family: \"Lora\", serif;\n  font-weight: 700;\n  font-style: normal;\n  font-size: 20px;\n  color: rgba(35, 35, 35, 0.88); }\n  [class^=\"ButtonBase\"][class*=\"--center\"] {\n    display: block;\n    max-width: 200px;\n    margin-left: auto;\n    margin-right: auto; }\n  [class^=\"ButtonBase\"][class*=\"--disabled\"] {\n    opacity: 0.50;\n    cursor: not-allowed !important; }\n\n.ModernButton {\n  margin-top: 14px;\n  margin-bottom: 14px; }\n  .ModernButton:hover {\n    cursor: pointer; }\n  .ModernButton:hover, .ModernButton[class*=\"--disabled\"] {\n    transition: 200ms all; }\n    .ModernButton:hover .ModernButton__Upper, .ModernButton[class*=\"--disabled\"] .ModernButton__Upper {\n      top: 5px;\n      left: 5px;\n      border-color: rgba(62, 62, 62, 0.25);\n      font-size: 21px;\n      transition: 200ms all; }\n    .ModernButton:hover .ModernButton__Shadow, .ModernButton[class*=\"--disabled\"] .ModernButton__Shadow {\n      top: 5px;\n      left: 5px;\n      opacity: 0.5;\n      transition: 200ms all; }\n\n.ModernButton__Upper {\n  border: 2px solid #3E3E3E;\n  border-radius: 3px;\n  background-color: transparent;\n  width: 100%;\n  height: inherit;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1;\n  transition: 150ms all; }\n\n.ModernButton__Shadow {\n  opacity: 1.0;\n  background-color: #e9e9e9;\n  border: 2px solid #e9e9e9;\n  border-radius: 3px;\n  width: 100%;\n  height: inherit;\n  position: absolute;\n  z-index: 0;\n  top: 10px;\n  left: 10px;\n  transition: 150ms all;\n  border-collapse: separate; }\n\n.BorderButton {\n  border-radius: 3px;\n  border: 2px solid #3E3E3E; }\n  .BorderButton:not([class*=\"--disabled\"]):hover {\n    cursor: pointer;\n    font-size: 21px;\n    transition: 200ms;\n    border-color: rgba(62, 62, 62, 0.25); }\n\n[class*=\"FillButton\"] {\n  border-radius: 3px;\n  border-width: 2px;\n  border-style: solid; }\n  [class*=\"FillButton\"][class*=\"--light\"] {\n    background-color: #fff;\n    border-color: #3E3E3E;\n    color: #3E3E3E; }\n    [class*=\"FillButton\"][class*=\"--light\"]:hover {\n      border-color: rgba(62, 62, 62, 0.75);\n      background-color: rgba(255, 255, 255, 0.75); }\n  [class*=\"FillButton\"][class*=\"--medium\"] {\n    background-color: #e9e9e9;\n    border-color: #3E3E3E;\n    color: #3E3E3E; }\n    [class*=\"FillButton\"][class*=\"--medium\"]:hover {\n      border-color: rgba(62, 62, 62, 0.75);\n      background-color: rgba(233, 233, 233, 0.75); }\n  [class*=\"FillButton\"][class*=\"--dark\"] {\n    background-color: #3E3E3E;\n    border-color: #3E3E3E;\n    color: #fff; }\n    [class*=\"FillButton\"][class*=\"--dark\"]:hover {\n      border-color: rgba(62, 62, 62, 0.75);\n      background-color: rgba(62, 62, 62, 0.75); }\n  [class*=\"FillButton\"]:not([class*=\"--disabled\"]):hover {\n    cursor: pointer;\n    font-size: 21px;\n    transition: 200ms; }\n\n.LightFillButton {\n  border-radius: 3px;\n  border: 2px solid #3E3E3E;\n  background-color: #e9e9e9; }\n  .LightFillButton:not([class*=\"--disabled\"]):hover {\n    cursor: pointer;\n    font-size: 21px;\n    transition: 200ms;\n    border-color: rgba(62, 62, 62, 0.25); }\n\n.IconButton {\n  height: 50px;\n  width: 50px;\n  min-width: 50px; }\n  .IconButton .ModernButton__Upper,\n  .IconButton .ModernButton__Shadow {\n    border-radius: 50%; }\n  .IconButton .ModernButton__Upper {\n    display: flex;\n    align-items: center;\n    justify-content: center; }\n\n.IconButton__Icon path {\n  transform-origin: 50% 50%;\n  transition: 150ms all; }\n\n.IconButton:hover .IconButton__Icon path {\n  transform: scale(1.15);\n  transition: 200ms all; }\n\n.SpacerBase {\n  border: none;\n  height: 2px;\n  background-color: #3E3E3E;\n  margin-top: 40px;\n  margin-bottom: 40px; }\n\n.SimpleSpacer--short {\n  width: 50%;\n  max-width: 100px; }\n\n.SimpleSpacer--medium {\n  width: 75%;\n  max-width: 175px; }\n\n.SimpleSpacer--long {\n  width: 100%;\n  max-width: 250px; }\n\n.SimpleSpacer--center {\n  width: 100%;\n  max-width: 150px;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto; }\n\n.Underlay {\n  position: fixed;\n  height: 100%;\n  width: 100%;\n  background-color: #3E3E3E;\n  z-index: -1; }\n\n.HomePageJumbotron {\n  background-color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column;\n  padding: 40px;\n  height: 100%;\n  width: 100%;\n  max-width: 850px; }\n\n.ContactForm {\n  background-color: #fff; }\n  .ContactForm .ContactForm__FormContent {\n    max-width: 700px;\n    margin-left: auto;\n    margin-right: auto; }\n\n.Portfolio {\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.Portfolio__Content {\n  max-width: 700px; }\n\n.Portfolio__Projects {\n  overflow: auto; }\n\n.AnimatedBar {\n  position: relative;\n  width: 100%;\n  height: 44px; }\n\n.AnimatedBar__FillWrapper {\n  overflow: hidden;\n  height: 25px;\n  border: 2px solid #3E3E3E; }\n\n.FillWrapper__Fill {\n  height: inherit;\n  background-color: #3E3E3E;\n  width: 0;\n  transition-timing-function: cubic-bezier(0, 0.22, 0.65, 1.4); }\n\n.AnimatedBar_Shadow {\n  height: 29px;\n  /* $height + 2 * $border-size */\n  width: inherit;\n  background-color: #e9e9e9;\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  z-index: -1;\n  /* to appear below fill elements */ }\n\n.TextInput--Line {\n  border-left: 2px solid #3E3E3E;\n  border-top: none;\n  border-right: none;\n  border-bottom: 2px solid #3E3E3E;\n  display: block;\n  width: 100%;\n  padding: 5px;\n  outline: none;\n  transition: 100ms all; }\n\n.TextInput--Area {\n  border: 2px solid #3E3E3E;\n  display: block;\n  resize: none;\n  width: 100%;\n  padding: 5px;\n  outline: none;\n  transition: 100ms all; }\n\n.Scroller {\n  width: 65px;\n  height: 65px;\n  background-color: #fff;\n  position: absolute;\n  bottom: 40px;\n  right: 40px;\n  border-radius: 50%;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n  .Scroller:hover {\n    cursor: pointer; }\n\n.BlogPostsWrapper {\n  overflow: auto; }\n\n.BlogPost__Content {\n  width: 100%;\n  max-width: 800px;\n  padding: 40px;\n  margin: 40px auto; }\n  .BlogPost__Content p {\n    line-height: 2rem; }\n\n[class^=\"BlogPostCard\"] {\n  width: 100%;\n  max-width: 500px;\n  margin-left: auto;\n  margin-right: auto;\n  margin-top: 40px; }\n  [class^=\"BlogPostCard\"][class*=\"--alt\"] {\n    border-top: #3E3E3E solid 2px;\n    border-left: #3E3E3E solid 2px;\n    -webkit-box-shadow: 15px 15px 0 #e9e9e9;\n    -moz-box-shadow: 15px 15px 0 #e9e9e9;\n    box-shadow: 15px 15px 0 #e9e9e9; }\n  [class^=\"BlogPostCard\"] h3 {\n    opacity: 1.0;\n    transition: 150ms all; }\n  [class^=\"BlogPostCard\"]:hover h3 {\n    opacity: 0.75;\n    transition: 200ms all; }\n  [class^=\"BlogPostCard\"]:first-of-type {\n    margin-top: 0; }\n  @media screen and (min-width: 992px) {\n    [class^=\"BlogPostCard\"] {\n      width: 47.5%;\n      float: left;\n      margin-left: 5%; }\n      [class^=\"BlogPostCard\"]:nth-child(odd) {\n        margin-left: 0; }\n      [class^=\"BlogPostCard\"]:nth-of-type(2), [class^=\"BlogPostCard\"]:first-of-type {\n        margin-top: 0; } }\n\n.NotFound {\n  height: 100%;\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  flex-direction: column; }\n\n@keyframes bounce--main {\n  from {\n    top: 0; }\n  to {\n    top: 15px; } }\n\n@keyframes bounce--shadow {\n  from {\n    top: 0; }\n  to {\n    top: 25px; } }\n\n.Loader {\n  display: flex;\n  max-width: 145px;\n  align-items: center;\n  justify-content: space-between; }\n\n.Loader__Dot {\n  position: relative; }\n\n.Dot__Main {\n  width: 25px;\n  height: 25px;\n  border-radius: 50%;\n  border: 2px solid #3E3E3E;\n  background-color: transparent;\n  z-index: 1;\n  position: relative; }\n\n.Dot__Shadow {\n  left: 10px;\n  position: absolute;\n  background-color: #e9e9e9;\n  width: 25px;\n  height: 25px;\n  border-radius: 50%;\n  content: \"\";\n  top: 5px;\n  left: 5px; }\n\n.Loader__Dot:nth-of-type(1) .Dot__Main {\n  animation-name: bounce--main;\n  animation-duration: 600ms;\n  animation-delay: 150ms;\n  animation-iteration-count: infinite;\n  animation-direction: alternate; }\n\n.Loader__Dot:nth-of-type(1) .Dot__Shadow {\n  animation-name: bounce--shadow;\n  animation-duration: 600ms;\n  animation-delay: 175ms;\n  animation-iteration-count: infinite;\n  animation-direction: alternate; }\n\n.Loader__Dot:nth-of-type(2) .Dot__Main {\n  animation-name: bounce--main;\n  animation-duration: 600ms;\n  animation-delay: 300ms;\n  animation-iteration-count: infinite;\n  animation-direction: alternate; }\n\n.Loader__Dot:nth-of-type(2) .Dot__Shadow {\n  animation-name: bounce--shadow;\n  animation-duration: 600ms;\n  animation-delay: 350ms;\n  animation-iteration-count: infinite;\n  animation-direction: alternate; }\n\n.Loader__Dot:nth-of-type(3) .Dot__Main {\n  animation-name: bounce--main;\n  animation-duration: 600ms;\n  animation-delay: 450ms;\n  animation-iteration-count: infinite;\n  animation-direction: alternate; }\n\n.Loader__Dot:nth-of-type(3) .Dot__Shadow {\n  animation-name: bounce--shadow;\n  animation-duration: 600ms;\n  animation-delay: 525ms;\n  animation-iteration-count: infinite;\n  animation-direction: alternate; }\n\n.Loader__Dot:nth-of-type(4) .Dot__Main {\n  animation-name: bounce--main;\n  animation-duration: 600ms;\n  animation-delay: 600ms;\n  animation-iteration-count: infinite;\n  animation-direction: alternate; }\n\n.Loader__Dot:nth-of-type(4) .Dot__Shadow {\n  animation-name: bounce--shadow;\n  animation-duration: 600ms;\n  animation-delay: 700ms;\n  animation-iteration-count: infinite;\n  animation-direction: alternate; }\n\n.HomeButton {\n  height: 60px;\n  width: 60px;\n  position: fixed;\n  bottom: 25px;\n  right: 25px;\n  border-radius: 50%;\n  background-color: #3E3E3E;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.ProjectCard {\n  position: relative;\n  display: block;\n  width: 100%;\n  max-width: 500px;\n  margin-left: auto;\n  margin-right: auto;\n  margin-bottom: 40px; }\n  @media screen and (min-width: 992px) {\n    .ProjectCard {\n      width: 30%;\n      float: left;\n      margin-left: 5%; }\n      .ProjectCard:nth-child(3n + 1) {\n        margin-left: 0;\n        clear: left; }\n      .ProjectCard:nth-last-of-type(3), .ProjectCard:nth-last-of-type(2), .ProjectCard:last-of-type {\n        margin-bottom: 0; } }\n\n.ProjectCard__Image {\n  width: 100%;\n  height: 100%;\n  background-size: 100%;\n  background-repeat: no-repeat;\n  background-position: center;\n  transition: 200ms all; }\n  .ProjectCard__Image:hover {\n    background-size: 125%;\n    cursor: pointer;\n    transition: 300ms all; }\n    .ProjectCard__Image:hover .ProjectCard__Title {\n      opacity: 1.0;\n      transition: 200ms all; }\n\n.ProjectCard__Title {\n  position: absolute;\n  display: flex;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background-color: rgba(62, 62, 62, 0.5);\n  opacity: 0.0;\n  align-items: center;\n  justify-content: center;\n  text-align: center;\n  transition: 150ms all; }\n\n.BlogPosts__Content {\n  max-width: 700px;\n  margin-left: auto;\n  margin-right: auto; }\n\n.BlogPosts__BlogPostCards {\n  overflow: auto; }\n\n.Project__Content {\n  width: 100%;\n  max-width: 800px;\n  padding: 40px;\n  margin: 40px auto; }\n  .Project__Content p {\n    line-height: 2rem; }\n\n.Header__Back {\n  height: 50px;\n  width: 50px;\n  position: fixed;\n  top: 25px;\n  right: 25px;\n  border-radius: 50%;\n  background-color: #3E3E3E;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  z-index: 1; }\n  .Header__Back svg {\n    transform: rotateZ(90deg); }\n    .Header__Back svg path {\n      fill: #fff; }\n\n.Image {\n  background-color: transparent;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center; }\n\n.Image__Dummy {\n  visibility: hidden;\n  width: 100%; }\n\n.Youtube {\n  position: relative;\n  padding-bottom: 56.25%;\n  padding-top: 25px;\n  height: 0;\n  background-color: #e9e9e9; }\n\n.Youtube__Video {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%; }\n\n[class^=\"Block\"] {\n  display: flex;\n  align-items: center; }\n  [class^=\"Block\"] svg {\n    flex-shrink: 0; }\n\n.HomePage {\n  height: 100%;\n  width: 100%; }\n", ""]);
@@ -69831,7 +69970,7 @@ exports.push([module.i, "@font-face {\n  font-family: 'FiraCode-Regular';\n  src
 
 
 /***/ }),
-/* 672 */
+/* 674 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(270)();
