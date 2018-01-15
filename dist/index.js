@@ -24,6 +24,10 @@ var _blogRoutes = require('./routes/blog-routes');
 
 var _blogRoutes2 = _interopRequireDefault(_blogRoutes);
 
+var _recommendationRoutes = require('./routes/recommendation-routes');
+
+var _recommendationRoutes2 = _interopRequireDefault(_recommendationRoutes);
+
 var _contactFormRoutes = require('./routes/contact-form-routes');
 
 var _contactFormRoutes2 = _interopRequireDefault(_contactFormRoutes);
@@ -35,10 +39,10 @@ var _constants2 = _interopRequireDefault(_constants);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // pulling off required shared constants
-// external modules
-var API_INFO = _constants2.default.API_INFO;
+
 
 // custom modules
+var API_INFO = _constants2.default.API_INFO; // external modules
 
 var app = (0, _express2.default)();
 app.use(_bodyParser2.default.json());
@@ -49,6 +53,7 @@ app.use('/public', _express2.default.static(_path2.default.join(__dirname, '../p
 (0, _dev2.default)(app);
 (0, _projectRoutes2.default)(app);
 (0, _blogRoutes2.default)(app);
+(0, _recommendationRoutes2.default)(app);
 (0, _contactFormRoutes2.default)(app);
 
 var port = 8081; // dev port
