@@ -19,7 +19,7 @@ export default class HomePage extends Component {
                 <Recommendations />
                 <ContactForm />
                 {/* <Scroller to="top" /> */}
-                <Footer />
+                {/* <Footer /> */}
             </div>
         );
     }

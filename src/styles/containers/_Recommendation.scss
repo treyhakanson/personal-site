@@ -1,0 +1,22 @@
+.RecommendationBlock {
+   @include media-query--md {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}
+
+.RecommendationBlock .RecommendationCard {
+   margin-top: 0 !important;
+   margin-bottom: $sp--md;
+}
+
+.RecommendationBlock:last-of-type .RecommendationCard:last-of-type {
+   margin-bottom: 0;
+}
+
+.RecommendationBlock:last-of-type .RecommendationCard {
+   @include media-query--md {
+      margin-bottom: 0;
+   }
+}

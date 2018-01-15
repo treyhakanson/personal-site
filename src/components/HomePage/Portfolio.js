@@ -40,13 +40,13 @@ export default class Portfolio extends Component {
                     <SimpleSpacer.Medium />
                     <p>
                         Hi, I&apos;m Trey Hakanson, its nice to meet you.
-                        I&apos;m a frontend developer and UI/UX designer based
+                        I&apos;m a full-stack developer and UI/UX designer based
                         in Columbus Ohio. To learn more about me and what I do,
                         check out some of these projects or my blog.
                     </p>
                     {this.state.error && <div className="error"></div>}
                     {this.state.loading && <Loader />}
-                    {!this.state.loading && <div className="Portfolio__Projects margin-top--md">
+                    {!this.state.loading && <div className="Portfolio__Projects margin-top--sm">
                         {this.state.projects.map(project =>
                             <ProjectCard key={project.id}
                                 title={project.title}

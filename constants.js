@@ -9,5 +9,8 @@ module.exports = {
     },
     PROJECT: {
         PROJECTS_PER_PAGE: 6
+    },
+    RECOMMENDATION: {
+      RECOMMENDATIONS_PER_PAGE: 8
     }
 };

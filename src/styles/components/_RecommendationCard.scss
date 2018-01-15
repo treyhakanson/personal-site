@@ -11,12 +11,8 @@
    }
 
    @include media-query--md {
-      padding-right: $sp--sm;
+      max-width: calc(25% - #{$sp--sm});
       margin-top: 0;
-
-      &:last-of-type {
-         padding-right: 0;
-      }
    }
 }
 

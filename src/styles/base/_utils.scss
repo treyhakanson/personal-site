@@ -57,6 +57,10 @@
     display: inline-block;
 }
 
+.display--flex {
+   display: flex;
+}
+
 // content alignment
 [class*="align-content"] {
     display: flex;
@@ -77,6 +81,12 @@
 }
 
 // miscellaneous
+.ellipsis-overflow {
+   text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+}
+
 .no-underline {
     text-decoration: none !important;
 }

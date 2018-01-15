@@ -38,9 +38,13 @@ export default class Recommendations extends Component {
                 <div className="Recommendations__Content">
                     <h2>Recommended</h2>
                     <SimpleSpacer.Medium />
+                    <p>
+                       Some of my favorite reads from around the web. Check them
+                       out, maybe you&apos;ll learn something new!
+                    </p>
                     {this.state.error && <div className="error"></div>}
                     {this.state.loading && <Loader />}
-                    {!this.state.loading && <div className="RecommendationsWrapper">
+                    {!this.state.loading && <div className="RecommendationsWrapper margin-top--sm">
                         <div className="Recommendations__RecommendationCards">
                             {this.state.recommendations.map(recommendation =>
                                 <RecommendationCard key={recommendation.id}
@@ -53,7 +57,7 @@ export default class Recommendations extends Component {
                     <Button.Light className="margin-top--sm"
                         clear
                         text="See More"
-                        link="/" />
+                        link="/recommendation" />
                 </div>
             </div>
         );

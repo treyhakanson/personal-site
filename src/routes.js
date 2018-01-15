@@ -7,6 +7,7 @@ import NotFound from 'containers/NotFound';
 import HomePage from 'containers/HomePage';
 import Projects from 'containers/Projects';
 import Blog from 'containers/Blog';
+import Recommendation from 'containers/Recommendation';
 import BlogPost from 'containers/BlogPost';
 import Project from 'containers/Project';
 import StyleGuide from 'components/StyleGuide';
@@ -23,6 +24,7 @@ export default (
 			<IndexRoute component={Projects} />
 			<Route path=":projectTitle" component={Project} />
 		</Route>
+      <Route path="recommendation" component={Recommendation} />
 		<Route path="*" component={NotFound} />
 	</Route>
 );
