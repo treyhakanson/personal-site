@@ -1,0 +1,33 @@
+.RecommendationCard {
+   margin-top: $sp--md;
+   flex: 1 1 0;
+
+   &:first-of-type {
+      margin-top: 0;
+   }
+
+   &:hover {
+      opacity: 0.75;
+   }
+
+   @include media-query--md {
+      padding-right: $sp--sm;
+      margin-top: 0;
+
+      &:last-of-type {
+         padding-right: 0;
+      }
+   }
+}
+
+.RecommendationCard__Title {
+   margin-top: $sp--xs;
+}
+
+.RecommendationCard__Thumbnail {
+   width: 100%;
+   height: 150px;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}

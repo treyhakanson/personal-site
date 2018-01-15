@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 import dev from './utils/dev';
 import projectRoutes from './routes/project-routes';
 import blogRoutes from './routes/blog-routes';
+import recommendationRoutes from './routes/recommendation-routes';
 import contactFormRoutes from './routes/contact-form-routes';
 import SHARED_CONSTANTS from '../constants.js';
 
@@ -22,6 +23,7 @@ app.use('/public', express.static(path.join(__dirname, '../public')));
 dev(app);
 projectRoutes(app);
 blogRoutes(app);
+recommendationRoutes(app);
 contactFormRoutes(app);
 
 let port = 8081; // dev port
