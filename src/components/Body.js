@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react';
 
 // custom modules
 import { ELEMENT_TYPES } from 'utils/constants';
+import Header from 'components/Header';
 import Code from 'components/Code';
 import Image from 'components/Image';
 import Youtube from 'components/Youtube';
@@ -16,6 +17,8 @@ export default class Body extends Component {
         switch(element.type) {
             case ELEMENT_TYPES.TEXT:
                 return <p>{element.content}</p>;
+            case ELEMENT_TYPES.SUBHEADING:
+               return <h3>{element.content}</h3>;
             case ELEMENT_TYPES.LINK:
                 console.log(element.link);
                 return <a href={element.link}><p>{element.content}</p></a>;

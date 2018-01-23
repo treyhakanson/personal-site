@@ -25,6 +25,7 @@ export const STATUS = {
 
 export const ELEMENT_TYPES = {
     TEXT: 'text',
+    SUBHEADING: 'subheading',
     LINK: 'link',
     QUOTE: 'quote',
     IMAGE: 'image',
