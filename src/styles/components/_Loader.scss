@@ -1,50 +1,58 @@
 @keyframes bounce--main {
-    from { top: 0; }
-    to   { top: 15px; }
+   from {
+      top: 0;
+   }
+   to {
+      top: 15px;
+   }
 }
 @keyframes bounce--shadow {
-    from { top: 0; }
-    to   { top: 25px; }
+   from {
+      top: 0;
+   }
+   to {
+      top: 25px;
+   }
 }
 
 .Loader {
-    display: flex;
-    max-width: $dot-sz * 4 + $dot-spacing * 3;
-    align-items: center;
-    justify-content: space-between;
+   display: flex;
+   max-width: $dot-sz * 4 + $dot-spacing * 3;
+   align-items: center;
+   justify-content: space-between;
 }
 
 .Loader__Dot {
-    position: relative;
+   position: relative;
 }
 
 .Dot__Main {
-    width: $dot-sz;
-    height: $dot-sz;
-    border-radius: 50%;
-    border: $border-width--default solid $primary-color--default;
-    background-color: transparent;
-    z-index: 1;
-    position: relative;
+   width: $dot-sz;
+   height: $dot-sz;
+   border-radius: 50%;
+   border: $border-width--default solid $primary-color--default;
+   background-color: transparent;
+   z-index: 1;
+   position: relative;
 }
 
 .Dot__Shadow {
-    left: 10px;
-    position: absolute;
-    background-color: $primary-color--fade;
-    width: $dot-sz;
-    height: $dot-sz;
-    border-radius: 50%;
-    content: "";
-    top: $dot-spacing / 3;
-    left: $dot-spacing / 3;
+   left: 10px;
+   position: absolute;
+   background-color: $primary-color--fade;
+   width: $dot-sz;
+   height: $dot-sz;
+   border-radius: 50%;
+   content: "";
+   top: $dot-spacing / 3;
+   left: $dot-spacing / 3;
 }
 @for $i from 1 through 4 {
-    .Loader__Dot:nth-of-type(#{$i}) .Dot__Main {
-        @include delay-animation( 'bounce--main', 150ms * $i, 600ms);
-    }
+   .Loader__Dot:nth-of-type(#{$i}) .Dot__Main {
+      @include delay-animation( "bounce--main", 150ms * $i, 600ms);
+   }
 
-    .Loader__Dot:nth-of-type(#{$i}) .Dot__Shadow {
-        @include delay-animation( 'bounce--shadow', 175ms * $i, 600ms);
-    }
+   .Loader__Dot:nth-of-type(#{$i}) .Dot__Shadow {
+      @include delay-animation( "bounce--shadow", 175ms * $i, 600ms);
+   }
 }

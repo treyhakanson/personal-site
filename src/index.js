@@ -1,37 +1,38 @@
 // external modules
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
-import hljs from 'highlight.js';
-import { browserHistory, hashHistory } from 'react-router';
+import React from "react";
+import ReactDOM from "react-dom";
+import { AppContainer } from "react-hot-loader";
+import hljs from "highlight.js";
+import { browserHistory, hashHistory } from "react-router";
 
 // custom modules
-import RootContainer from 'containers/RootContainer';
-import es6Syntax from 'utils/es6-syntax';
+import RootContainer from "containers/RootContainer";
+import es6Syntax from "utils/es6-syntax";
 
 // styles
-import 'styles/stylesheet.scss';
+import "styles/stylesheet.scss";
 
 // load highlight js for code
-hljs.registerLanguage('js', es6Syntax);
+hljs.registerLanguage("js", es6Syntax);
 
 const render = (Component, history) => {
-		ReactDOM.render(
-			<AppContainer>
-				<Component history={history} />
-			</AppContainer>,
-			document.getElementById('root')
-		);
+   ReactDOM.render(
+      <AppContainer>
+         <Component history={history} />
+      </AppContainer>,
+      document.getElementById("root")
+   );
 };
 
 let history;
-if (process.env.NODE_ENV != 'development') {
-	history = browserHistory;
+if (process.env.NODE_ENV != "development") {
+   history = browserHistory;
 } else {
-	history = hashHistory;
-	if (module.hot)
-		module.hot.accept('containers/RootContainer', () =>
-			render(RootContainer, history));
+   history = hashHistory;
+   if (module.hot)
+      module.hot.accept("containers/RootContainer", () =>
+         render(RootContainer, history)
+      );
 }
 
 render(RootContainer, history);

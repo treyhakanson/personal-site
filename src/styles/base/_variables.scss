@@ -1,8 +1,8 @@
 // font families
-$header-font-family: 'Lora', serif;
-$sub-header-font-family: 'Playfair Display', cursive;
-$regular-font-family: 'ABeeZee', sans-serif;
-$code-font-family: 'FiraCode-Regular', monospace;
+$header-font-family: "Lora", serif;
+$sub-header-font-family: "Playfair Display", cursive;
+$regular-font-family: "ABeeZee", sans-serif;
+$code-font-family: "FiraCode-Regular", monospace;
 
 // font sizes
 $header-font-size--default: 42px;
@@ -43,15 +43,15 @@ $code-line-height: 25px;
 // application colors
 $code-border-color: #5e6687;
 $code-background-color: #f5f7ff;
-$primary-color--default: #3E3E3E;
+$primary-color--default: #3e3e3e;
 $primary-color--fade: #e9e9e9;
 $primary-color--transluscent: rgba($primary-color--default, 0.5);
 
-$success-color--default: #53BA68;
+$success-color--default: #53ba68;
 $error-color--default: #b92930;
 $error-color--fade: #b55c60;
 $light-color: #fff;
-$light-color--fade: rgba($light-color, 0.10);
+$light-color--fade: rgba($light-color, 0.1);
 
 // spacing
 $sp--xs: 5px;

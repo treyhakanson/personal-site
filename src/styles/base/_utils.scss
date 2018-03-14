@@ -1,60 +1,60 @@
 // inline code styling
 .code {
-    background-color: $code-background-color;
-    padding: 5px;
+   background-color: $code-background-color;
+   padding: 5px;
 
-    @include code-font;
+   @include code-font;
 }
 
 // color utils
 .background-color--primary-color--fade {
-    background-color: $primary-color--fade !important;
+   background-color: $primary-color--fade !important;
 }
 
 // font utils
 .text-center {
-    text-align: center;
+   text-align: center;
 }
 
 // screen size utils
 .hide--sm {
-    @include media-query--sm {
-        display: none;
-    }
+   @include media-query--sm {
+      display: none;
+   }
 }
 
 .hide--md {
-    @include media-query--md {
-        display: none;
-    }
+   @include media-query--md {
+      display: none;
+   }
 }
 
 .hide--lg {
-    @include media-query--lg {
-        display: none;
-    }
+   @include media-query--lg {
+      display: none;
+   }
 }
 
 .hide--lg {
-    @include media-query--lg {
-        display: none;
-    }
+   @include media-query--lg {
+      display: none;
+   }
 }
 
 .fill--primary {
-    background-color: $primary-color--default;
+   background-color: $primary-color--default;
 }
 
 .fill--light {
-    background-color: $light-color;
+   background-color: $light-color;
 }
 
 .display--block {
-    display: block;
+   display: block;
 }
 
 .display--inline-block {
-    display: inline-block;
+   display: inline-block;
 }
 
 .display--flex {
@@ -63,21 +63,21 @@
 
 // content alignment
 [class*="align-content"] {
-    display: flex;
+   display: flex;
 
-    &[class*="--left"] {
-        align-items: left;
-        justify-content: center;
-    }
+   &[class*="--left"] {
+      align-items: left;
+      justify-content: center;
+   }
 
-    &[class*="--center"] {
-        align-items: center;
-        justify-content: center;
-    }
+   &[class*="--center"] {
+      align-items: center;
+      justify-content: center;
+   }
 
-    &[class*="--col"] {
-        flex-direction: column;
-    }
+   &[class*="--col"] {
+      flex-direction: column;
+   }
 }
 
 // miscellaneous
@@ -88,29 +88,29 @@
 }
 
 .no-underline {
-    text-decoration: none !important;
+   text-decoration: none !important;
 }
 
 .handle-float {
-    overflow: auto;
+   overflow: auto;
 }
 
 .hover--basic {
-    cursor: pointer;
+   cursor: pointer;
 }
 
 .font-color--fade {
-    color: $font-color--light;
+   color: $font-color--light;
 }
 
 .font-color--light {
-    color: $light-color;
+   color: $light-color;
 }
 
 .font-color--error {
-    color: $error-color--default;
+   color: $error-color--default;
 }
 
 .font-color--success {
-    color: $success-color--default;
+   color: $success-color--default;
 }

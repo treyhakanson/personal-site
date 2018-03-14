@@ -1,18 +1,18 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
 // this is an example reducer to allow the app
 // to create a redux store successfully. Remove
 // once your own reducers have been added.
 const tmp = () => {
-	return {
-		action: null,
-		payload: null
-	}
-}
+   return {
+      action: null,
+      payload: null
+   };
+};
 
 const rootReducer = combineReducers({
-	// insert reducers here
-	tmp
+   // insert reducers here
+   tmp
 });
 
 export default rootReducer;

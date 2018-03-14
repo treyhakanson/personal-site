@@ -1,44 +1,43 @@
 [class^="BlogPostCard"] {
-    width: 100%;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: $sp--md;
+   width: 100%;
+   max-width: 500px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: $sp--md;
 
-    &[class*="--alt"] {
-        border-top: $primary-color--default solid $border-width--default;
-        border-left: $primary-color--default solid $border-width--default;
+   &[class*="--alt"] {
+      border-top: $primary-color--default solid $border-width--default;
+      border-left: $primary-color--default solid $border-width--default;
 
-        @include box-shadow(15px, 15px, 0, $primary-color--fade);
-    }
+      @include box-shadow(15px, 15px, 0, $primary-color--fade);
+   }
 
-    h3 {
-        opacity: 1.0;
-        transition: 150ms all;
-    }
+   h3 {
+      opacity: 1;
+      transition: 150ms all;
+   }
 
-    &:hover h3 {
-        opacity: 0.75;
-        transition: 200ms all;
-    }
+   &:hover h3 {
+      opacity: 0.75;
+      transition: 200ms all;
+   }
 
-    &:first-of-type {
-        margin-top: 0;
-    }
+   &:first-of-type {
+      margin-top: 0;
+   }
 
-    @include media-query--md {
-        width: 47.5%;
-        float: left;
-        margin-left: 5%;
+   @include media-query--md {
+      width: 47.5%;
+      float: left;
+      margin-left: 5%;
 
-        &:nth-child(odd) {
-            margin-left: 0;
-        }
+      &:nth-child(odd) {
+         margin-left: 0;
+      }
 
-        &:nth-of-type(2),
-        &:first-of-type {
-            margin-top: 0;
-        }
-    }
-
+      &:nth-of-type(2),
+      &:first-of-type {
+         margin-top: 0;
+      }
+   }
 }

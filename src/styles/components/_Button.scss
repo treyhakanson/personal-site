@@ -1,180 +1,180 @@
 // base button styles
 [class^="ButtonBase"] {
-    height: $button-height;
-    min-width: $button-min-width;
-    max-width: $button-max-width;
-    display: inline-block;
-    position: relative;
-    transition: $transition-speed--inactive all;
-    line-height: $button-height;
-    text-align: center;
+   height: $button-height;
+   min-width: $button-min-width;
+   max-width: $button-max-width;
+   display: inline-block;
+   position: relative;
+   transition: $transition-speed--inactive all;
+   line-height: $button-height;
+   text-align: center;
 
-    @include header-font($button-font-size--default);
+   @include header-font($button-font-size--default);
 
-    &[class*="--center"] {
-        display: block;
-        max-width: $button-max-width;
-        margin-left: auto;
-        margin-right: auto;
-    }
+   &[class*="--center"] {
+      display: block;
+      max-width: $button-max-width;
+      margin-left: auto;
+      margin-right: auto;
+   }
 
-    &[class*="--disabled"] {
-        opacity: 0.50;
-        cursor: not-allowed !important;
-    }
+   &[class*="--disabled"] {
+      opacity: 0.5;
+      cursor: not-allowed !important;
+   }
 }
 
 // modern button
 .ModernButton {
-    margin-top: #{$modern-button-offset + $border-width--default * 2};
-    margin-bottom: #{$modern-button-offset + $border-width--default * 2};
+   margin-top: #{$modern-button-offset + $border-width--default * 2};
+   margin-bottom: #{$modern-button-offset + $border-width--default * 2};
 
-    &:hover {
-        cursor: pointer;
-    }
+   &:hover {
+      cursor: pointer;
+   }
 
-    &:hover,
-    &[class*="--disabled"] {
-        transition: $transition-speed--active all;
+   &:hover,
+   &[class*="--disabled"] {
+      transition: $transition-speed--active all;
 
-        .ModernButton__Upper {
-            top: #{$modern-button-offset / 2};
-            left: #{$modern-button-offset / 2};
-            border-color: rgba($primary-color--default, 0.25);
-            font-size: $button-font-size--active;
-            transition: $transition-speed--active all;
-        }
-        .ModernButton__Shadow {
-            top: #{$modern-button-offset / 2};
-            left: #{$modern-button-offset / 2};
-            opacity: 0.5;
-            transition: $transition-speed--active all;
-        }
-    }
+      .ModernButton__Upper {
+         top: #{$modern-button-offset / 2};
+         left: #{$modern-button-offset / 2};
+         border-color: rgba($primary-color--default, 0.25);
+         font-size: $button-font-size--active;
+         transition: $transition-speed--active all;
+      }
+      .ModernButton__Shadow {
+         top: #{$modern-button-offset / 2};
+         left: #{$modern-button-offset / 2};
+         opacity: 0.5;
+         transition: $transition-speed--active all;
+      }
+   }
 }
 
 .ModernButton__Upper {
-    border: $border-width--default solid $primary-color--default;
-    border-radius: $border-radius--default;
-    background-color: transparent;
-    width: 100%;
-    height: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; // always above ModernButton__Upper
-    transition: $transition-speed--inactive all;
+   border: $border-width--default solid $primary-color--default;
+   border-radius: $border-radius--default;
+   background-color: transparent;
+   width: 100%;
+   height: inherit;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1; // always above ModernButton__Upper
+   transition: $transition-speed--inactive all;
 }
 
 .ModernButton__Shadow {
-    opacity: 1.0;
-    background-color: $primary-color--fade;
-    border: $border-width--default solid $primary-color--fade;
-    border-radius: $border-radius--default;
-    width: 100%;
-    height: inherit;
-    position: absolute;
-    z-index: 0; // always beneath ModernButton__Upper
-    top: $modern-button-offset;
-    left: $modern-button-offset;
-    transition: $transition-speed--inactive all;
-    border-collapse: separate;
+   opacity: 1;
+   background-color: $primary-color--fade;
+   border: $border-width--default solid $primary-color--fade;
+   border-radius: $border-radius--default;
+   width: 100%;
+   height: inherit;
+   position: absolute;
+   z-index: 0; // always beneath ModernButton__Upper
+   top: $modern-button-offset;
+   left: $modern-button-offset;
+   transition: $transition-speed--inactive all;
+   border-collapse: separate;
 }
 
 // border button
 .BorderButton {
-    border-radius: $border-radius--default;
-    border: $border-width--default solid $primary-color--default;
+   border-radius: $border-radius--default;
+   border: $border-width--default solid $primary-color--default;
 
-    &:not([class*="--disabled"]):hover {
-        cursor: pointer;
-        font-size: $button-font-size--active;
-        transition: $transition-speed--active;
-        border-color: rgba($primary-color--default, 0.25);
-    }
+   &:not([class*="--disabled"]):hover {
+      cursor: pointer;
+      font-size: $button-font-size--active;
+      transition: $transition-speed--active;
+      border-color: rgba($primary-color--default, 0.25);
+   }
 }
 
 // fill button
 [class*="FillButton"] {
-    border-radius: $border-radius--default;
-    border-width: $border-width--default;
-    border-style: solid;
+   border-radius: $border-radius--default;
+   border-width: $border-width--default;
+   border-style: solid;
 
-    &[class*="--light"] {
-        background-color: $light-color;
-        border-color: $primary-color--default;
-        color: $primary-color--default;
-        &:hover {
-            border-color: rgba($primary-color--default, 0.75);
-            background-color: rgba($light-color, 0.75);
-        }
-    }
+   &[class*="--light"] {
+      background-color: $light-color;
+      border-color: $primary-color--default;
+      color: $primary-color--default;
+      &:hover {
+         border-color: rgba($primary-color--default, 0.75);
+         background-color: rgba($light-color, 0.75);
+      }
+   }
 
-    &[class*="--medium"] {
-        background-color: $primary-color--fade;
-        border-color: $primary-color--default;
-        color: $primary-color--default;
-        &:hover {
-            border-color: rgba($primary-color--default, 0.75);
-            background-color: rgba($primary-color--fade, 0.75);
-        }
-    }
+   &[class*="--medium"] {
+      background-color: $primary-color--fade;
+      border-color: $primary-color--default;
+      color: $primary-color--default;
+      &:hover {
+         border-color: rgba($primary-color--default, 0.75);
+         background-color: rgba($primary-color--fade, 0.75);
+      }
+   }
 
-    &[class*="--dark"] {
-        background-color: $primary-color--default;
-        border-color: $primary-color--default;
-        color: $light-color;
-        &:hover {
-            border-color: rgba($primary-color--default, 0.75);
-            background-color: rgba($primary-color--default, 0.75);
-        }
-    }
+   &[class*="--dark"] {
+      background-color: $primary-color--default;
+      border-color: $primary-color--default;
+      color: $light-color;
+      &:hover {
+         border-color: rgba($primary-color--default, 0.75);
+         background-color: rgba($primary-color--default, 0.75);
+      }
+   }
 
-    &:not([class*="--disabled"]):hover {
-        cursor: pointer;
-        font-size: $button-font-size--active;
-        transition: $transition-speed--active;
-    }
+   &:not([class*="--disabled"]):hover {
+      cursor: pointer;
+      font-size: $button-font-size--active;
+      transition: $transition-speed--active;
+   }
 }
 
 // light fill button
 .LightFillButton {
-    border-radius: $border-radius--default;
-    border: $border-width--default solid $primary-color--default;
-    background-color: $primary-color--fade;
+   border-radius: $border-radius--default;
+   border: $border-width--default solid $primary-color--default;
+   background-color: $primary-color--fade;
 
-    &:not([class*="--disabled"]):hover {
-        cursor: pointer;
-        font-size: $button-font-size--active;
-        transition: $transition-speed--active;
-        border-color: rgba($primary-color--default, 0.25);
-    }
+   &:not([class*="--disabled"]):hover {
+      cursor: pointer;
+      font-size: $button-font-size--active;
+      transition: $transition-speed--active;
+      border-color: rgba($primary-color--default, 0.25);
+   }
 }
 
 // icon button
 .IconButton {
-    height: $icon-button-size;
-    width: $icon-button-size;
-    min-width: $icon-button-size;
+   height: $icon-button-size;
+   width: $icon-button-size;
+   min-width: $icon-button-size;
 
-    .ModernButton__Upper,
-    .ModernButton__Shadow {
-        border-radius: 50%;
-    }
+   .ModernButton__Upper,
+   .ModernButton__Shadow {
+      border-radius: 50%;
+   }
 
-    .ModernButton__Upper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+   .ModernButton__Upper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
 }
 
 .IconButton__Icon path {
-    transform-origin: 50% 50%;
-    transition: $transition-speed--inactive all;
+   transform-origin: 50% 50%;
+   transition: $transition-speed--inactive all;
 }
 
 .IconButton:hover .IconButton__Icon path {
-    transform: scale(1.15);
-    transition: $transition-speed--active all;
+   transform: scale(1.15);
+   transition: $transition-speed--active all;
 }

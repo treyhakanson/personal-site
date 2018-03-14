@@ -1,71 +1,71 @@
 // general resets
 * {
-    margin: 0;
-    box-sizing: border-box;
+   margin: 0;
+   box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
-    width: 100%;
+   height: 100%;
+   width: 100%;
 }
 
 // text element rests
 h1 {
-    @include header-font($header-font-size--jumbo);
+   @include header-font($header-font-size--jumbo);
 }
 
 h2 {
-    @include header-font;
+   @include header-font;
 }
 
 h3 {
-    @include sub-header-font($sub-header-font-size--jumbo);
+   @include sub-header-font($sub-header-font-size--jumbo);
 }
 
 h4 {
-    @include sub-header-font;
+   @include sub-header-font;
 }
 
 p {
-    @include regular-font;
+   @include regular-font;
 }
 
 ol {
-    @include regular-font;
+   @include regular-font;
 }
 
 li {
-    @include regular-font;
+   @include regular-font;
 
-    &:not(:last-of-type) {
-        margin-bottom: $sp--sm;
-    }
+   &:not(:last-of-type) {
+      margin-bottom: $sp--sm;
+   }
 }
 
 a,
 a:link,
 a:visited {
-    color: $font-color--default;
+   color: $font-color--default;
 }
 
 input,
 textarea {
-    @include regular-font;
+   @include regular-font;
 }
 
 ::selection {
-    color: $light-color;
-    background-color: $primary-color--transluscent;
+   color: $light-color;
+   background-color: $primary-color--transluscent;
 }
 
 // code formatting (syntax highlighting handled by highlight.js)
 pre {
-    padding: $code-padding;
-    line-height: $code-line-height;
-    border-left: $border-width--thick solid $code-border-color;
+   padding: $code-padding;
+   line-height: $code-line-height;
+   border-left: $border-width--thick solid $code-border-color;
 
-    code {
-        @include code-font;
-    }
+   code {
+      @include code-font;
+   }
 }

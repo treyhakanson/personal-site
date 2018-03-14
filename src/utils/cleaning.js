@@ -6,7 +6,7 @@
  * @return {string} the cleaned simple url
  */
 export function cleanTitle(title) {
-    return title.replace(/\ /g, '-').toLowerCase();
+   return title.replace(/\ /g, "-").toLowerCase();
 }
 
 /**
@@ -17,9 +17,12 @@ export function cleanTitle(title) {
  * @return {string} the cleaned title
  */
 export function cleanTitleRev(url) {
-    return url.split('-').reduce((x, y) => {
-        return `${x} ${y[0].toUpperCase()}${y.slice(1, y.length)}`;
-    }, '').trim();
+   return url
+      .split("-")
+      .reduce((x, y) => {
+         return `${x} ${y[0].toUpperCase()}${y.slice(1, y.length)}`;
+      }, "")
+      .trim();
 }
 
 /**
@@ -30,6 +33,6 @@ export function cleanTitleRev(url) {
  * @return {boolean} whether or not the email is valid
  */
 export function validateEmail(email) {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   return re.test(email);
 }

@@ -1,16 +1,19 @@
 // external modules
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from "react";
 
 export default class Underlay extends Component {
-    static propTypes = {
-        imagePath: PropTypes.string.isRequired
-    };
+   static propTypes = {
+      imagePath: PropTypes.string.isRequired
+   };
 
-    render() {
-        return (
-            <div className="Underlay" style={{
-                backgroundImage: `url(${this.props.imagePath})`
-            }} />
-        );
-    }
+   render() {
+      return (
+         <div
+            className="Underlay"
+            style={{
+               backgroundImage: `url(${this.props.imagePath})`
+            }}
+         />
+      );
+   }
 }

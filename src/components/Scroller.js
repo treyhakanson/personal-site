@@ -1,40 +1,37 @@
 // external modules
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from "react";
 
 // custom modules
-import DownArrow from 'assets/svgs/down-arrow.svg';
-import { SCROLLER_DIRECTION } from 'utils/constants';
+import DownArrow from "assets/svgs/down-arrow.svg";
+import { SCROLLER_DIRECTION } from "utils/constants";
 
 export default class Scroller extends Component {
-    static propTypes = {
-        to: PropTypes.oneOf(Object.values(SCROLLER_DIRECTION)),
-        amount: PropTypes.number
-    };
+   static propTypes = {
+      to: PropTypes.oneOf(Object.values(SCROLLER_DIRECTION)),
+      amount: PropTypes.number
+   };
 
-    getIcon() {
-        const iconProps = {
-            className: 'Scroller__Icon',
-            width: 50,
-            height: 50
-        };
-        switch (this.props.to) {
-            case SCROLLER_DIRECTION.TOP:
-                return <DownArrow {...iconProps} />;
-            case SCROLLER_DIRECTION.BOTTOM:
-                return <DownArrow {...iconProps} />;
-        }
-    }
+   getIcon() {
+      const iconProps = {
+         className: "Scroller__Icon",
+         width: 50,
+         height: 50
+      };
+      switch (this.props.to) {
+         case SCROLLER_DIRECTION.TOP:
+            return <DownArrow {...iconProps} />;
+         case SCROLLER_DIRECTION.BOTTOM:
+            return <DownArrow {...iconProps} />;
+      }
+   }
 
-    activateScroller() {
+   activateScroller() {}
 
-    }
-
-    render() {
-        return (
-            <div className="Scroller"
-                onClick={this.activateScroller.bind(this)}>
-                {this.getIcon()}
-            </div>
-        );
-    }
+   render() {
+      return (
+         <div className="Scroller" onClick={this.activateScroller.bind(this)}>
+            {this.getIcon()}
+         </div>
+      );
+   }
 }

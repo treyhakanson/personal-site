@@ -1,88 +1,88 @@
 // font mixins
 @mixin build-font($font-family, $font-weight, $font-style, $font-size) {
-    font-family: $font-family;
-    font-weight: $font-weight;
-    font-style: $font-style;
-    font-size: $font-size;
-    color: $font-color--default;
+   font-family: $font-family;
+   font-weight: $font-weight;
+   font-style: $font-style;
+   font-size: $font-size;
+   color: $font-color--default;
 }
 
 @mixin header-font($font-size: $header-font-size--default) {
-    @include build-font($header-font-family, $header-font-weight,
+   @include build-font($header-font-family, $header-font-weight,
         $header-font-style, $font-size);
 }
 
 @mixin sub-header-font($font-size: $sub-header-font-size--default) {
-    @include build-font($sub-header-font-family, $sub-header-font-weight,
+   @include build-font($sub-header-font-family, $sub-header-font-weight,
         $sub-header-font-style, $font-size);
 }
 
 @mixin regular-font($font-size: $regular-font-size--default) {
-    @include build-font($regular-font-family, $regular-font-weight,
+   @include build-font($regular-font-family, $regular-font-weight,
         $regular-font-style, $font-size);
 }
 
 @mixin code-font($font-size: $code-font-size--default) {
-    @include build-font($code-font-family, $code-font-weight,
+   @include build-font($code-font-family, $code-font-weight,
         $code-font-style, $font-size);
 }
 
 // shadows
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
-    @if $inset {
-        -webkit-box-shadow:inset $top $left $blur $color;
-        -moz-box-shadow:inset $top $left $blur $color;
-        box-shadow:inset $top $left $blur $color;
-    } @else {
-        -webkit-box-shadow: $top $left $blur $color;
-        -moz-box-shadow: $top $left $blur $color;
-        box-shadow: $top $left $blur $color;
-    }
+   @if $inset {
+      -webkit-box-shadow: inset $top $left $blur $color;
+      -moz-box-shadow: inset $top $left $blur $color;
+      box-shadow: inset $top $left $blur $color;
+   } @else {
+      -webkit-box-shadow: $top $left $blur $color;
+      -moz-box-shadow: $top $left $blur $color;
+      box-shadow: $top $left $blur $color;
+   }
 }
 
 // media queries
 @mixin build-media-query($size) {
-    @media screen and (min-width: $size) {
-        @content;
-    }
+   @media screen and (min-width: $size) {
+      @content;
+   }
 }
 
 @mixin media-query--xs() {
-    @include build-media-query($screen-size--xs) {
-        @content;
-    }
+   @include build-media-query($screen-size--xs) {
+      @content;
+   }
 }
 
 @mixin media-query--sm() {
-    @include build-media-query($screen-size--sm) {
-        @content;
-    }
+   @include build-media-query($screen-size--sm) {
+      @content;
+   }
 }
 
 @mixin media-query--md() {
-    @include build-media-query($screen-size--md) {
-        @content;
-    }
+   @include build-media-query($screen-size--md) {
+      @content;
+   }
 }
 
 @mixin media-query--lg() {
-    @include build-media-query($screen-size--lg) {
-        @content;
-    }
+   @include build-media-query($screen-size--lg) {
+      @content;
+   }
 }
 
 // spacing mixins
 @mixin build-all-dimen($type, $sp) {
-    #{$type}-top: $sp !important;
-    #{$type}-right: $sp !important;
-    #{$type}-bottom: $sp !important;
-    #{$type}-left: $sp !important;
+   #{$type}-top: $sp !important;
+   #{$type}-right: $sp !important;
+   #{$type}-bottom: $sp !important;
+   #{$type}-left: $sp !important;
 }
 
 @mixin delay-animation($animation-name, $animation-delay, $animation-duration) {
-  animation-name: #{$animation-name};
-  animation-duration: $animation-duration;
-  animation-delay: $animation-delay;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+   animation-name: #{$animation-name};
+   animation-duration: $animation-duration;
+   animation-delay: $animation-delay;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
 }

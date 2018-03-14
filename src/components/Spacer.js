@@ -1,76 +1,76 @@
 // external modules
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from "react";
 
 // custom modules
-import { SPACER_MARGIN } from 'utils/constants';
+import { SPACER_MARGIN } from "utils/constants";
 
 // TODO: create more complex and ornate spacer options
 
 class SpacerBase extends Component {
-    static propTypes = {
-        light: PropTypes.bool,
-        spacing: PropTypes.oneOf(Object.values(SPACER_MARGIN))
-    };
+   static propTypes = {
+      light: PropTypes.bool,
+      spacing: PropTypes.oneOf(Object.values(SPACER_MARGIN))
+   };
 
-    static defaultProps = {
-        spacing: SPACER_MARGIN.SMALL
-    };
+   static defaultProps = {
+      spacing: SPACER_MARGIN.SMALL
+   };
 
-    /**
-     * getClassName - meant to be override in subclasses; should return the
-     * desired className
-     *
-     * @return {string}  the className of the spacer
-     */
-    getClassName(className) {
-        const classNames = ['SpacerBase'];
-        if (this.props.className)
-            classNames.push(this.props.className);
-        if (this.props.light)
-            classNames.push('background-color--primary-color--fade');
-        if (this.props.spacing)
-            classNames.push(`margin-top--${this.props.spacing} margin-bottom--${this.props.spacing}`);
-        if (className)
-            classNames.push(className);
+   /**
+    * getClassName - meant to be override in subclasses; should return the
+    * desired className
+    *
+    * @return {string}  the className of the spacer
+    */
+   getClassName(className) {
+      const classNames = ["SpacerBase"];
+      if (this.props.className) classNames.push(this.props.className);
+      if (this.props.light)
+         classNames.push("background-color--primary-color--fade");
+      if (this.props.spacing)
+         classNames.push(
+            `margin-top--${this.props.spacing} margin-bottom--${
+               this.props.spacing
+            }`
+         );
+      if (className) classNames.push(className);
 
-        return classNames.join(' ');
-    }
+      return classNames.join(" ");
+   }
 
-    render() {
-        return (
-            <hr className={this.getClassName()} />
-        );
-    }
+   render() {
+      return <hr className={this.getClassName()} />;
+   }
 }
 
 class SimpleSpacerShort extends SpacerBase {
-    getClassName() {
-        return super.getClassName('SimpleSpacer--short');
-    }
+   getClassName() {
+      return super.getClassName("SimpleSpacer--short");
+   }
 }
 
 class SimpleSpacerMedium extends SpacerBase {
-    getClassName() {
-        return super.getClassName('SimpleSpacer--medium');
-    }
+   getClassName() {
+      return super.getClassName("SimpleSpacer--medium");
+   }
 }
 
 class SimpleSpacerLong extends SpacerBase {
-    getClassName() {
-        return super.getClassName('SimpleSpacer--long');
-    }
+   getClassName() {
+      return super.getClassName("SimpleSpacer--long");
+   }
 }
 
 class SimpleSpacerCenter extends SpacerBase {
-    getClassName() {
-        return super.getClassName('SimpleSpacer--center');
-    }
+   getClassName() {
+      return super.getClassName("SimpleSpacer--center");
+   }
 }
 
 // simple spacer exports
 export const SimpleSpacer = {
-    Short: SimpleSpacerShort,
-    Medium: SimpleSpacerMedium,
-    Long: SimpleSpacerLong,
-    Center: SimpleSpacerCenter
+   Short: SimpleSpacerShort,
+   Medium: SimpleSpacerMedium,
+   Long: SimpleSpacerLong,
+   Center: SimpleSpacerCenter
 };

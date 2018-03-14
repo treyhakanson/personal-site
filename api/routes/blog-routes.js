@@ -1,12 +1,14 @@
 // custom modules
-import SHARED_CONSTANTS from '../../constants.js';
-import pool from '../db';
+import SHARED_CONSTANTS from "../../constants.js";
+import pool from "../db";
 
 // pull off required shared constants
 const { API_INFO, BLOG } = SHARED_CONSTANTS;
 
 function getTopPosts(req, res) {
-    pool.query(`
+   pool
+      .query(
+         `
         SELECT id,
                tm AS date,
                title,
@@ -18,18 +20,23 @@ function getTopPosts(req, res) {
             FROM blog_posts
             ORDER BY tm DESC
         LIMIT 4;
-    `, [])
-        .then(({ rows }) => {
-            res.json(rows);
-        }).catch(err => {
-            console.log(err);
-            res.status(500).json({ error: 'an unexpected error occurred' });
-        });
+    `,
+         []
+      )
+      .then(({ rows }) => {
+         res.json(rows);
+      })
+      .catch(err => {
+         console.log(err);
+         res.status(500).json({ error: "an unexpected error occurred" });
+      });
 }
 
 function getBlogPost(req, res) {
-    const { blogTitle } = req.params;
-    pool.query(`
+   const { blogTitle } = req.params;
+   pool
+      .query(
+         `
         SELECT id,
                tm AS date,
                title,
@@ -41,22 +48,27 @@ function getBlogPost(req, res) {
             FROM blog_posts
             WHERE LOWER(title) = LOWER($1)
         LIMIT 1;
-    `, [blogTitle.replace(/-/g, ' ')])
-        .then(({ rows }) => {
-            if (rows.length) {
-                res.json(rows[0]);
-            } else {
-                res.status(404).json({ error: 'post does not exist' });
-            }
-        }).catch(err => {
-            console.log(err);
-            res.status(500).json({ error: 'an unexpected error occurred' });
-        });
+    `,
+         [blogTitle.replace(/-/g, " ")]
+      )
+      .then(({ rows }) => {
+         if (rows.length) {
+            res.json(rows[0]);
+         } else {
+            res.status(404).json({ error: "post does not exist" });
+         }
+      })
+      .catch(err => {
+         console.log(err);
+         res.status(500).json({ error: "an unexpected error occurred" });
+      });
 }
 
 function getBlogPosts(req, res) {
-    const { page = 0 } = req.query;
-    pool.query(`
+   const { page = 0 } = req.query;
+   pool
+      .query(
+         `
         SELECT id,
                tm AS date,
                title,
@@ -67,17 +79,20 @@ function getBlogPosts(req, res) {
                blog_body AS blogbody
             FROM blog_posts
         LIMIT $1 OFFSET $2;
-    `, [BLOG.POSTS_PER_PAGE, BLOG.POSTS_PER_PAGE * page])
-        .then(({ rows = [] }) => {
-            res.json(rows);
-        }).catch(err => {
-            console.error(err);
-            res.status(500).json({ error: 'an unexpected error occurred' });
-        })
+    `,
+         [BLOG.POSTS_PER_PAGE, BLOG.POSTS_PER_PAGE * page]
+      )
+      .then(({ rows = [] }) => {
+         res.json(rows);
+      })
+      .catch(err => {
+         console.error(err);
+         res.status(500).json({ error: "an unexpected error occurred" });
+      });
 }
 
 export default function(app) {
-    app.get(`/api/v${API_INFO.VERSION}/blog/get-top-posts`, getTopPosts);
-    app.get(`/api/v${API_INFO.VERSION}/blog/get-post/:blogTitle`, getBlogPost);
-    app.get(`/api/v${API_INFO.VERSION}/blog/posts`, getBlogPosts);
-};
+   app.get(`/api/v${API_INFO.VERSION}/blog/get-top-posts`, getTopPosts);
+   app.get(`/api/v${API_INFO.VERSION}/blog/get-post/:blogTitle`, getBlogPost);
+   app.get(`/api/v${API_INFO.VERSION}/blog/posts`, getBlogPosts);
+}

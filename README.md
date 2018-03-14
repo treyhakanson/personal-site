@@ -20,27 +20,27 @@ npm i
 
 3. Initialize the postgres database:
 
-    1. Create the `config/db-config.json` file:
+   1. Create the `config/db-config.json` file:
 
-    ```json
-    {
-        "user": "",
-    	"database": "",
-    	"password": "",
-    	"host": "",
-    	"port": ##,
-    	"max": ##,
-    	"idleTimeoutMillis": ##
-    }
-    ```
+   ```json
+   {
+       "user": "",
+   	"database": "",
+   	"password": "",
+   	"host": "",
+   	"port": ##,
+   	"max": ##,
+   	"idleTimeoutMillis": ##
+   }
+   ```
 
-    2. Execute the `api/db/sql/init_db.sql` file:
+   2. Execute the `api/db/sql/init_db.sql` file:
 
-    ```sh
-    psql -f `/path/to/init_db.sql`
-    ```
+   ```sh
+   psql -f `/path/to/init_db.sql`
+   ```
 
-3. Start Webpack dev server:
+4. Start Webpack dev server:
 
 ```sh
 npm run dev

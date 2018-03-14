@@ -1,13 +1,13 @@
 .Recommendations__Content {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+   max-width: 700px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .Recommendations__RecommendationCards {
-    overflow: auto;
+   overflow: auto;
 
-    @include media-query--md {
+   @include media-query--md {
       display: flex;
       justify-content: space-between;
       align-items: start;

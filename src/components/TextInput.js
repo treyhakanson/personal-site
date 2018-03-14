@@ -1,8 +1,8 @@
 // external modules
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from "react";
 
 // custom modules
-import { INPUT_TYPES } from 'utils/constants';
+import { INPUT_TYPES } from "utils/constants";
 
 /**
  * TextInputBase - An abstract class upon which the other text inputs are built.
@@ -10,49 +10,49 @@ import { INPUT_TYPES } from 'utils/constants';
  * @extends Component
  */
 class TextInputBase extends Component {
-    static propTypes = {
-        placeholder: PropTypes.string,
-        onChange: PropTypes.func,
-        onBlur: PropTypes.func,
-        required: PropTypes.bool
-    }
+   static propTypes = {
+      placeholder: PropTypes.string,
+      onChange: PropTypes.func,
+      onBlur: PropTypes.func,
+      required: PropTypes.bool
+   };
 
-    static defaultProps = {
-        type: 'text',
-        value: '',
-        required: false
-    };
+   static defaultProps = {
+      type: "text",
+      value: "",
+      required: false
+   };
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            error: false
-        };
-    }
+   constructor(props) {
+      super(props);
+      this.state = {
+         error: false
+      };
+   }
 
-    /**
-     * onChange - fires on change of a text inputs value, applying error styles
-     * if needed and invoking the `onChange` callback on the `props` object, if
-     * needed.
-     *
-     * @param {string} val the new value of the input field
-     */
-    onChange({ target: { value: val } }) {
-        this.setState({ error: !val && this.props.required });
-        this.props.onChange && this.props.onChange(val);
-    }
+   /**
+    * onChange - fires on change of a text inputs value, applying error styles
+    * if needed and invoking the `onChange` callback on the `props` object, if
+    * needed.
+    *
+    * @param {string} val the new value of the input field
+    */
+   onChange({ target: { value: val } }) {
+      this.setState({ error: !val && this.props.required });
+      this.props.onChange && this.props.onChange(val);
+   }
 
-    /**
-     * onChange - fires on blurring of a text input, applying error styles if
-     * needed and invoking the `onBlur` callback on the `props` object, if
-     * needed.
-     *
-     * @param {string} val the new value of the input field
-     */
-    onBlur({ target: { value: val } }) {
-        this.setState({ error: !val && this.props.required });
-        this.props.onBlur && this.props.onBlur(val);
-    }
+   /**
+    * onChange - fires on blurring of a text input, applying error styles if
+    * needed and invoking the `onBlur` callback on the `props` object, if
+    * needed.
+    *
+    * @param {string} val the new value of the input field
+    */
+   onBlur({ target: { value: val } }) {
+      this.setState({ error: !val && this.props.required });
+      this.props.onBlur && this.props.onBlur(val);
+   }
 }
 
 /**
@@ -65,30 +65,48 @@ class TextInputBase extends Component {
  * @param {type} componentName the name of the component
  */
 function verifyValueProp(props, propName, componentName) {
-    if (props[propName] == undefined) return new Error(
-            '`' + propName + '` must be supplied to' +
-            ' `' + componentName + '`.'
-        );
+   if (props[propName] == undefined)
+      return new Error(
+         "`" + propName + "` must be supplied to" + " `" + componentName + "`."
+      );
 
-    const valueType = typeof props[propName];
-    const type = props.type || Input.defaultProps.type;
+   const valueType = typeof props[propName];
+   const type = props.type || Input.defaultProps.type;
 
-    switch (type) {
-        case 'number':
-            if (valueType != 'number') return new Error(
-                    'Invalid prop `' + propName + '` supplied to' +
-                    ' `' + componentName + '`. Since `type` prop was ' +
-                    'specified as ' + type + ', ' + propName + ' must' +
-                    ' be of type `number`.'
-                );
-        case 'text':
-            if (valueType != 'string') return new Error(
-                    'Invalid prop `' + propName + '` supplied to' +
-                    ' `' + componentName + '`. Since `type` prop was ' +
-                    'specified as ' + type + ', ' + propName + ' must' +
-                    ' be of type `string`.'
-                );
-    }
+   switch (type) {
+      case "number":
+         if (valueType != "number")
+            return new Error(
+               "Invalid prop `" +
+                  propName +
+                  "` supplied to" +
+                  " `" +
+                  componentName +
+                  "`. Since `type` prop was " +
+                  "specified as " +
+                  type +
+                  ", " +
+                  propName +
+                  " must" +
+                  " be of type `number`."
+            );
+      case "text":
+         if (valueType != "string")
+            return new Error(
+               "Invalid prop `" +
+                  propName +
+                  "` supplied to" +
+                  " `" +
+                  componentName +
+                  "`. Since `type` prop was " +
+                  "specified as " +
+                  type +
+                  ", " +
+                  propName +
+                  " must" +
+                  " be of type `string`."
+            );
+   }
 }
 
 /**
@@ -96,26 +114,27 @@ function verifyValueProp(props, propName, componentName) {
  * @extends TextInputBase
  */
 class Input extends TextInputBase {
-    static propTypes = {
-        ...TextInputBase.propTypes,
-        type: PropTypes.oneOf(Object.values(INPUT_TYPES)),
-        value: verifyValueProp
-    };
+   static propTypes = {
+      ...TextInputBase.propTypes,
+      type: PropTypes.oneOf(Object.values(INPUT_TYPES)),
+      value: verifyValueProp
+   };
 
-    render() {
-        const classNames = ['TextInput--Line', 'margin-bottom--md'];
-        if (this.state.error)
-            classNames.push('TextInput--error');
+   render() {
+      const classNames = ["TextInput--Line", "margin-bottom--md"];
+      if (this.state.error) classNames.push("TextInput--error");
 
-        return (
-            <input className={classNames.join(' ')}
-                type={this.props.type}
-                placeholder={this.props.placeholder}
-                value={this.props.value}
-                onChange={this.onChange.bind(this)}
-                onBlur={this.onBlur.bind(this)} />
-        );
-    }
+      return (
+         <input
+            className={classNames.join(" ")}
+            type={this.props.type}
+            placeholder={this.props.placeholder}
+            value={this.props.value}
+            onChange={this.onChange.bind(this)}
+            onBlur={this.onBlur.bind(this)}
+         />
+      );
+   }
 }
 
 /**
@@ -123,29 +142,29 @@ class Input extends TextInputBase {
  * @extends TextInputBase
  */
 class Area extends TextInputBase {
-    static propTypes = {
-        ...TextInputBase.propTypes,
-        value: PropTypes.string
-    };
+   static propTypes = {
+      ...TextInputBase.propTypes,
+      value: PropTypes.string
+   };
 
-    render() {
-        const classNames = ['TextInput--Area', 'margin-bottom--md'];
-        if (this.state.error)
-            classNames.push('TextInput--error');
+   render() {
+      const classNames = ["TextInput--Area", "margin-bottom--md"];
+      if (this.state.error) classNames.push("TextInput--error");
 
-        return (
-            <textarea className={classNames.join(' ')}
-                rows={this.props.lines}
-                placeholder={this.props.placeholder}
-                value={this.props.value}
-                onChange={this.onChange.bind(this)}
-                onBlur={this.onBlur.bind(this)} />
-        );
-    }
+      return (
+         <textarea
+            className={classNames.join(" ")}
+            rows={this.props.lines}
+            placeholder={this.props.placeholder}
+            value={this.props.value}
+            onChange={this.onChange.bind(this)}
+            onBlur={this.onBlur.bind(this)}
+         />
+      );
+   }
 }
 
-
 export default {
-    Line: Input,
-    Area
+   Line: Input,
+   Area
 };
