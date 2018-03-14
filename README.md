@@ -4,6 +4,12 @@
 
 My personal site built with React, Node.js, PostgreSQL, and Nginx.
 
+## TODOs
+
+* [ ] Add information about production builds
+* [ ] Add tests
+* [ ] Fully configure CI
+
 ## Setup
 
 1. Run Nginx via the utility script `init_nginx.sh`:
