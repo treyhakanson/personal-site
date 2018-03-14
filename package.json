@@ -4,6 +4,7 @@
    "description": "My personal site, an ongoing projects",
    "main": "index.js",
    "scripts": {
+      "test": "yarn build--full",
       "start": "NODE_ENV=development nodemon api/index.js --exec babel-node",
       "dev":
          "webpack-dev-server --config ./webpack.dev.config.js --define process.env.NODE_ENV=\"'development'\" --hot",
