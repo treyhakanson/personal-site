@@ -1,16 +1,16 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+   value: true
 });
 
-var _pg = require('pg');
+var _pg = require("pg");
 
-var _pgPromise = require('pg-promise');
+var _pgPromise = require("pg-promise");
 
 var _pgPromise2 = _interopRequireDefault(_pgPromise);
 
-var _dbConfig = require('../../config/db-config.json');
+var _dbConfig = require("../../config/db-config.json");
 
 var _dbConfig2 = _interopRequireDefault(_dbConfig);
 
@@ -21,8 +21,8 @@ var pool = new _pg.Pool(_dbConfig2.default);
 // custom modules
 // external modules
 
-pool.on('error', function (err, client) {
-  console.error('idle client error', err.message, err.stack);
+pool.on("error", function (err, client) {
+   console.error("idle client error", err.message, err.stack);
 });
 
 /**
@@ -32,16 +32,16 @@ pool.on('error', function (err, client) {
  * @param {function} callback - callback to be executed on completion of the query
  */
 function query(text, values) {
-  return pool.query(text, values);
-};
+   return pool.query(text, values);
+}
 
 /**
  * Connect to the database
  * @param {function} callback - callback to be executed on connection success/failure
  */
 function connect(callback) {
-  return pool.connect(callback);
-};
+   return pool.connect(callback);
+}
 
 /**
  * test - Test a query by prinitng out the query with the interpolated values.
@@ -52,13 +52,13 @@ function connect(callback) {
  * @return {string} the final query
  */
 function test(text, values) {
-  var query = _pgPromise2.default.as.format(text, values);
-  console.log(query);
-  return query;
+   var query = _pgPromise2.default.as.format(text, values);
+   console.log(query);
+   return query;
 }
 
 exports.default = {
-  query: query,
-  connect: connect,
-  test: test
+   query: query,
+   connect: connect,
+   test: test
 };

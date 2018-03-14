@@ -15,7 +15,7 @@ bash init_nginx.sh
 2. Install Node modules:
 
 ```sh
-npm i
+yarn install
 ```
 
 3. Initialize the postgres database:
@@ -43,13 +43,13 @@ npm i
 4. Start Webpack dev server:
 
 ```sh
-npm run dev
+yarn dev
 ```
 
 4. Start the API:
 
 ```sh
-npm run start
+yarn start
 ```
 
 5. View the application at `http://localhost:8000/`
