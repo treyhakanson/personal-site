@@ -1,10 +1,17 @@
 .ContactForm {
-    background-color: $light-color;
+    background-color: transparent;
 
     .ContactForm__FormContent {
         max-width: 700px;
+        background-color: $light-color;
         margin-left: auto;
         margin-right: auto;
     }
 
+    @include media-query--md {
+      padding-top: $sp--lg;
+      padding-right: $sp--lg;
+      padding-bottom: $sp--lg;
+      padding-left: $sp--lg;
+   }
 }

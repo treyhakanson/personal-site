@@ -2,10 +2,8 @@
 import React, { Component, PropTypes } from 'react';
 
 // custom modules
-import Footer from 'components/Footer';
 import { HomePageJumbotron, Portfolio, BlogPosts, Recommendations,
     ContactForm } from 'components/HomePage';
-import Scroller from 'components/Scroller';
 import Underlay from 'components/Underlay';
 
 export default class HomePage extends Component {
@@ -18,8 +16,6 @@ export default class HomePage extends Component {
                 <BlogPosts />
                 <Recommendations />
                 <ContactForm />
-                {/* <Scroller to="top" /> */}
-                {/* <Footer /> */}
             </div>
         );
     }
