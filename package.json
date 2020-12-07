@@ -29,7 +29,7 @@
       "body-parser": "^1.17.2",
       "ejs": "^2.5.7",
       "express": "^4.15.4",
-      "highlight.js": "^9.12.0",
+      "highlight.js": "^10.4.1",
       "moment": "^2.18.1",
       "pg-promise": "^6.5.2",
       "react": "^15.6.1",
